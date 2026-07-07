@@ -123,10 +123,6 @@ export default function Header() {
           <img src="https://flagsapi.com/GB/flat/64.png" alt="EN" className="w-5 h-auto rounded-sm" />
           <span className="text-base text-white">EN</span>
         </button>
-        <button className="flex items-center gap-2 py-2 px-3 rounded-lg bg-white/5 hover:bg-white/10 hover:shadow-lg focus:ring-2 focus:ring-secondary transition-all duration-200 opacity-60 hover:opacity-100">
-          <img src="https://flagsapi.com/SA/flat/64.png" alt="AR" className="w-5 h-auto rounded-sm" />
-          <span className="text-base text-white">AR</span>
-        </button>
       </div>
 
       {/* Mobile Hamburger */}
@@ -220,10 +216,6 @@ export default function Header() {
             <button className="flex items-center gap-2 px-3 py-2 rounded-md bg-secondary/15 text-secondary text-sm font-medium">
               <img src="https://flagsapi.com/GB/flat/64.png" alt="EN" className="w-5 h-auto rounded-sm" />
               English
-            </button>
-            <button className="flex items-center gap-2 px-3 py-2 rounded-md text-white/60 hover:text-white hover:bg-white/[0.07] text-sm font-medium transition-colors">
-              <img src="https://flagsapi.com/SA/flat/64.png" alt="AR" className="w-5 h-auto rounded-sm" />
-              العربية
             </button>
           </div>
         </div>
