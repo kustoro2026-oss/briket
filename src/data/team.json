@@ -1,0 +1,51 @@
+[
+  {
+    "id": "yoga-indra",
+    "name": "Yoga Indra P.N.",
+    "role": "President Director",
+    "photo": "https://assets.djavacoal.com/team-members/U4pR0OdlMCuLGon3HSBMk",
+    "bio": "Founder and President Director of CV Djavacoal Indonesia, leading the company since 2018."
+  },
+  {
+    "id": "ops-manager",
+    "name": "Ahmad Rizky",
+    "role": "Operational Manager",
+    "photo": "https://assets.djavacoal.com/team-members/nIjBq6gLA0VXt4C4pzMnU",
+    "bio": "Oversees all production operations, ensuring quality and efficiency across the manufacturing process."
+  },
+  {
+    "id": "it-specialist",
+    "name": "Ardhian Faiz Zein",
+    "role": "IT Specialist",
+    "photo": "https://assets.djavacoal.com/team-members/5rhZlFyFpTyfsz6B0X4fT",
+    "bio": "Manages all technology infrastructure and digital systems for Djavacoal."
+  },
+  {
+    "id": "finance-admin",
+    "name": "Clara Lucia M.",
+    "role": "Finance & Administration",
+    "photo": "https://assets.djavacoal.com/team-members/Alp1tb7PxKOK_CvVExWLA",
+    "bio": "Handles financial operations, administration, and documentation."
+  },
+  {
+    "id": "operational-1",
+    "name": "Vivi Nofitasari",
+    "role": "Operational",
+    "photo": "https://assets.djavacoal.com/team-members/7zfqT45mqUSYpQrREfXyk",
+    "bio": "Part of the operational team ensuring smooth day-to-day production."
+  },
+  {
+    "id": "digital-marketing-1",
+    "name": "Syafira Nur Yulia",
+    "role": "Digital Marketing",
+    "photo": "https://assets.djavacoal.com/team-members/HoDcLhXe1EXpDNnwai1tl",
+    "bio": "Manages online presence, social media, and digital marketing strategies."
+  },
+  {
+    "id": "digital-marketing-2",
+    "name": "Syawalina NurFitri",
+    "role": "Digital Marketing",
+    "photo": "https://assets.djavacoal.com/team-members/BGM2MBC3KhEAuVaozFUup",
+    "bio": "Supports digital marketing campaigns and content creation."
+  }
+]

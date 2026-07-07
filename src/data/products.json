@@ -1,0 +1,148 @@
+[
+  {
+    "id": "coconut-shell-charcoal-briquette",
+    "name": "Coconut Shisha Charcoal Briquette",
+    "slug": "coconut-shell-charcoal-briquette-",
+    "description": "Coconut Shell Charcoal Briquette is an eco-friendly, sustainable fuel made from the natural byproduct of coconut shells. Known for its high calorific value, long burn time, and low ash content, it is ideal for grilling, barbecues, shisha, and industrial applications. Our premium coconut charcoal briquettes are made from 100% natural coconut shell, providing consistent heat, long burning time, and minimal ash production.",
+    "category": "Shisha",
+    "images": [
+      "https://assets.djavacoal.com/products/media/BGcOmXZ0DDl90Ejkmb6fF",
+      "https://assets.djavacoal.com/products/media/3ze1x1ufLGgPWeaU44oTv",
+      "https://assets.djavacoal.com/products/media/AJETNV4kIzceevuZzAtHb",
+      "https://assets.djavacoal.com/products/media/kzlOSGq6hkYRTBt-8Cag7",
+      "https://assets.djavacoal.com/products/media/wzxdreqn9VcVSlg2e17lb"
+    ],
+    "shapes": [
+      { "type": "FLAT", "sizes": ["25x25x17 - (108 pcs/kg)", "25x25x15 - (120 pcs/kg)", "20x20x20 - (192 pcs/kg)"] },
+      { "type": "CUBE", "sizes": ["22x22x22 - (96 pcs/kg)", "25x25x25 - (72 pcs/kg)", "26x26x26 - (64 pcs/kg)", "27x27x27 - (54 pcs/kg)", "28x28x28 - (50 pcs/kg)"] },
+      { "type": "HEXA", "sizes": ["18x50 - (72 pcs/kg)", "20x35 - (96 pcs/kg)", "20x50 - (64 pcs/kg)"] },
+      { "type": "STICK", "sizes": ["18x50 - (72 pcs/kg)", "20x35 - (96 pcs/kg)", "20x50 - (64 pcs/kg)"] }
+    ],
+    "packaging": ["Bulk Loose", "Full", "Bulk"],
+    "moq": "20\" Container (18 Tons) / 40\" Container (26 Tons)",
+    "capacity": "250 Tons/Month",
+    "specifications": {
+      "Ash Content": "< 2.5%",
+      "Moisture": "< 8%",
+      "Fixed Carbon": "> 75%",
+      "Burning Time": "> 2 hours",
+      "Caloric Value": "> 7000 Kcal"
+    },
+    "specImages": [
+      "https://assets.djavacoal.com/products/specifications/2LZejyOmwFAkZH5nCeZVp",
+      "https://assets.djavacoal.com/products/specifications/P8HieRMlvmaFukum2WwY7"
+    ],
+    "shapeImages": {
+      "FLAT": "https://assets.djavacoal.com/products/variants/S_XQGiEEQQsWTu_n4Cn-O",
+      "CUBE": "https://assets.djavacoal.com/products/variants/rgMzvxvChdRR2diOa8OoD",
+      "HEXA": "https://assets.djavacoal.com/products/variants/Y3g06PEVbC-OP93RdbXnx",
+      "STICK": "https://assets.djavacoal.com/products/variants/BXycrcgQ26TvzTt7ShoDj"
+    }
+  },
+  {
+    "id": "barbeque-charcoal-briquette",
+    "name": "Barbeque Charcoal Briquette",
+    "slug": "barbeque-charcoal-briquette",
+    "description": "High-quality BBQ charcoal briquettes made from coconut shell. Perfect for grilling and barbeque, providing long-lasting heat with minimal smoke and ash.",
+    "category": "BBQ",
+    "images": [
+      "https://assets.djavacoal.com/products/media/wOK7KXjLym1cQ4cNVMe5j",
+      "https://assets.djavacoal.com/products/media/jxyQEOdlcz0Yz_Fg1NuFf",
+      "https://assets.djavacoal.com/products/media/xd7b0Ae714GeTWvIHzTiZ",
+      "https://assets.djavacoal.com/products/media/26mZBkxVAsqt0KJMum8IY",
+      "https://assets.djavacoal.com/products/media/5Rq_3oR1y3u9cHq_d4xzL"
+    ],
+    "shapes": [
+      { "type": "Hexa", "sizes": ["50x50x30mm", "50x50x35mm"] },
+      { "type": "Pillow", "sizes": ["50x50x30mm", "60x60x35mm"] }
+    ],
+    "packaging": ["Bulk Loose", "Woven Bag"],
+    "moq": "40ft Container (27 Tons)",
+    "capacity": "250 Tons/Month",
+    "specifications": {
+      "Ash Content": "< 3%",
+      "Moisture": "< 8%",
+      "Fixed Carbon": "> 70%",
+      "Burning Time": "> 3 hours",
+      "Caloric Value": "> 6500 Kcal"
+    }
+  },
+  {
+    "id": "sawdust-charcoal",
+    "name": "Sawdust Charcoal",
+    "slug": "sawdust-charcoal",
+    "description": "Eco-friendly sawdust charcoal briquettes made from compressed sawdust. An economical alternative for industrial and household heating needs.",
+    "category": "Industrial",
+    "images": [
+      "https://assets.djavacoal.com/products/media/ESZyvBjO91rAqlzSrWkZq",
+      "https://assets.djavacoal.com/products/media/Oe4vtT_0CWTQjd0IYi_9m",
+      "https://assets.djavacoal.com/products/media/zvq2eTr_68LKeb8Lhfdhn",
+      "https://assets.djavacoal.com/products/media/qJnciiBM8VI1pqdqz-Eag"
+    ],
+    "shapes": [
+      { "type": "Hexa", "sizes": ["AB Grade (45mm)", "ABC Grade (40mm)", "CD Grade (35mm)"] }
+    ],
+    "packaging": ["Woven Bag"],
+    "moq": "40ft Container (27 Tons)",
+    "capacity": "135 Tons/Month",
+    "specifications": {
+      "Ash Content": "< 5%",
+      "Moisture": "< 10%",
+      "Fixed Carbon": "> 60%",
+      "Burning Time": "> 2 hours",
+      "Caloric Value": "> 5500 Kcal"
+    }
+  },
+  {
+    "id": "natural-wood-charcoal",
+    "name": "Natural Wood Charcoal",
+    "slug": "natural-wood-charcoal",
+    "description": "100% natural hardwood charcoal, lump form. Ideal for restaurant grilling, traditional cooking, and industrial applications requiring high heat.",
+    "category": "Restaurant",
+    "images": [
+      "https://assets.djavacoal.com/products/media/h4T9OE6-eIld1qfb69OZU",
+      "https://assets.djavacoal.com/products/media/F7nvZwEvQ5t0vdTj0ZS3q",
+      "https://assets.djavacoal.com/products/media/cHd60925h-TmwZWuRibTP",
+      "https://assets.djavacoal.com/products/media/kNV-sb7fr8MKMFa0PoUGZ"
+    ],
+    "shapes": [
+      { "type": "Lump Wood", "sizes": ["< 5cm"] }
+    ],
+    "packaging": ["Bulk Loose"],
+    "moq": "40ft Container (20 Tons)",
+    "capacity": "100 Tons/Month",
+    "specifications": {
+      "Ash Content": "< 3%",
+      "Moisture": "< 10%",
+      "Fixed Carbon": "> 75%",
+      "Burning Time": "> 2 hours",
+      "Caloric Value": "> 7000 Kcal"
+    }
+  },
+  {
+    "id": "djavacoal-brand",
+    "name": "Djavacoal Brands",
+    "slug": "djavacoal-brand",
+    "description": "Our signature Golden Cube brand, available for OEM and private label arrangements. Premium quality charcoal products under your own brand name.",
+    "category": "OEM",
+    "images": [
+      "https://djavacoal.com/images/products/cube-25.png",
+      "https://djavacoal.com/images/products/cube-26.png"
+    ],
+    "shapes": [
+      { "type": "Cube 25", "sizes": ["72 pcs/kg"] },
+      { "type": "Cube 20x50", "sizes": ["64 pcs/kg"] },
+      { "type": "Cube 26", "sizes": ["64 pcs/kg"] }
+    ],
+    "packaging": ["OEM / Private Label"],
+    "moq": "Contact for details",
+    "capacity": "250 Tons/Month",
+    "specifications": {
+      "Ash Content": "< 2.5%",
+      "Moisture": "< 8%",
+      "Fixed Carbon": "> 75%",
+      "Burning Time": "> 2 hours",
+      "Caloric Value": "> 7000 Kcal"
+    }
+  }
+]

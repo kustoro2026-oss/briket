@@ -1,7 +1,30 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
+  images: {
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "assets.djavacoal.com",
+      },
+      {
+        protocol: "https",
+        hostname: "flagsapi.com",
+      },
+    ],
+  },
+  // Hindari webpack me-watch folder public/images yang besar (251MB+)
+  // agar dev server tidak lambat dan tidak compile ulang terus.
+  // NOTE: Hanya berlaku saat menggunakan webpack (next dev --webpack)
+  webpack: (config, { dev }) => {
+    if (dev) {
+      config.watchOptions = {
+        ignored: /public[\\/]images/,
+        poll: false,
+      };
+    }
+    return config;
+  },
 };
 
 export default nextConfig;

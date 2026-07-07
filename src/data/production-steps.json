@@ -1,0 +1,56 @@
+[
+  {
+    "step": 1,
+    "title": "Raw Material Selection",
+    "description": "We carefully select high-quality coconut shells from local sources, ensuring they are dry, clean, and free from contaminants.",
+    "illustration": "https://djavacoal.com/images/Step1.png"
+  },
+  {
+    "step": 2,
+    "title": "Carbonization",
+    "description": "Coconut shells are burned in controlled kilns at high temperatures with limited oxygen to produce high-quality charcoal.",
+    "illustration": "https://djavacoal.com/images/Step2.png"
+  },
+  {
+    "step": 3,
+    "title": "Crushing & Sieving",
+    "description": "The carbonized charcoal is crushed into fine powder and sieved to ensure uniform particle size for consistent briquette quality.",
+    "illustration": "https://djavacoal.com/images/Step33.png"
+  },
+  {
+    "step": 4,
+    "title": "Mixing with Natural Binder",
+    "description": "Charcoal powder is mixed with natural tapioca starch binder to create a moldable mixture that holds its shape after drying.",
+    "illustration": "https://djavacoal.com/images/Step4.png"
+  },
+  {
+    "step": 5,
+    "title": "Briquetting / Molding",
+    "description": "The mixture is pressed into desired shapes and sizes using mechanical briquetting machines with precise molds.",
+    "illustration": "https://djavacoal.com/images/Step5.png"
+  },
+  {
+    "step": 6,
+    "title": "Drying & Curing",
+    "description": "Fresh briquettes are sun-dried and then oven-cured to reduce moisture content and ensure structural integrity.",
+    "illustration": "https://djavacoal.com/images/Step6.png"
+  },
+  {
+    "step": 7,
+    "title": "Quality Control & Lab Testing",
+    "description": "Each batch undergoes rigorous testing for ash content, moisture, fixed carbon, burning time, and calorific value.",
+    "illustration": "https://djavacoal.com/images/Step7.png"
+  },
+  {
+    "step": 8,
+    "title": "Packaging",
+    "description": "Approved briquettes are packed according to customer specifications - bulk, full packaging, or woven bags.",
+    "illustration": "https://djavacoal.com/images/Step8.png"
+  },
+  {
+    "step": 9,
+    "title": "Storage & Export",
+    "description": "Packaged products are stored in dry warehouses and prepared for export shipping to destinations worldwide.",
+    "illustration": "https://djavacoal.com/images/Step9.png"
+  }
+]
