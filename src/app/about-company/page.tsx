@@ -64,8 +64,8 @@ export default function AboutCompanyPage() {
                 <h3 className="text-sm font-semibold text-white">About Company</h3>
               </div>
               {[
-                { label: "CV. Djavacoal Indonesia", href: "#cv-djavacoal-indonesia" },
-                { label: "Djavacoal's Team", href: "#djavacoals-team" },
+                { label: "CV. Grow With Fakhri Indonesia", href: "#grow-with-fakhri" },
+                { label: "Grow With Fakhri's Team", href: "#grow-with-fakhris-team" },
                 { label: "What We Do?", href: "#what-we-do" },
                 { label: "Countries Exported", href: "#countries-exported" },
                 { label: "Legal & Certificates", href: "#legal-certificate" },
@@ -91,8 +91,8 @@ export default function AboutCompanyPage() {
               onChange={(e) => { window.location.href = e.target.value; }}
             >
               {[
-                { label: "CV. Djavacoal Indonesia", value: "#cv-djavacoal-indonesia" },
-                { label: "Djavacoal's Team", value: "#djavacoals-team" },
+                { label: "CV. Grow With Fakhri Indonesia", value: "#grow-with-fakhri" },
+                { label: "Grow With Fakhri's Team", value: "#grow-with-fakhris-team" },
                 { label: "What We Do?", value: "#what-we-do" },
                 { label: "Countries Exported", value: "#countries-exported" },
                 { label: "Legal & Certificates", value: "#legal-certificate" },
@@ -109,7 +109,7 @@ export default function AboutCompanyPage() {
           {/* Main Content */}
           <div className="space-y-3">
         {/* ===== Who We Are? ===== */}
-        <section id="cv-djavacoal-indonesia" className="mt-2 scroll-mt-28 space-y-4 rounded-xl bg-[#222222] p-5 lg:p-10">
+        <section id="grow-with-fakhri" className="mt-2 scroll-mt-28 space-y-4 rounded-xl bg-[#222222] p-5 lg:p-10">
           <div className="mb-2 flex items-center gap-3">
             <span className="h-px w-8 bg-white" />
             <p className="text-sm font-medium italic tracking-[0.35px] text-[#60A5FF]">Who We Are?</p>
@@ -121,7 +121,7 @@ export default function AboutCompanyPage() {
 
           <div className="space-y-4">
             <p className="text-base leading-[26px] text-[#E0DFE2]">
-              CV Djavacoal Indonesia is a trusted supplier and exporter of premium charcoal products, specializing
+              CV Grow With Fakhri Indonesia is a trusted supplier and exporter of premium charcoal products, specializing
               in coconut shell charcoal briquettes, BBQ briquettes, sawdust charcoal briquettes, and natural
               hardwood charcoal. With years of expertise in the charcoal industry, we are committed to delivering
               excellence through innovation, strict quality standards, and reliable service.
@@ -132,7 +132,7 @@ export default function AboutCompanyPage() {
               logistics, competitive shipping costs, and timely delivery for our global partners.
             </p>
             <p className="text-base leading-[26px] text-[#E0DFE2]">
-              At Djavacoal, quality is our priority. We carefully select only the best raw materials, ensuring
+              At Grow With Fakhri, quality is our priority. We carefully select only the best raw materials, ensuring
               every product meets international standards for performance, long-lasting burning time, and
               eco-friendly characteristics. Through advanced production methods and rigorous quality control,
               we guarantee consistency and reliability in every shipment.
@@ -144,7 +144,7 @@ export default function AboutCompanyPage() {
               long-term partnerships built on trust, professionalism, and mutual growth.
             </p>
             <p className="text-sm leading-[22.75px] text-[#c0c5cc]">
-              Djavacoal Indonesia is proudly present as a premium charcoal supplier for clients around
+              Grow With Fakhri Indonesia is proudly present as a premium charcoal supplier for clients around
               the world, delivering only the best quality and maintaining strong business relationships
               across borders.
             </p>
@@ -160,7 +160,7 @@ export default function AboutCompanyPage() {
             >
               <img
                 src="https://img.youtube.com/vi/NWO_S1Kh6U0/maxresdefault.jpg"
-                alt="Production Process Coconut Charcoal Briquette From Djavacoal Indonesia"
+                alt="Production Process Coconut Charcoal Briquette From Grow With Fakhri Indonesia"
                 className="w-full object-cover"
               />
               <div className="absolute inset-0 flex items-center justify-center bg-black/10">
@@ -175,7 +175,7 @@ export default function AboutCompanyPage() {
           <h3 className="text-lg font-semibold text-white mt-6">Company Legal Data</h3>
           <div className="flex flex-col overflow-hidden border border-[#848484] text-sm mt-2">
             {[
-              ["Company Name:", "CV Djavacoal Indonesia"],
+              ["Company Name:", "CV Grow With Fakhri Indonesia"],
               ["Owner's Name:", "Yoga Indra Pradipta N"],
               ["Address:", "Jl. P. Ilir Sari V No. 15, Jawa Barat, Indonesia"],
               ["Established:", "2018"],
@@ -198,23 +198,23 @@ export default function AboutCompanyPage() {
 
           {/* Social Links */}
           <div className="flex gap-2 mt-4">
-            <a href="https://www.facebook.com/djavacoal/" target="_blank" rel="noopener noreferrer" className="border border-gray-300 bg-transparent p-2 hover:bg-gray-500 transition-colors">
+            <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" className="border border-gray-300 bg-transparent p-2 hover:bg-gray-500 transition-colors">
               <svg className="w-4 h-4 text-gray-300" fill="currentColor" viewBox="0 0 320 512"><path d="M80 299.3V512H196V299.3h86.5l18-97.8H196V166.9c0-51.7 20.3-71.5 72.7-71.5 16.3 0 29.4.4 37 1.2V7.9C291.4 4 256.4 0 236.2 0 129.3 0 80 50.5 80 159.4v42.1H0v97.8H80z"/></svg>
             </a>
-            <a href="https://www.linkedin.com/company/djavacoal-indonesia/" target="_blank" rel="noopener noreferrer" className="border border-gray-300 bg-transparent p-2 hover:bg-gray-500 transition-colors">
+            <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer" className="border border-gray-300 bg-transparent p-2 hover:bg-gray-500 transition-colors">
               <svg className="w-4 h-4 text-gray-300" fill="currentColor" viewBox="0 0 448 512"><path d="M100.3 448H7.4V148.9h92.9zM53.8 108.1C24.1 108.1 0 83.5 0 53.8a53.8 53.8 0 0 1 107.6 0c0 29.7-24.1 54.3-53.8 54.3zM447.9 448h-92.7V302.4c0-34.7-.7-79.2-48.3-79.2-48.3 0-55.7 37.7-55.7 76.7V448h-92.8V148.9h89.1v40.8h1.3c12.4-23.5 42.7-48.3 87.9-48.3 94 0 111.3 61.9 111.3 142.3V448z"/></svg>
             </a>
-            <a href="https://www.instagram.com/djavacharcoal" target="_blank" rel="noopener noreferrer" className="border border-gray-300 bg-transparent p-2 hover:bg-gray-500 transition-colors">
+            <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" className="border border-gray-300 bg-transparent p-2 hover:bg-gray-500 transition-colors">
               <svg className="w-[18px] h-[18px] text-gray-300" fill="currentColor" viewBox="0 0 448 512"><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/></svg>
             </a>
           </div>
         </section>
 
-        {/* ===== Djavacoal's Team ===== */}
-        <section id="djavacoals-team" className="relative scroll-mt-24 overflow-hidden rounded-2xl border border-[#2A2A2A] bg-[#222222] p-6 md:p-10">
+        {/* ===== Grow With Fakhri's Team ===== */}
+        <section id="grow-with-fakhris-team" className="relative scroll-mt-24 overflow-hidden rounded-2xl border border-[#2A2A2A] bg-[#222222] p-6 md:p-10">
           <div className="mb-2 flex items-center gap-3">
             <span className="h-px w-8 bg-white" />
-            <p className="text-sm font-medium italic tracking-[0.35px] text-[#60A5FF]">Djavacoal&apos;s Team</p>
+            <p className="text-sm font-medium italic tracking-[0.35px] text-[#60A5FF]">Grow With Fakhri&apos;s Team</p>
           </div>
           <h2 className="text-[20px] font-semibold text-white mt-1">The People Behind Our Success</h2>
           <p className="text-base text-[#EFA12D] mt-1">From Indonesia to the World, With Dedication and Care</p>
@@ -273,7 +273,7 @@ export default function AboutCompanyPage() {
 
           <div className="space-y-4 text-base leading-[26px] lg:text-lg text-[#c0c5cc]">
             <p>
-              At Djavacoal Indonesia, we are dedicated to producing and exporting premium charcoal products
+              At Grow With Fakhri Indonesia, we are dedicated to producing and exporting premium charcoal products
               that are tailored to meet the demands of international markets. Our product line covers a wide
               range of charcoal briquettes, including coconut shell, BBQ, sawdust, white charcoal (Binchotan),
               and natural hardwood charcoal. Each product is manufactured with precision and strict quality
@@ -288,7 +288,7 @@ export default function AboutCompanyPage() {
               logistics, and timely delivery to clients worldwide.
             </p>
             <p>
-              At Djavacoal, we are not just a supplier but a trusted partner. Our mission is to deliver
+              At Grow With Fakhri, we are not just a supplier but a trusted partner. Our mission is to deliver
               premium charcoal while building long-term relationships based on professionalism, trust, and
               mutual growth. By focusing on quality, sustainability, and reliability, we proudly represent
               Indonesia&apos;s finest natural resources in the global charcoal industry.
@@ -361,19 +361,19 @@ export default function AboutCompanyPage() {
             <div className="relative h-56 w-full overflow-hidden rounded-md sm:h-72 md:h-80 lg:h-[520px] lg:max-w-3/4">
               <img
                 src="https://assets.djavacoal.com/static-media/factory-visit/KD9GTB1lAdONCB51ytzWd"
-                alt="Charcoal Production Factory Djavacoal Indonesia"
+                alt="Charcoal Production Factory Grow With Fakhri Indonesia"
                 className="h-full w-full rounded-md object-cover"
               />
             </div>
             <div className="flex-1 space-y-4">
               <p className="text-sm leading-[22.75px] text-[#c0c5cc]">
-                At Djavacoal Indonesia, we take pride in operating three factories across Java that combine
+                At Grow With Fakhri Indonesia, we take pride in operating three factories across Java that combine
                 years of expertise, strict quality control, and modern production standards to deliver
                 world-class charcoal products. Our facilities are equipped to handle large-scale production
                 while maintaining the consistency and excellence that our global customers trust.
               </p>
               <a
-                href="https://wa.me/+6282126572600?text=Hi%2C%20I%20would%20like%20to%20schedule%20a%20factory%20visit"
+                href="https://wa.me/+628818786988?text=Hi%2C%20I%20would%20like%20to%20schedule%20a%20factory%20visit"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex h-[54px] w-full items-center justify-center gap-3 rounded-lg bg-[#1B7308] text-sm font-semibold text-white transition hover:bg-[#1c7a09] md:w-[325px]"
@@ -389,10 +389,10 @@ export default function AboutCompanyPage() {
         <section id="countries-exported" className="mt-2 scroll-mt-28 space-y-4 rounded-xl bg-[#222222] p-5 lg:p-10">
           <h3 className="text-[18px] font-semibold text-white">Countries We Have Exported To</h3>
           <p className="text-sm leading-[22.75px] text-[#c0c5cc]">
-            Djavacoal Indonesia has successfully exported premium charcoal products to more than 20 countries
+            Grow With Fakhri Indonesia has successfully exported premium charcoal products to more than 20 countries
             across the Middle East, Asia, Europe, Africa, Australia, and the Americas. Our global reach
             demonstrates the trust international partners place in our quality, reliability, and professionalism.
-            From Saudi Arabia to Brazil, from Japan to the USA, Djavacoal continues to serve the world with
+            From Saudi Arabia to Brazil, from Japan to the USA, Grow With Fakhri continues to serve the world with
             the finest Indonesian charcoal.
           </p>
           <div className="flex flex-wrap justify-center gap-3 pt-2">
@@ -408,11 +408,11 @@ export default function AboutCompanyPage() {
           </div>
         </section>
 
-        {/* ===== Djavacoal's Gallery ===== */}
+        {/* ===== Grow With Fakhri's Gallery ===== */}
         <section id="our-gallery" className="mt-10 scroll-mt-28 space-y-6 rounded-xl bg-[#222222] p-5 lg:p-10">
           <div className="mb-2 flex items-center gap-3">
             <span className="h-px w-8 bg-white" />
-            <p className="text-sm font-medium italic tracking-[0.35px] text-[#60A5FF]">Djavacoal&apos;s Gallery</p>
+            <p className="text-sm font-medium italic tracking-[0.35px] text-[#60A5FF]">Grow With Fakhri&apos;s Gallery</p>
           </div>
           <h2 className="text-[20px] font-semibold text-white">Our Story in Pictures</h2>
           <p className="text-base text-[#EFA12D]">Experience The Dedication Behind Every Charcoal We Produce</p>
@@ -447,7 +447,7 @@ export default function AboutCompanyPage() {
           <div className="grid grid-cols-1 gap-8 lg:grid-cols-2">
             {/* Factory Gallery */}
             <div className="space-y-4">
-              <h3 className="text-lg font-semibold text-[#EFA12D] lg:text-2xl">Djavacoal&apos;s Factory Gallery</h3>
+              <h3 className="text-lg font-semibold text-[#EFA12D] lg:text-2xl">Grow With Fakhri&apos;s Factory Gallery</h3>
               <img
                 src={`https://assets.djavacoal.com/static-media/factory-gallery/${factoryGalleryFeatured}`}
                 alt="Factory"
@@ -467,7 +467,7 @@ export default function AboutCompanyPage() {
 
             {/* Product Gallery */}
             <div className="space-y-4">
-              <h3 className="text-lg font-semibold text-[#EFA12D] lg:text-2xl">Djavacoal&apos;s Products Gallery</h3>
+              <h3 className="text-lg font-semibold text-[#EFA12D] lg:text-2xl">Grow With Fakhri&apos;s Products Gallery</h3>
               <img
                 src={`https://assets.djavacoal.com/static-media/product-gallery/${productGalleryFeatured}`}
                 alt="Products"

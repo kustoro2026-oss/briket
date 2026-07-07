@@ -18,10 +18,10 @@ const openSans = Open_Sans({
 
 export const metadata: Metadata = {
   title: {
-    default: "Coconut Charcoal Briquettes Manufacturer | Djavacoal",
-    template: "%s | Djavacoal Indonesia",
+    default: "Grow With Fakhri | Premium Charcoal Briquettes",
+    template: "%s | Grow With Fakhri",
   },
-  description: "Power Your Flame with Djavacoal Indonesia: The Ultimate Solution for Clean Energy. Premium coconut charcoal briquettes for shisha, BBQ, and industrial use.",
+  description: "Grow With Fakhri - Premium coconut charcoal briquettes for shisha, BBQ, and industrial use.",
 };
 
 export default function RootLayout({

@@ -17,7 +17,7 @@ export default function ContactUsPage() {
           <div className="absolute inset-0 bg-black/20 flex items-center justify-center">
             <div className="text-center">
               <h1 className="text-2xl font-semibold text-white">Contact Us</h1>
-              <p className="text-white/70 mt-1 text-lg">Free Sample Djavacoal Indonesia</p>
+              <p className="text-white/70 mt-1 text-lg">Free Sample Grow With Fakhri</p>
             </div>
           </div>
         </div>
@@ -31,8 +31,8 @@ export default function ContactUsPage() {
             <div className="flex flex-col items-center md:w-1/2">
               {/* Centered Logo SVG */}
               <img
-                src="https://djavacoal.com/svgs/logoContactUs.svg"
-                alt="Djavacoal"
+                src="/images/logo-brand-baru.png"
+                alt="Grow With Fakhri"
                 className="h-auto w-[300px] mb-10"
               />
 
@@ -47,8 +47,8 @@ export default function ContactUsPage() {
                   </div>
                   <div>
                     <h4 className="text-base font-semibold text-[#EFA12D]">E-Mail</h4>
-                    <a href="mailto:djavacoal@gmail.com" className="text-sm text-[#d9dce0] hover:text-secondary">
-                      djavacoal@gmail.com
+                    <a href="mailto:growwithfakhri@gmail.com" className="text-sm text-[#d9dce0] hover:text-secondary">
+                      growwithfakhri@gmail.com
                     </a>
                   </div>
                 </div>
@@ -63,12 +63,12 @@ export default function ContactUsPage() {
                   <div>
                     <h4 className="text-base font-semibold text-[#EFA12D]">Phone</h4>
                     <a
-                      href="https://wa.me/6282126572600"
+                      href="https://wa.me/628818786988"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="text-sm text-[#d9dce0] hover:text-secondary"
                     >
-                      +6282126572600
+                      +628818786988
                     </a>
                   </div>
                 </div>
@@ -96,16 +96,16 @@ export default function ContactUsPage() {
 
               {/* Social Icons */}
               <div className="mt-8 flex gap-3">
-                <a href="https://facebook.com/djavacoal" target="_blank" rel="noopener noreferrer" className="border bg-transparent p-2 hover:bg-gray-500 transition-colors">
+                <a href="https://facebook.com/" target="_blank" rel="noopener noreferrer" className="border bg-transparent p-2 hover:bg-gray-500 transition-colors">
                   <FaFacebookF className="w-[18px] h-[18px] text-gray-200" />
                 </a>
-                <a href="https://linkedin.com/company/djavacoal-indonesia" target="_blank" rel="noopener noreferrer" className="border bg-transparent p-2 hover:bg-gray-500 transition-colors">
+                <a href="https://linkedin.com/" target="_blank" rel="noopener noreferrer" className="border bg-transparent p-2 hover:bg-gray-500 transition-colors">
                   <FaLinkedinIn className="w-[18px] h-[18px] text-gray-200" />
                 </a>
-                <a href="https://instagram.com/djavacharcoal" target="_blank" rel="noopener noreferrer" className="border bg-transparent p-2 hover:bg-gray-500 transition-colors">
+                <a href="https://instagram.com/" target="_blank" rel="noopener noreferrer" className="border bg-transparent p-2 hover:bg-gray-500 transition-colors">
                   <FaInstagram className="w-[18px] h-[18px] text-gray-200" />
                 </a>
-                <a href="https://tiktok.com/@djavacoal" target="_blank" rel="noopener noreferrer" className="border bg-transparent p-2 hover:bg-gray-500 transition-colors">
+                <a href="https://tiktok.com/" target="_blank" rel="noopener noreferrer" className="border bg-transparent p-2 hover:bg-gray-500 transition-colors">
                   <FaTiktok className="w-[18px] h-[18px] text-gray-200" />
                 </a>
               </div>
@@ -129,7 +129,7 @@ export default function ContactUsPage() {
                   allowFullScreen
                   loading="lazy"
                   referrerPolicy="no-referrer-when-downgrade"
-                  title="Djavacoal Location"
+                  title="Grow With Fakhri Location"
                 />
               </div>
             </div>

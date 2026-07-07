@@ -148,7 +148,7 @@ export default function ProductPage() {
                     Catalogue
                   </a>
                   <a
-                    href="https://wa.me/+6282126572600"
+                    href="https://wa.me/+628818786988"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center gap-2 bg-[#168738] text-white px-4 py-4 rounded-[6px] text-sm font-bold hover:opacity-90 transition-opacity"

@@ -13,7 +13,7 @@ const navItems = [
     label: "About Company",
     href: "/about-company",
     children: [
-      { label: "CV. Djavacoal Indonesia", href: "/about-company#cv-djavacoal-indonesia" },
+      { label: "Grow With Fakhri", href: "/about-company#grow-with-fakhri" },
       { label: "Team", href: "/about-company#djavacoals-team" },
       { label: "What We Do", href: "/about-company#what-we-do" },
       { label: "Legal & Certificate", href: "/about-company#legal-certificate" },
@@ -29,7 +29,7 @@ const navItems = [
       { label: "Barbeque Charcoal", href: "/our-products/barbeque-charcoal-briquette" },
       { label: "Sawdust Charcoal", href: "/our-products/sawdust-charcoal" },
       { label: "Natural Wood Charcoal", href: "/our-products/natural-wood-charcoal" },
-      { label: "Djavacoal Brands", href: "/our-products/djavacoal-brand" },
+      { label: "Grow With Fakhri Brands", href: "/our-products/grow-with-fakhri-brand" },
     ],
   },
   {
@@ -65,7 +65,7 @@ export default function Header() {
 
         {/* Logo */}
         <Link href="/" className="px-6 text-lg font-semibold lg:ml-[50px] flex-shrink-0">
-          <img src="https://djavacoal.com/images/logo.png" alt="Djavacoal" className="h-auto w-34" style={{ width: "136px" }} />
+          <img src="/images/logo-brand-baru.png" alt="Grow With Fakhri" className="h-auto w-34" style={{ width: "136px" }} />
         </Link>
 
         {/* Desktop Navigation */}
@@ -154,7 +154,7 @@ export default function Header() {
       >
         {/* Logo + Close */}
         <div className="flex items-center justify-between px-5 py-4 border-b border-white/10">
-          <img src="https://djavacoal.com/images/logo.png" alt="Djavacoal" className="h-7 w-auto" />
+          <img src="/images/logo-brand-baru.png" alt="Grow With Fakhri" className="h-7 w-auto" />
           <button
             onClick={() => setMobileOpen(false)}
             className="text-sm font-medium text-white/80 hover:text-white uppercase tracking-wide transition-colors"

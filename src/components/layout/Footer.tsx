@@ -4,8 +4,8 @@ import Link from "next/link";
 import { FaFacebookF, FaLinkedinIn, FaInstagram, FaTiktok } from "react-icons/fa";
 
 const companyLinks = [
-  { label: "CV. Djavacoal Indonesia", href: "/about-company#cv-djavacoal-indonesia" },
-  { label: "Djavacoal's Team", href: "/about-company#djavacoals-team" },
+  { label: "Grow With Fakhri", href: "/about-company#grow-with-fakhri" },
+  { label: "Grow With Fakhri's Team", href: "/about-company#grow-with-fakhris-team" },
   { label: "Legal & Certificate", href: "/about-company#legal-certificate" },
   { label: "Factory", href: "/about-company#factory" },
   { label: "Our Gallery", href: "/about-company#our-gallery" },
@@ -16,7 +16,7 @@ const productLinks = [
   { label: "Barbeque Charcoal Briquette", href: "/our-products/barbeque-charcoal-briquette" },
   { label: "Sawdust Charcoal", href: "/our-products/sawdust-charcoal" },
   { label: "Natural Wood Charcoal", href: "/our-products/natural-wood-charcoal" },
-  { label: "Djavacoal Brand", href: "/our-products/djavacoal-brand" },
+  { label: "Grow With Fakhri Brand", href: "/our-products/grow-with-fakhri-brand" },
 ];
 
 const quickLinks = [
@@ -42,7 +42,7 @@ export default function Footer() {
         {/* Column 1 - Company */}
         <div>
           <Link href="/" className="mb-4 inline-block">
-            <img src="https://djavacoal.com/svgs/logo.svg" alt="Logo Djavacoal" className="h-auto w-auto" style={{ width: "162px", height: "92px" }} />
+            <img src="/images/logo-brand-baru.png" alt="Grow With Fakhri" className="h-auto w-auto" style={{ width: "162px", height: "92px" }} />
           </Link>
           <h3 className="text-secondary border-secondary mb-2 border-b-2 pb-1 text-base font-bold sm:text-xl">
             Company
@@ -116,7 +116,7 @@ export default function Footer() {
               rel="noopener noreferrer"
               className="decoration-secondary text-sm text-gray-200 hover:underline md:text-base"
             >
-              Djavacoal Indonesia - Dusun II, Wirogunan, Kec. Kartasura, Kabupaten Sukoharjo, Jawa Tengah 57166
+              Grow With Fakhri - Dusun II, Wirogunan, Kec. Kartasura, Kabupaten Sukoharjo, Jawa Tengah 57166
             </a>
           </div>
 
@@ -127,12 +127,12 @@ export default function Footer() {
             </svg>
             <p className="text-sm font-bold text-gray-200 md:text-base">Phone :</p>
             <a
-              href="https://wa.me/+6282126572600"
+              href="https://wa.me/+628818786988"
               target="_blank"
               rel="noopener noreferrer"
               className="decoration-secondary text-sm text-gray-200 hover:underline md:text-base"
             >
-              +6282126572600
+              +628818786988
             </a>
           </div>
 
@@ -144,25 +144,25 @@ export default function Footer() {
             </svg>
             <p className="text-sm font-bold text-gray-200 md:text-base">E-mail :</p>
             <a
-              href="mailto:marketing@djavacoal.com"
+              href="mailto:growwithfakhri@gmail.com"
               className="decoration-secondary text-sm text-gray-200 hover:underline md:text-base"
             >
-              djavacoal@gmail.com
+              growwithfakhri@gmail.com
             </a>
           </div>
 
           {/* Social Icons */}
           <div className="flex gap-3">
-            <a href="https://www.facebook.com/djavacoal/" target="_blank" rel="noopener noreferrer" className="border bg-transparent p-2 hover:bg-gray-500 transition-colors">
+            <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" className="border bg-transparent p-2 hover:bg-gray-500 transition-colors">
               <FaFacebookF className="w-4 h-4 text-gray-200" />
             </a>
-            <a href="https://www.linkedin.com/company/djavacoal-indonesia/" target="_blank" rel="noopener noreferrer" className="border bg-transparent p-2 hover:bg-gray-500 transition-colors">
+            <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer" className="border bg-transparent p-2 hover:bg-gray-500 transition-colors">
               <FaLinkedinIn className="w-4 h-4 text-gray-200" />
             </a>
-            <a href="https://www.instagram.com/djavacharcoal" target="_blank" rel="noopener noreferrer" className="border bg-transparent p-2 hover:bg-gray-500 transition-colors">
+            <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" className="border bg-transparent p-2 hover:bg-gray-500 transition-colors">
               <FaInstagram className="w-[18px] h-[18px] text-gray-200" />
             </a>
-            <a href="https://www.tiktok.com/@djavacoalindonesia" target="_blank" rel="noopener noreferrer" className="border bg-transparent p-2 hover:bg-gray-500 transition-colors">
+            <a href="https://www.tiktok.com/" target="_blank" rel="noopener noreferrer" className="border bg-transparent p-2 hover:bg-gray-500 transition-colors">
               <FaTiktok className="w-4 h-4 text-gray-200" />
             </a>
           </div>
@@ -171,7 +171,7 @@ export default function Footer() {
 
       {/* Copyright */}
       <div className="relative py-4 text-center text-xs text-white">
-        &copy; Copyright 2026 &middot; CV. Djavacoal Indonesia
+        &copy; Copyright 2026 &middot; CV. Grow With Fakhri
       </div>
     </footer>
   );

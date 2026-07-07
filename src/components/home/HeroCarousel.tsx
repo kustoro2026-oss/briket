@@ -9,7 +9,7 @@ const slideImages = [
   "https://assets.djavacoal.com/static-media/carousel/piDf0CGL8Ly5Q9gbCL-yn",
 ];
 
-const slideTitle = "Power Your Flame with Djavacoal Indonesia: The Ultimate Solution for Clean Energy";
+const slideTitle = "Grow With Fakhri: Premium Coconut Charcoal Briquettes";
 
 export default function HeroCarousel() {
   const [current, setCurrent] = useState(0);
@@ -37,7 +37,7 @@ export default function HeroCarousel() {
         >
           <img
             src={image}
-            alt={`Djavacoal slide ${index + 1}`}
+            alt={`Grow With Fakhri slide ${index + 1}`}
             className="w-full h-full object-cover object-center transition-transform duration-700 ease-out scale-100"
           />
         </div>

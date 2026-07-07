@@ -100,10 +100,10 @@ export default function HomeSections() {
           </div>
           <div>
             <h2 className="text-[30px] font-bold text-white text-left" style={{ fontFamily: "var(--font-josefin-sans)" }}>
-              CV. DJAVACOAL INDONESIA
+              CV. GROW WITH FAKHRI
             </h2>
             <p className="text-[15px] leading-[27px] text-[#cfcfcf] text-justify mb-4 mt-4" style={{ fontFamily: "var(--font-open-sans)" }}>
-              CV Djavacoal Indonesia is a trusted supplier and exporter of premium charcoal products, specializing
+              CV Grow With Fakhri is a trusted supplier and exporter of premium charcoal products, specializing
               in coconut shell charcoal briquettes, BBQ briquettes, sawdust charcoal briquettes, and natural
               hardwood charcoal. With years of expertise in the charcoal industry, we are committed to delivering
               excellence through innovation, strict quality standards, and reliable service.
@@ -114,7 +114,7 @@ export default function HomeSections() {
               logistics, competitive shipping costs, and timely delivery for our global partners.
             </p>
             <p className="text-[15px] leading-[27px] text-[#cfcfcf] text-justify mb-4" style={{ fontFamily: "var(--font-open-sans)" }}>
-              At Djavacoal, quality is our priority. We carefully select only the best raw materials, ensuring
+              At Grow With Fakhri, quality is our priority. We carefully select only the best raw materials, ensuring
               every product meets international standards for performance, long-lasting burning time, and
               eco-friendly characteristics. Through advanced production methods and rigorous quality control,
               we guarantee consistency and reliability in every shipment.
@@ -303,7 +303,7 @@ export default function HomeSections() {
             />
           </div>
           <a
-            href="https://wa.me/+6282126572600?text=Hi%2C%20I%20would%20like%20to%20schedule%20a%20factory%20visit"
+            href="https://wa.me/+628818786988?text=Hi%2C%20I%20would%20like%20to%20schedule%20a%20factory%20visit"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center justify-center gap-3 rounded-lg bg-[#1B7308] text-white px-6 h-[54px] w-[271px] text-sm font-semibold transition-all hover:bg-[#1c7a09] md:w-[360px] md:text-[15px] lg:w-[500px]"

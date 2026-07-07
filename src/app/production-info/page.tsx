@@ -163,7 +163,7 @@ export default function ProductionInfoPage() {
                   <div>
                     <h3 className="text-sm font-semibold text-white mb-3">FOB (Free On Board)</h3>
                     <p className="text-sm leading-relaxed text-[#CCCCCC]">
-                      At Djavacoal Indonesia, all international shipments are provided under{" "}
+                      At Grow With Fakhri, all international shipments are provided under{" "}
                       <strong className="text-white">FOB (Free On Board)</strong> terms. This means we
                       take full responsibility for <strong className="text-white">preparing, packaging</strong>,{" "}
                       and delivering your order safely to the <strong className="text-white">designated port in Indonesia</strong>,
