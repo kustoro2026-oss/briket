@@ -25,6 +25,8 @@ const nextConfig: NextConfig = {
     }
     return config;
   },
+  // Konfigurasi Turbopack (Next.js 16 default) - wajib ada agar Vercel build tidak error
+  turbopack: {},
 };
 
 export default nextConfig;
