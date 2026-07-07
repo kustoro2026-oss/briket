@@ -59,8 +59,8 @@ export default function HomeSections() {
       {/* ========== CERTIFICATE MARQUEE ========== */}
       <section className="relative w-full overflow-hidden bg-gradient-to-b from-[#0D0D0D] to-[#1A1A1A]" style={{ height: "300px" }}>
         {/* Row 1 - scroll ke kiri */}
-        <div className="flex animate-[certificateMarquee_150s_linear_infinite]" style={{ height: "150px" }}>
-          {[...certificates, ...certificates, ...certificates, ...certificates].map((cert, i) => (
+        <div className="flex animate-[certificateMarquee_25s_linear_infinite]" style={{ height: "150px" }}>
+          {[...certificates, ...certificates].map((cert, i) => (
             <div
               key={i}
               className="flex-shrink-0 w-[320px] h-full flex items-center justify-center border border-[#2A2A2A]"
@@ -74,8 +74,8 @@ export default function HomeSections() {
           ))}
         </div>
         {/* Row 2 - scroll ke kanan */}
-        <div className="flex animate-[certificateMarquee_r_150s_linear_infinite]" style={{ height: "150px" }}>
-          {[...certificates, ...certificates, ...certificates, ...certificates].map((cert, i) => (
+        <div className="flex animate-[certificateMarquee_r_25s_linear_infinite]" style={{ height: "150px" }}>
+          {[...certificates, ...certificates].map((cert, i) => (
             <div
               key={i}
               className="flex-shrink-0 w-[320px] h-full flex items-center justify-center border border-[#2A2A2A]"
