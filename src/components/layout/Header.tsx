@@ -65,7 +65,7 @@ export default function Header() {
 
         {/* Logo */}
         <Link href="/" className="px-6 text-lg font-semibold lg:ml-[50px] flex-shrink-0">
-          <img src="/images/logo-brand-baru.png" alt="Grow With Fakhri" className="h-auto w-34" style={{ width: "136px" }} />
+          <img src="/images/logo-brand-baru.png" alt="Grow With Fakhri" className="h-10 w-auto" />
         </Link>
 
         {/* Desktop Navigation */}
@@ -154,7 +154,7 @@ export default function Header() {
       >
         {/* Logo + Close */}
         <div className="flex items-center justify-between px-5 py-4 border-b border-white/10">
-          <img src="/images/logo-brand-baru.png" alt="Grow With Fakhri" className="h-7 w-auto" />
+          <img src="/images/logo-brand-baru.png" alt="Grow With Fakhri" className="h-6 w-auto" />
           <button
             onClick={() => setMobileOpen(false)}
             className="text-sm font-medium text-white/80 hover:text-white uppercase tracking-wide transition-colors"

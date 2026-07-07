@@ -33,7 +33,7 @@ export default function ContactUsPage() {
               <img
                 src="/images/logo-brand-baru.png"
                 alt="Grow With Fakhri"
-                className="h-auto w-[300px] mb-10"
+                className="h-auto w-[120px] mb-10"
               />
 
               {/* Contact Info Items */}

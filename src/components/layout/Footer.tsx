@@ -42,7 +42,7 @@ export default function Footer() {
         {/* Column 1 - Company */}
         <div>
           <Link href="/" className="mb-4 inline-block">
-            <img src="/images/logo-brand-baru.png" alt="Grow With Fakhri" className="h-auto w-auto" style={{ width: "162px", height: "92px" }} />
+            <img src="/images/logo-brand-baru.png" alt="Grow With Fakhri" className="h-12 w-auto" />
           </Link>
           <h3 className="text-secondary border-secondary mb-2 border-b-2 pb-1 text-base font-bold sm:text-xl">
             Company
