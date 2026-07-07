@@ -416,15 +416,15 @@ export default function HomeSections() {
       </section>
 
       {/* ========== SHIPPING PARTNERS ========== */}
-      <section className="bg-primary relative w-full overflow-hidden py-10 lg:py-16">
-        <h2 className="text-center text-[26px] font-bold text-white mb-10" style={{ fontFamily: "var(--font-josefin-sans)" }}>
+      <section className="bg-primary relative w-full overflow-hidden py-6 lg:py-10">
+        <h2 className="text-center text-[26px] font-bold text-white mb-6" style={{ fontFamily: "var(--font-josefin-sans)" }}>
           GLOBAL SHIPPING PARTNER
         </h2>
-        <div className="relative h-[420px] w-full overflow-hidden">
+        <div className="relative w-full overflow-hidden">
           <Marquee speed="slow">
             <div className="flex items-center gap-10">
               {[...shippingPartners, ...shippingPartners].map((partner, i) => (
-                <div key={i} className="flex-shrink-0 w-[178px] h-[178px] flex items-center justify-center">
+                <div key={i} className="flex-shrink-0 w-[150px] h-[150px] flex items-center justify-center">
                   <img src={partner.image} alt={partner.name} className="max-w-full max-h-full object-contain" />
                 </div>
               ))}
