@@ -58,95 +58,97 @@ export default function Header() {
   const [openDropdown, setOpenDropdown] = useState<string | null>(null);
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-[101] bg-primary/95 backdrop-blur-xl flex items-center justify-between h-24" style={{ minHeight: "96px" }}>
-      {/* Gold accent bar */}
-      <div className="bg-secondary absolute bottom-0 left-0 h-0.5 w-full" />
+    <>
+      <nav className="fixed top-0 left-0 right-0 z-[101] bg-primary/95 backdrop-blur-xl flex items-center justify-between h-24" style={{ minHeight: "96px" }}>
+        {/* Gold accent bar */}
+        <div className="bg-secondary absolute bottom-0 left-0 h-0.5 w-full" />
 
-      {/* Logo */}
-      <Link href="/" className="px-6 text-lg font-semibold lg:ml-[50px] flex-shrink-0">
-        <img src="https://djavacoal.com/images/logo.png" alt="Djavacoal" className="h-auto w-34" style={{ width: "136px" }} />
-      </Link>
+        {/* Logo */}
+        <Link href="/" className="px-6 text-lg font-semibold lg:ml-[50px] flex-shrink-0">
+          <img src="https://djavacoal.com/images/logo.png" alt="Djavacoal" className="h-auto w-34" style={{ width: "136px" }} />
+        </Link>
 
-      {/* Desktop Navigation */}
-      <div className="hidden lg:flex items-center gap-x-4 h-full">
-        {navItems.map((item) => {
-          const isDropdown = !!item.children;
-          return (
-            <div
-              key={item.label}
-              className={`relative h-full ${isDropdown ? "border-b-2 border-transparent" : ""}`}
-              onMouseEnter={() => isDropdown && setOpenDropdown(item.label)}
-              onMouseLeave={() => setOpenDropdown(null)}
-            >
-              {isDropdown ? (
-                <button
-                  className="flex items-center gap-1 min-w-10 md:min-w-20 px-2 h-full text-sm lg:text-base text-white hover:bg-[#B87C22] transition-colors"
-                >
-                  {item.label}
-                  <HiChevronDown className={`w-3 h-3 transition-transform duration-200 ${openDropdown === item.label ? "rotate-180" : ""}`} />
-                </button>
-              ) : (
-                <Link
-                  href={item.href}
-                  className={`flex items-center min-w-10 md:min-w-20 px-2 h-full text-sm lg:text-base transition-colors ${
-                    item.label === "Home" ? "text-secondary" : "text-white hover:bg-[#B87C22]"
-                  }`}
-                >
-                  {item.label}
-                </Link>
-              )}
+        {/* Desktop Navigation */}
+        <div className="hidden lg:flex items-center gap-x-4 h-full">
+          {navItems.map((item) => {
+            const isDropdown = !!item.children;
+            return (
+              <div
+                key={item.label}
+                className={`relative h-full ${isDropdown ? "border-b-2 border-transparent" : ""}`}
+                onMouseEnter={() => isDropdown && setOpenDropdown(item.label)}
+                onMouseLeave={() => setOpenDropdown(null)}
+              >
+                {isDropdown ? (
+                  <button
+                    className="flex items-center gap-1 min-w-10 md:min-w-20 px-2 h-full text-sm lg:text-base text-white hover:bg-[#B87C22] transition-colors"
+                  >
+                    {item.label}
+                    <HiChevronDown className={`w-3 h-3 transition-transform duration-200 ${openDropdown === item.label ? "rotate-180" : ""}`} />
+                  </button>
+                ) : (
+                  <Link
+                    href={item.href}
+                    className={`flex items-center min-w-10 md:min-w-20 px-2 h-full text-sm lg:text-base transition-colors ${
+                      item.label === "Home" ? "text-secondary" : "text-white hover:bg-[#B87C22]"
+                    }`}
+                  >
+                    {item.label}
+                  </Link>
+                )}
 
-              {/* Dropdown */}
-              {isDropdown && openDropdown === item.label && (
-                <div className="absolute top-full left-0 z-50 w-[326px] bg-[#353535]/90 backdrop-blur-lg border border-[#353535] rounded-b-lg py-2 opacity-100 visible translate-y-0 scale-y-100 transition-all duration-300">
-                  {item.children!.map((child, idx) => (
-                    <Link
-                      key={child.label}
-                      href={child.href}
-                      className={`block px-4 py-2 text-base text-white hover:bg-[#3B5952] hover:font-bold transition-colors duration-300 ${
-                        idx < item.children!.length - 1 ? "border-b border-[#3A3A3A]" : ""
-                      }`}
-                    >
-                      {child.label}
-                    </Link>
-                  ))}
-                </div>
-              )}
-            </div>
-          );
-        })}
-      </div>
+                {/* Dropdown */}
+                {isDropdown && openDropdown === item.label && (
+                  <div className="absolute top-full left-0 z-50 w-[326px] bg-[#353535]/90 backdrop-blur-lg border border-[#353535] rounded-b-lg py-2 opacity-100 visible translate-y-0 scale-y-100 transition-all duration-300">
+                    {item.children!.map((child, idx) => (
+                      <Link
+                        key={child.label}
+                        href={child.href}
+                        className={`block px-4 py-2 text-base text-white hover:bg-[#3B5952] hover:font-bold transition-colors duration-300 ${
+                          idx < item.children!.length - 1 ? "border-b border-[#3A3A3A]" : ""
+                        }`}
+                      >
+                        {child.label}
+                      </Link>
+                    ))}
+                  </div>
+                )}
+              </div>
+            );
+          })}
+        </div>
 
-      {/* Language Switcher */}
-      <div className="hidden lg:flex items-center px-6 py-4 lg:mr-[50px] gap-2">
-        <button className="flex items-center gap-2 py-2 px-3 rounded-lg bg-white/5 hover:bg-white/10 hover:shadow-lg focus:ring-2 focus:ring-secondary transition-all duration-200">
-          <img src="https://flagsapi.com/GB/flat/64.png" alt="EN" className="w-5 h-auto rounded-sm" />
-          <span className="text-base text-white">EN</span>
+        {/* Language Switcher */}
+        <div className="hidden lg:flex items-center px-6 py-4 lg:mr-[50px] gap-2">
+          <button className="flex items-center gap-2 py-2 px-3 rounded-lg bg-white/5 hover:bg-white/10 hover:shadow-lg focus:ring-2 focus:ring-secondary transition-all duration-200">
+            <img src="https://flagsapi.com/GB/flat/64.png" alt="EN" className="w-5 h-auto rounded-sm" />
+            <span className="text-base text-white">EN</span>
+          </button>
+        </div>
+
+        {/* Mobile Hamburger */}
+        <button
+          onClick={() => setMobileOpen(!mobileOpen)}
+          className="lg:hidden flex flex-col items-center justify-center gap-1.5 h-10 w-10 rounded-md mr-4 hover:bg-white/10 focus:ring-2 focus:ring-secondary transition-colors"
+          aria-label="Toggle menu"
+        >
+          <span className={`block w-5 h-0.5 bg-white transition-all duration-300 ${mobileOpen ? "rotate-45 translate-y-2" : ""}`} />
+          <span className={`block w-5 h-0.5 bg-white transition-all duration-300 ${mobileOpen ? "opacity-0" : ""}`} />
+          <span className={`block w-5 h-0.5 bg-white transition-all duration-300 ${mobileOpen ? "-rotate-45 -translate-y-2" : ""}`} />
         </button>
-      </div>
+      </nav>
 
-      {/* Mobile Hamburger */}
-      <button
-        onClick={() => setMobileOpen(!mobileOpen)}
-        className="lg:hidden flex flex-col items-center justify-center gap-1.5 h-10 w-10 rounded-md mr-4 hover:bg-white/10 focus:ring-2 focus:ring-secondary transition-colors"
-        aria-label="Toggle menu"
-      >
-        <span className={`block w-5 h-0.5 bg-white transition-all duration-300 ${mobileOpen ? "rotate-45 translate-y-2" : ""}`} />
-        <span className={`block w-5 h-0.5 bg-white transition-all duration-300 ${mobileOpen ? "opacity-0" : ""}`} />
-        <span className={`block w-5 h-0.5 bg-white transition-all duration-300 ${mobileOpen ? "-rotate-45 -translate-y-2" : ""}`} />
-      </button>
-
-      {/* Mobile Overlay */}
+      {/* Mobile Overlay - di luar nav agar tidak kena backdrop-blur */}
       {mobileOpen && (
         <div
-          className="fixed inset-0 z-[90] bg-black/50 transition-opacity lg:hidden"
+          className="fixed inset-0 z-[200] bg-black/70 lg:hidden"
           onClick={() => setMobileOpen(false)}
         />
       )}
 
-      {/* Mobile Drawer */}
+      {/* Mobile Drawer - di luar nav dengan z-index tertinggi + bg solid */}
       <div
-        className={`fixed top-0 right-0 z-[100] h-full w-80 max-w-[85vw] bg-[#1a1a1a] shadow-2xl transition-transform duration-300 ease-in-out flex flex-col lg:hidden ${
+        className={`fixed top-0 right-0 z-[210] h-full w-80 max-w-[85vw] bg-[#151515] shadow-2xl transition-transform duration-300 ease-in-out flex flex-col lg:hidden ${
           mobileOpen ? "translate-x-0" : "translate-x-full"
         }`}
       >
@@ -222,6 +224,6 @@ export default function Header() {
           })}
         </nav>
       </div>
-    </nav>
+    </>
   );
 }
