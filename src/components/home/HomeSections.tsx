@@ -76,36 +76,26 @@ export default function HomeSections() {
 
       {/* ========== COMPANY PROFILE ========== */}
       <section className="bg-primary w-full px-5 py-16 md:px-10 md:py-20 lg:px-[100px] lg:py-24">
-        <div className="flex flex-col items-center gap-12 lg:flex-row lg:items-start lg:justify-between lg:gap-16">
-          <div onClick={() => setVideoOpen(true)} className="cursor-pointer">
+        <div className="flex flex-col items-center gap-8 lg:flex-row lg:items-center lg:gap-12">
+          {/* Video Thumbnail - diperbesar */}
+          <div onClick={() => setVideoOpen(true)} className="cursor-pointer w-full max-w-[480px] lg:max-w-[560px] flex-shrink-0">
             <VideoThumbnail videoId="NWO_S1Kh6U0" />
           </div>
-          <div>
-            <h2 className="text-[30px] font-bold text-white text-left" style={{ fontFamily: "var(--font-josefin-sans)" }}>
+          {/* Deskripsi */}
+          <div className="flex-1">
+            <h2 className="text-[28px] md:text-[32px] font-bold text-white text-left" style={{ fontFamily: "var(--font-josefin-sans)" }}>
               CV. GROW WITH FAKHRI
             </h2>
             <p className="text-[15px] leading-[27px] text-[#cfcfcf] text-justify mb-4 mt-4" style={{ fontFamily: "var(--font-open-sans)" }}>
               CV Grow With Fakhri is a trusted supplier and exporter of premium charcoal products, specializing
-              in coconut shell charcoal briquettes, BBQ briquettes, sawdust charcoal briquettes, and natural
-              hardwood charcoal. With years of expertise in the charcoal industry, we are committed to delivering
-              excellence through innovation, strict quality standards, and reliable service.
-            </p>
-            <p className="text-[15px] leading-[27px] text-[#cfcfcf] text-justify mb-4" style={{ fontFamily: "var(--font-open-sans)" }}>
-              We operate with three partner factories across Java Island, Indonesia, strategically located with
-              direct access to major international ports in Jakarta, Semarang, and Surabaya. This ensures smooth
-              logistics, competitive shipping costs, and timely delivery for our global partners.
-            </p>
-            <p className="text-[15px] leading-[27px] text-[#cfcfcf] text-justify mb-4" style={{ fontFamily: "var(--font-open-sans)" }}>
-              At Grow With Fakhri, quality is our priority. We carefully select only the best raw materials, ensuring
-              every product meets international standards for performance, long-lasting burning time, and
-              eco-friendly characteristics. Through advanced production methods and rigorous quality control,
-              we guarantee consistency and reliability in every shipment.
+              in coconut shell charcoal briquettes, BBQ briquettes, sawdust charcoal, and natural hardwood charcoal.
+              With three partner factories across Java Island and direct access to major international ports,
+              we ensure competitive shipping and timely delivery for our global partners.
             </p>
             <p className="text-[15px] leading-[27px] text-[#cfcfcf] text-justify mb-6" style={{ fontFamily: "var(--font-open-sans)" }}>
-              Beyond supplying charcoal, we proudly serve the international market with OEM and private label
-              services, offering customized briquette shapes, packaging, and branding to fit our clients&apos;
-              unique needs. Our vision is not only to deliver high-quality products, but also to establish
-              long-term partnerships built on trust, professionalism, and mutual growth.
+              Quality is our priority — every product meets international standards for performance, long-lasting
+              burning time, and eco-friendly characteristics. We also offer OEM and private label services for
+              custom briquette shapes, packaging, and branding to fit your unique needs.
             </p>
             <Link
               href="/about-company"
