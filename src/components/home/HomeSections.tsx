@@ -57,38 +57,36 @@ export default function HomeSections() {
   return (
     <>
       {/* ========== CERTIFICATE MARQUEE ========== */}
-      <section className="relative w-full h-[150px] overflow-hidden bg-gradient-to-b from-[#0D0D0D] to-[#1A1A1A]">
-        <div className="overflow-hidden h-full">
-          <div className="flex animate-[certificateMarquee_150s_linear_infinite]">
-            {[...certificates, ...certificates, ...certificates, ...certificates, ...certificates, ...certificates, ...certificates, ...certificates].map((cert, i) => (
-              <div
-                key={i}
-                className="flex-shrink-0 w-[320px] h-[150px] flex items-center justify-center border border-[#2A2A2A]"
-                style={{
-                  background: "radial-gradient(circle at center, #000 0%, #171717 50%, rgba(255,255,255,0.06) 100%)",
-                  boxShadow: "0 0 20px rgba(0,0,0,0.19)",
-                }}
-              >
-                <img src={cert.image} alt={cert.name} className="max-h-[98px] w-auto object-contain" />
-              </div>
-            ))}
-          </div>
+      <section className="relative w-full overflow-hidden bg-gradient-to-b from-[#0D0D0D] to-[#1A1A1A]" style={{ height: "300px" }}>
+        {/* Row 1 - scroll ke kiri */}
+        <div className="flex animate-[certificateMarquee_150s_linear_infinite]" style={{ height: "150px" }}>
+          {[...certificates, ...certificates, ...certificates, ...certificates].map((cert, i) => (
+            <div
+              key={i}
+              className="flex-shrink-0 w-[320px] h-full flex items-center justify-center border border-[#2A2A2A]"
+              style={{
+                background: "radial-gradient(circle at center, #000 0%, #171717 50%, rgba(255,255,255,0.06) 100%)",
+                boxShadow: "0 0 20px rgba(0,0,0,0.19)",
+              }}
+            >
+              <img src={cert.image} alt={cert.name} className="max-h-[98px] w-auto object-contain" />
+            </div>
+          ))}
         </div>
-        <div className="overflow-hidden h-full">
-          <div className="flex animate-[certificateMarquee_r_150s_linear_infinite]">
-            {[...certificates, ...certificates, ...certificates, ...certificates, ...certificates, ...certificates, ...certificates, ...certificates].map((cert, i) => (
-              <div
-                key={i}
-                className="flex-shrink-0 w-[320px] h-[150px] flex items-center justify-center border border-[#2A2A2A]"
-                style={{
-                  background: "radial-gradient(circle at center, #000 0%, #171717 50%, rgba(255,255,255,0.06) 100%)",
-                  boxShadow: "0 0 20px rgba(0,0,0,0.19)",
-                }}
-              >
-                <img src={cert.image} alt={cert.name} className="max-h-[98px] w-auto object-contain" />
-              </div>
-            ))}
-          </div>
+        {/* Row 2 - scroll ke kanan */}
+        <div className="flex animate-[certificateMarquee_r_150s_linear_infinite]" style={{ height: "150px" }}>
+          {[...certificates, ...certificates, ...certificates, ...certificates].map((cert, i) => (
+            <div
+              key={i}
+              className="flex-shrink-0 w-[320px] h-full flex items-center justify-center border border-[#2A2A2A]"
+              style={{
+                background: "radial-gradient(circle at center, #000 0%, #171717 50%, rgba(255,255,255,0.06) 100%)",
+                boxShadow: "0 0 20px rgba(0,0,0,0.19)",
+              }}
+            >
+              <img src={cert.image} alt={cert.name} className="max-h-[98px] w-auto object-contain" />
+            </div>
+          ))}
         </div>
       </section>
 
