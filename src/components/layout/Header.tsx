@@ -153,52 +153,65 @@ export default function Header() {
         {/* Logo + Close */}
         <div className="flex items-center justify-between px-5 py-4 border-b border-white/10">
           <img src="https://djavacoal.com/images/logo.png" alt="Djavacoal" className="h-7 w-auto" />
-          <button onClick={() => setMobileOpen(false)} className="text-white/70 hover:text-white p-1.5 hover:bg-white/10 rounded-md transition-colors">
-            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-            </svg>
+          <button
+            onClick={() => setMobileOpen(false)}
+            className="text-sm font-medium text-white/80 hover:text-white uppercase tracking-wide transition-colors"
+          >
+            Close menu
           </button>
         </div>
 
-        {/* Mobile Nav Links */}
-        <nav className="flex-1 overflow-y-auto px-3 py-3">
-          <p className="px-3 py-1 text-xs font-semibold text-white/40 uppercase tracking-wider mb-2">Menu</p>
+        {/* Menu heading + Language */}
+        <div className="px-5 pt-5 pb-2">
+          <h2 className="text-white font-semibold text-lg mb-3">Menu</h2>
+          <div className="flex items-center gap-3 mb-1">
+            <span className="text-sm text-white/80">Language</span>
+            <button className="flex items-center gap-2 px-3 py-1.5 rounded bg-secondary text-white text-sm font-semibold">
+              <img src="https://flagsapi.com/GB/flat/64.png" alt="EN" className="w-4 h-auto rounded-sm" />
+              English
+            </button>
+          </div>
+        </div>
+
+        <div className="border-t border-secondary/30 mx-5" />
+
+        {/* Mobile Nav Links - semua sub-item selalu terlihat */}
+        <nav className="flex-1 overflow-y-auto px-5 py-4">
           {navItems.map((item) => {
             const isDropdown = !!item.children;
             return (
-              <div key={item.label} className="mb-0.5">
+              <div key={item.label} className="mb-1">
                 {isDropdown ? (
                   <>
-                    <button
-                      onClick={() => setOpenDropdown(openDropdown === item.label ? null : item.label)}
-                      className="flex w-full items-center justify-between px-3 py-2.5 rounded-md text-sm font-medium text-white/90 hover:bg-white/[0.07] transition-colors"
+                    <Link
+                      href={item.href}
+                      onClick={() => setMobileOpen(false)}
+                      className="flex items-center gap-1.5 py-2.5 text-base font-semibold text-white hover:text-secondary transition-colors"
                     >
                       {item.label}
-                      <HiChevronDown className={`w-4 h-4 transition-transform duration-200 ${openDropdown === item.label ? "rotate-180" : ""}`} />
-                    </button>
-                    {openDropdown === item.label && (
-                      <div className="ml-3 border-l-2 border-secondary/30 pl-3 py-1 space-y-0.5">
-                        {item.children!.map((child) => (
-                          <Link
-                            key={child.label}
-                            href={child.href}
-                            onClick={() => setMobileOpen(false)}
-                            className="block px-3 py-2 rounded-md text-sm text-white/70 hover:text-secondary hover:bg-white/[0.05] transition-colors"
-                          >
-                            {child.label}
-                          </Link>
-                        ))}
-                      </div>
-                    )}
+                      <HiChevronDown className="w-3.5 h-3.5 text-secondary" />
+                    </Link>
+                    <div className="border-l-2 border-secondary/40 ml-2 pl-4 py-1 space-y-0.5">
+                      {item.children!.map((child) => (
+                        <Link
+                          key={child.label}
+                          href={child.href}
+                          onClick={() => setMobileOpen(false)}
+                          className="block py-2 text-sm text-white/90 hover:text-secondary transition-colors"
+                        >
+                          {child.label}
+                        </Link>
+                      ))}
+                    </div>
                   </>
                 ) : (
                   <Link
                     href={item.href}
                     onClick={() => setMobileOpen(false)}
-                    className={`block px-3 py-2.5 rounded-md text-sm font-medium transition-colors ${
+                    className={`block py-2.5 text-base font-semibold transition-colors ${
                       item.label === "Home"
-                        ? "bg-secondary/15 text-secondary"
-                        : "text-white/90 hover:bg-white/[0.07]"
+                        ? "text-secondary"
+                        : "text-white hover:text-secondary"
                     }`}
                   >
                     {item.label}
@@ -208,17 +221,6 @@ export default function Header() {
             );
           })}
         </nav>
-
-        {/* Language Switcher */}
-        <div className="border-t border-white/10 px-5 py-4">
-          <p className="text-xs font-semibold text-white/40 uppercase tracking-wider mb-3">Language</p>
-          <div className="flex gap-2">
-            <button className="flex items-center gap-2 px-3 py-2 rounded-md bg-secondary/15 text-secondary text-sm font-medium">
-              <img src="https://flagsapi.com/GB/flat/64.png" alt="EN" className="w-5 h-auto rounded-sm" />
-              English
-            </button>
-          </div>
-        </div>
       </div>
     </nav>
   );
