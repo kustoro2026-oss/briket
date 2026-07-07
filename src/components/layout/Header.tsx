@@ -150,58 +150,44 @@ export default function Header() {
 
       {/* Mobile Drawer */}
       <div
-        className={`fixed top-0 right-0 z-[100] h-full w-80 max-w-[85vw] bg-primary/95 backdrop-blur-xl shadow-2xl transition-transform duration-300 ease-in-out flex flex-col overflow-auto lg:hidden ${
+        className={`fixed top-0 right-0 z-[100] h-full w-80 max-w-[85vw] bg-[#1a1a1a] shadow-2xl transition-transform duration-300 ease-in-out flex flex-col lg:hidden ${
           mobileOpen ? "translate-x-0" : "translate-x-full"
         }`}
       >
-        {/* Close + Logo area */}
-        <div className="border-secondary/30 border-b px-6 py-6 flex items-center justify-between">
-          <img src="https://djavacoal.com/images/logo.png" alt="Djavacoal" className="h-8 w-auto" />
-          <button onClick={() => setMobileOpen(false)} className="text-white p-1 hover:bg-white/10 rounded-md transition-colors">
-            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        {/* Logo + Close */}
+        <div className="flex items-center justify-between px-5 py-4 border-b border-white/10">
+          <img src="https://djavacoal.com/images/logo.png" alt="Djavacoal" className="h-7 w-auto" />
+          <button onClick={() => setMobileOpen(false)} className="text-white/70 hover:text-white p-1.5 hover:bg-white/10 rounded-md transition-colors">
+            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
             </svg>
           </button>
         </div>
 
-        {/* Language Section */}
-        <div className="border-secondary/30 border-t px-4 pt-10">
-          <h2 className="text-xl font-semibold text-white mb-4">Menu</h2>
-          <div className="flex gap-2 mb-6">
-            <button className="flex items-center gap-2 px-3 py-2 rounded-md bg-secondary/20 text-secondary text-base">
-              <img src="https://flagsapi.com/GB/flat/64.png" alt="EN" className="w-5 h-auto rounded-sm" />
-              English
-            </button>
-            <button className="flex items-center gap-2 px-3 py-2 rounded-md text-white/90 hover:bg-white/10 text-base">
-              <img src="https://flagsapi.com/SA/flat/64.png" alt="AR" className="w-5 h-auto rounded-sm" />
-              العربية
-            </button>
-          </div>
-        </div>
-
         {/* Mobile Nav Links */}
-        <nav className="flex-1 px-4 pb-6 space-y-1">
+        <nav className="flex-1 overflow-y-auto px-3 py-3">
+          <p className="px-3 py-1 text-xs font-semibold text-white/40 uppercase tracking-wider mb-2">Menu</p>
           {navItems.map((item) => {
             const isDropdown = !!item.children;
             return (
-              <div key={item.label}>
+              <div key={item.label} className="mb-0.5">
                 {isDropdown ? (
                   <>
                     <button
                       onClick={() => setOpenDropdown(openDropdown === item.label ? null : item.label)}
-                      className="flex w-full items-center justify-between px-4 py-3 rounded-lg text-base font-medium text-white hover:bg-white/10 transition-colors"
+                      className="flex w-full items-center justify-between px-3 py-2.5 rounded-md text-sm font-medium text-white/90 hover:bg-white/[0.07] transition-colors"
                     >
                       {item.label}
                       <HiChevronDown className={`w-4 h-4 transition-transform duration-200 ${openDropdown === item.label ? "rotate-180" : ""}`} />
                     </button>
                     {openDropdown === item.label && (
-                      <div className="ml-2 space-y-0.5">
+                      <div className="ml-3 border-l-2 border-secondary/30 pl-3 py-1 space-y-0.5">
                         {item.children!.map((child) => (
                           <Link
                             key={child.label}
                             href={child.href}
                             onClick={() => setMobileOpen(false)}
-                            className="block px-3 py-2 rounded text-sm text-white/90 hover:text-secondary transition-colors"
+                            className="block px-3 py-2 rounded-md text-sm text-white/70 hover:text-secondary hover:bg-white/[0.05] transition-colors"
                           >
                             {child.label}
                           </Link>
@@ -213,10 +199,10 @@ export default function Header() {
                   <Link
                     href={item.href}
                     onClick={() => setMobileOpen(false)}
-                    className={`block px-4 py-3 rounded-lg text-base font-medium transition-colors ${
+                    className={`block px-3 py-2.5 rounded-md text-sm font-medium transition-colors ${
                       item.label === "Home"
-                        ? "bg-secondary text-white"
-                        : "text-white hover:bg-white/10"
+                        ? "bg-secondary/15 text-secondary"
+                        : "text-white/90 hover:bg-white/[0.07]"
                     }`}
                   >
                     {item.label}
@@ -226,6 +212,21 @@ export default function Header() {
             );
           })}
         </nav>
+
+        {/* Language Switcher */}
+        <div className="border-t border-white/10 px-5 py-4">
+          <p className="text-xs font-semibold text-white/40 uppercase tracking-wider mb-3">Language</p>
+          <div className="flex gap-2">
+            <button className="flex items-center gap-2 px-3 py-2 rounded-md bg-secondary/15 text-secondary text-sm font-medium">
+              <img src="https://flagsapi.com/GB/flat/64.png" alt="EN" className="w-5 h-auto rounded-sm" />
+              English
+            </button>
+            <button className="flex items-center gap-2 px-3 py-2 rounded-md text-white/60 hover:text-white hover:bg-white/[0.07] text-sm font-medium transition-colors">
+              <img src="https://flagsapi.com/SA/flat/64.png" alt="AR" className="w-5 h-auto rounded-sm" />
+              العربية
+            </button>
+          </div>
+        </div>
       </div>
     </nav>
   );
