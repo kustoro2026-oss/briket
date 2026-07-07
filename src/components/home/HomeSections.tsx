@@ -110,8 +110,8 @@ export default function HomeSections() {
       </section>
 
       {/* ========== WHY CHOOSE US ========== */}
-      <section className="relative w-full overflow-hidden py-20 md:py-28 lg:py-32">
-        <h2 className="text-center text-[26px] font-bold text-white mb-10" style={{ fontFamily: "var(--font-josefin-sans)" }}>
+      <section className="relative w-full overflow-hidden py-10 md:py-14 lg:py-16">
+        <h2 className="text-center text-[28px] font-bold text-white uppercase mb-10 md:text-[36px] lg:text-[42px]" style={{ fontFamily: "var(--font-josefin-sans)" }}>
           WHY CHOOSE US?
         </h2>
         <div className="scrollbar-hide flex justify-start gap-[clamp(1rem,1.5vw,1.25rem)] overflow-x-auto px-3 sm:px-5 md:px-10 lg:flex-wrap lg:justify-center lg:overflow-x-visible lg:px-20">
