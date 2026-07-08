@@ -3,6 +3,7 @@ import { Josefin_Sans, Open_Sans } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
+import WhatsAppCTA from "@/components/ui/WhatsAppCTA";
 
 const josefinSans = Josefin_Sans({
   variable: "--font-josefin-sans",
@@ -35,6 +36,7 @@ export default function RootLayout({
         <Header />
         <main className="flex-1 pt-24">{children}</main>
         <Footer />
+        <WhatsAppCTA />
       </body>
     </html>
   );
