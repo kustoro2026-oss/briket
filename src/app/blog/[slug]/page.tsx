@@ -111,26 +111,28 @@ export default async function BlogArticlePage({
             {/* Sidebar */}
             <aside className="lg:col-span-4">
               <h3 className="text-xl font-extrabold text-white mb-6">Newest</h3>
-              <div className="flex flex-col gap-6">
+              <div className="flex overflow-x-auto gap-4 snap-x snap-mandatory scrollbar-hide md:grid md:grid-cols-2 lg:flex lg:flex-col lg:gap-4">
                 {recentPosts.map((rp) => (
                   <Link
                     key={rp.id}
                     href={`/blog/${rp.slug}`}
-                    className={`flex flex-col gap-1 ${rp.id === post.id ? "opacity-50 pointer-events-none" : ""}`}
+                    className={`flex flex-row gap-3 flex-shrink-0 snap-center w-[75vw] sm:w-[45vw] md:w-full lg:w-full ${rp.id === post.id ? "opacity-50 pointer-events-none" : ""}`}
                   >
-                    <div className="relative w-full aspect-square overflow-hidden">
+                    <div className="relative w-20 h-20 sm:w-24 sm:h-24 flex-shrink-0 overflow-hidden rounded">
                       <Image
                         src={rp.featuredImage}
                         alt={rp.title}
                         fill
-                        sizes="(max-width: 1024px) 25vw, 20vw"
+                        sizes="80px"
                         className="object-cover"
                       />
                     </div>
-                    <p className="text-sm text-[#EFA12D] mt-1">
-                      {new Date(rp.date).toLocaleDateString("en-US", { month: "short", day: "numeric", year: "numeric" })}
-                    </p>
-                    <h4 className="text-base text-white font-normal">{rp.title}</h4>
+                    <div className="flex flex-col justify-center min-w-0">
+                      <p className="text-xs text-[#EFA12D]">
+                        {new Date(rp.date).toLocaleDateString("en-US", { month: "short", day: "numeric", year: "numeric" })}
+                      </p>
+                      <h4 className="text-sm text-white font-medium leading-snug line-clamp-2">{rp.title}</h4>
+                    </div>
                   </Link>
                 ))}
               </div>
