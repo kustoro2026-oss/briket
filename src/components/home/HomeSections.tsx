@@ -3,6 +3,7 @@ import Image from "next/image";
 import { FaWhatsapp } from "react-icons/fa";
 import Marquee from "@/components/ui/Marquee";
 import CompanyVideo from "@/components/home/CompanyVideo";
+import BlogCarousel from "@/components/home/BlogCarousel";
 import { getProducts, getRecentBlogPosts, getPackaging } from "@/lib/data";
 
 const features = [
@@ -299,37 +300,7 @@ export default function HomeSections() {
           ARTICLE & NEWS
         </h2>
 
-        {/* Horizontal scroll — 1 card mobile, 2 cards desktop */}
-        <div className="flex overflow-x-auto gap-6 px-5 snap-x snap-mandatory scrollbar-hide md:px-10">
-          {blogPosts.map((post) => (
-            <Link
-              key={post.id}
-              href={`/blog/${post.slug}`}
-              className="group flex flex-col gap-2.5 flex-shrink-0 snap-center w-[82vw] sm:w-[44vw] md:w-[calc(50%-12px)] lg:w-[calc(50%-16px)] pb-8 border-b border-[#9C9C9C] md:border-b-0 md:pb-0"
-            >
-              <div className="relative aspect-square w-full overflow-hidden">
-                <Image
-                  src={post.featuredImage}
-                  alt={post.title}
-                  fill
-                  sizes="(max-width: 640px) 82vw, (max-width: 768px) 44vw, (max-width: 1024px) 50vw, 50vw"
-                  className="object-cover group-hover:scale-105 transition-transform duration-500"
-                />
-              </div>
-              <p className="text-[#9C9C9C] text-[14px] md:text-[15px]" style={{ fontFamily: "var(--font-open-sans)" }}>
-                {new Date(post.date).toLocaleDateString("en-US", { month: "short", day: "numeric", year: "numeric" })}
-              </p>
-              <div className="flex items-start justify-between gap-5">
-                <h3 className="text-[16px] font-bold text-white uppercase leading-tight line-clamp-2 md:text-[18px]" style={{ fontFamily: "var(--font-josefin-sans)" }}>
-                  {post.title}
-                </h3>
-                <svg className="w-4 h-5 text-[#9C9C9C] shrink-0 mt-0.5 group-hover:text-white transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 12h14 M12 5l7 7-7 7" />
-                </svg>
-              </div>
-            </Link>
-          ))}
-        </div>
+        <BlogCarousel posts={blogPosts} />
       </section>
 
       {/* ========== EXPORT DESTINATION ========== */}
