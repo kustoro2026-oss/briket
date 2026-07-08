@@ -157,7 +157,7 @@ export default function HomeSections() {
                   <h3 className="text-[15px] font-bold text-white md:text-[16px]" style={{ fontFamily: "var(--font-josefin-sans)" }}>
                     {product.name}
                   </h3>
-                  <p className="mt-2 text-[13px] leading-[21px] text-[#C6C6C6] md:text-[14px] md:leading-[22.75px]" style={{ fontFamily: "var(--font-open-sans)" }}>
+                  <p className="mt-2 text-[13px] leading-[21px] text-[#C6C6C6] md:text-[14px] md:leading-[22.75px] line-clamp-3" style={{ fontFamily: "var(--font-open-sans)" }}>
                     {product.description}
                   </p>
                 </div>
