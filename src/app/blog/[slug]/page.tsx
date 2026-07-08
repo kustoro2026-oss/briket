@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { getBlogPostBySlug, getRecentBlogPosts } from "@/lib/data";
+import BlogContent from "@/components/ui/BlogContent";
 
 export async function generateMetadata({
   params,
@@ -103,8 +104,8 @@ export default async function BlogArticlePage({
           <div className="grid grid-cols-1 gap-8 lg:grid-cols-12">
             {/* Main Content */}
             <div className="lg:col-span-8">
-              <div className="prose prose-invert max-w-none py-10 text-base leading-[21.76px] text-[#C6C6C6]">
-                <p className="mb-6">{post.content}</p>
+              <div className="py-10">
+                <BlogContent content={post.content} />
               </div>
             </div>
 
