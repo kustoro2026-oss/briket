@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { HiArrowRight } from "react-icons/hi";
 import { getBlogPosts } from "@/lib/data";
@@ -33,10 +34,12 @@ export default function BlogPage() {
                 className="group flex max-w-[400px] flex-col gap-2.5"
               >
                 <div className="relative aspect-square w-full overflow-hidden">
-                  <img
+                  <Image
                     src={post.featuredImage}
                     alt={post.title}
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    fill
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                    className="object-cover group-hover:scale-105 transition-transform duration-500"
                   />
                 </div>
                 <p className="text-secondary text-base">

@@ -1,13 +1,15 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import Link from "next/link";
-import { notFound, useParams } from "next/navigation";
+import { notFound, useParams, useRouter } from "next/navigation";
 import { FaWhatsapp, FaFilePdf, FaFilter } from "react-icons/fa";
 import { getProductBySlug, getProducts, getPackaging } from "@/lib/data";
 
 export default function ProductPage() {
   const params = useParams();
+  const router = useRouter();
   const slug = params.slug as string;
   const product = getProductBySlug(slug);
 
@@ -24,10 +26,13 @@ export default function ProductPage() {
       {/* Banner */}
       <section className="bg-[#151515] text-white relative w-full overflow-hidden">
         <div className="relative h-48 w-full md:h-72">
-          <img
+          <Image
             src="https://djavacoal.com/images/bg-banner-OurProduct.png"
             alt="Our Products Banner"
-            className="absolute inset-0 h-full w-full object-cover"
+            fill
+            sizes="100vw"
+            className="object-cover"
+            priority
           />
           <div className="absolute inset-0 bg-black/20 flex items-center justify-center">
             <h1 className="text-2xl font-semibold italic text-white md:text-4xl">Products</h1>
@@ -41,7 +46,7 @@ export default function ProductPage() {
         <select
           className="flex-1 bg-transparent border border-[#3a3a3a] rounded px-4 py-2 text-sm text-white outline-none"
           value={`/our-products/${slug}`}
-          onChange={(e) => { window.location.href = e.target.value; }}
+          onChange={(e) => { router.push(e.target.value); }}
         >
           {allProducts.map((p) => (
             <option key={p.id} value={`/our-products/${p.slug}`} className="bg-[#151515]">
@@ -83,10 +88,12 @@ export default function ProductPage() {
               <div className="flex flex-col gap-2">
                 {/* Main Image */}
                 <div className="group relative cursor-pointer overflow-hidden rounded-lg sm:rounded-xl aspect-video w-[93vw]">
-                  <img
+                  <Image
                     src={product.images[activeThumb] || product.images[0]}
                     alt={product.name}
-                    className="h-full w-full object-cover"
+                    fill
+                    sizes="93vw"
+                    className="object-cover"
                   />
                 </div>
                 {/* Thumbnails */}
@@ -95,7 +102,7 @@ export default function ProductPage() {
                     <button
                       key={i}
                       onClick={() => setActiveThumb(i)}
-                      className={`aspect-square min-h-40 min-w-40 shrink-0 overflow-hidden rounded-lg transition-all sm:min-h-[180px] sm:min-w-[180px] sm:rounded-xl ${
+                      className={`relative aspect-square min-h-40 min-w-40 shrink-0 overflow-hidden rounded-lg transition-all sm:min-h-[180px] sm:min-w-[180px] sm:rounded-xl ${
                         i === activeThumb
                           ? "border border-white/20 shadow-[0_0_30px_rgba(0,0,0,0.25)]"
                           : "hover:ring-2 hover:ring-[#EFA12D]"
@@ -106,10 +113,12 @@ export default function ProductPage() {
                           : undefined,
                       }}
                     >
-                      <img
+                      <Image
                         src={img}
                         alt={`${product.name} ${i + 1}`}
-                        className="h-full w-full object-cover"
+                        fill
+                        sizes="180px"
+                        className="object-cover"
                       />
                     </button>
                   ))}
@@ -139,7 +148,7 @@ export default function ProductPage() {
                 {/* CTA Buttons */}
                 <div className="flex flex-wrap gap-3">
                   <a
-                    href="https://assets.djavacoal.com/product-catalogue/qxhZP9DNa6PfcEX9lG8EF"
+                    href="/images/product-catalogue.pdf"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center gap-2 bg-[#D28006] text-white px-4 py-4 rounded-[6px] text-sm font-bold hover:opacity-90 transition-opacity"
@@ -167,10 +176,12 @@ export default function ProductPage() {
                   {product.specImages ? (
                     <div className="grid grid-cols-1 gap-1 sm:gap-4 md:grid-cols-2">
                       {product.specImages.map((img: string, i: number) => (
-                        <img
+                        <Image
                           key={i}
                           src={img}
                           alt={`Specification ${i + 1}`}
+                          width={600}
+                          height={400}
                           className="w-full h-auto"
                         />
                       ))}
@@ -208,10 +219,12 @@ export default function ProductPage() {
                             }}
                           >
                             {product.shapeImages && (product.shapeImages as Record<string, string>)[shape.type] ? (
-                              <img
+                              <Image
                                 src={(product.shapeImages as Record<string, string>)[shape.type]}
                                 alt={shape.type}
-                                className="max-h-[110px] max-w-[110px] object-contain"
+                                width={110}
+                                height={110}
+                                className="object-contain"
                               />
                             ) : (
                               <span className="text-white/20 text-xs">{shape.type}</span>
@@ -249,10 +262,12 @@ export default function ProductPage() {
                             style={{ background: "radial-gradient(circle at center, #000 0%, #171717 50%, rgba(255,255,255,0.25) 100%)" }}
                           >
                             {pkgData ? (
-                              <img
+                              <Image
                                 src={pkgData.image}
                                 alt={pkgName}
-                                className="h-full w-full object-contain p-4"
+                                fill
+                                sizes="(max-width: 768px) 330px, (max-width: 1300px) 50vw, 33vw"
+                                className="object-contain p-4"
                               />
                             ) : (
                               <span className="text-white/20 text-xs">{pkgName}</span>

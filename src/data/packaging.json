@@ -3,24 +3,24 @@
     "id": "bulk",
     "name": "Bulk",
     "description": "Charcoal packed with inner plastic layer and outer master box. Suitable for wholesale and bulk orders with maximum protection.",
-    "image": "https://assets.djavacoal.com/packaging-options/aqBA36xl6d5wsvh3FNYtZ"
+    "image": "/images/packaging/bulk.jpg"
   },
   {
     "id": "bulk-loose",
     "name": "Bulk Loose",
     "description": "Charcoal packed with inner plastic only, 10kg per bag. Cost-effective packaging option for large volume buyers.",
-    "image": "https://assets.djavacoal.com/packaging-options/g-7V9ZpmyFNohIwy63gQS"
+    "image": "/images/packaging/bulk-loose.jpg"
   },
   {
     "id": "full",
     "name": "Full",
     "description": "Premium packaging with inner plastic, inner box, and outer master box. Ideal for retail and branded products.",
-    "image": "https://assets.djavacoal.com/packaging-options/_sisK9SgW_3p2ECBPe6Fc"
+    "image": "/images/packaging/full.jpg"
   },
   {
     "id": "woven-bag",
     "name": "Woven Bag",
     "description": "Charcoal packed in durable polypropylene woven bags. Standard for sawdust and wood charcoal products.",
-    "image": "https://assets.djavacoal.com/packaging-options/zeqDvlhd5NPgmrD532c9z"
+    "image": "/images/packaging/woven-bag.jpg"
   }
 ]

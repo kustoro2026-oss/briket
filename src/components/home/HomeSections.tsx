@@ -1,10 +1,8 @@
-"use client";
-
 import Link from "next/link";
-import { useState } from "react";
+import Image from "next/image";
 import { FaWhatsapp } from "react-icons/fa";
 import Marquee from "@/components/ui/Marquee";
-import VideoModal, { VideoThumbnail } from "@/components/ui/VideoModal";
+import CompanyVideo from "@/components/home/CompanyVideo";
 import { getProducts, getRecentBlogPosts, getPackaging } from "@/lib/data";
 
 const features = [
@@ -49,7 +47,6 @@ const exportCountries = [
 ];
 
 export default function HomeSections() {
-  const [videoOpen, setVideoOpen] = useState(false);
   const products = getProducts().slice(0, 4);
   const blogPosts = getRecentBlogPosts(4);
   const packagingOptions = getPackaging().slice(0, 3);
@@ -68,7 +65,7 @@ export default function HomeSections() {
                 boxShadow: "0 0 20px rgba(0,0,0,0.19)",
               }}
             >
-              <img src={cert.image} alt={cert.name} className="max-h-[98px] w-auto object-contain" />
+              <Image src={cert.image} alt={cert.name} width={320} height={98} className="object-contain" unoptimized />
             </div>
           ))}
         </div>
@@ -78,9 +75,7 @@ export default function HomeSections() {
       <section className="bg-primary w-full px-5 py-16 md:px-10 md:py-20 lg:px-[100px] lg:py-24">
         <div className="flex flex-col items-center gap-8 lg:flex-row lg:items-center lg:gap-12">
           {/* Video Thumbnail - diperbesar */}
-          <div onClick={() => setVideoOpen(true)} className="cursor-pointer w-full max-w-[480px] lg:max-w-[560px] flex-shrink-0">
-            <VideoThumbnail videoId="NWO_S1Kh6U0" />
-          </div>
+          <CompanyVideo />
           {/* Deskripsi */}
           <div className="flex-1">
             <h2 className="text-[28px] md:text-[32px] font-bold text-white text-left" style={{ fontFamily: "var(--font-josefin-sans)" }}>
@@ -123,7 +118,7 @@ export default function HomeSections() {
                 background: "radial-gradient(circle at center, #000 0%, #171717 50%, rgba(245,152,13,0.19) 90%)",
               }}
             >
-              <img src={feature.image} alt={feature.title} className="h-[120px] w-auto object-contain mb-4" />
+              <Image src={feature.image} alt={feature.title} width={120} height={120} className="object-contain mb-4" unoptimized />
               <h3 className="text-xs font-semibold text-[#EFA12D] text-center" style={{ fontFamily: "var(--font-josefin-sans)" }}>
                 {feature.title}
               </h3>
@@ -143,16 +138,18 @@ export default function HomeSections() {
             <div key={product.id} className="group flex flex-col items-center w-full pb-8 mb-4 border-b border-[#9C9C9C] md:border-b-0 md:pb-0 md:mb-0">
               <Link href={`/our-products/${product.slug}`} className="w-full block">
                 <div
-                  className="aspect-square w-full overflow-hidden rounded-[22px] border border-white/15 transition-all duration-500 hover:border-[#EFA12D]/80 hover:shadow-[0_0_30px_rgba(239,161,45,0.25)]"
+                  className="relative aspect-square w-full overflow-hidden rounded-[22px] border border-white/15 transition-all duration-500 hover:border-[#EFA12D]/80 hover:shadow-[0_0_30px_rgba(239,161,45,0.25)]"
                   style={{
                     background: "radial-gradient(circle at center, #000 0%, #171717 50%, rgba(255,255,255,0.19) 100%)",
                     boxShadow: "0 0 30px rgba(0,0,0,0.25)",
                   }}
                 >
-                  <img
+                  <Image
                     src={product.images[0] || "https://djavacoal.com/images/placeholder.jpg"}
                     alt={product.name}
-                    className="w-full h-full object-contain p-8 group-hover:scale-105 transition-transform duration-500"
+                    fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 25vw"
+                    className="object-contain p-8 group-hover:scale-105 transition-transform duration-500"
                   />
                 </div>
                 <div className="mt-6 max-w-[415px]">
@@ -179,10 +176,13 @@ export default function HomeSections() {
 
       {/* ========== PACKAGING PREVIEW ========== */}
       <section className="relative w-full overflow-hidden py-16">
-        <img
+        <Image
           src="https://djavacoal.com/images/bg-packaging-option.jpg"
           alt=""
-          className="absolute inset-0 -z-10 h-full w-full object-cover"
+          fill
+          sizes="100vw"
+          className="-z-10 object-cover"
+          unoptimized
         />
         <div className="relative z-10">
           <div className="mb-10 flex flex-col items-start justify-center px-5 md:px-10 lg:px-60">
@@ -202,11 +202,12 @@ export default function HomeSections() {
                 }}
               >
                 <div className="relative flex h-full w-full items-center justify-center">
-                  <img
+                  <Image
                     src={pkg.image}
                     alt={pkg.name}
+                    width={350}
+                    height={350}
                     className="object-contain p-8"
-                    style={{ width: "350px", height: "350px" }}
                   />
                 </div>
                 <h3 className="absolute top-5 font-semibold text-white text-xl" style={{ fontFamily: "var(--font-josefin-sans)" }}>
@@ -241,10 +242,12 @@ export default function HomeSections() {
               className="group relative w-full overflow-hidden"
               style={{ height: "205.5px" }}
             >
-              <img
+              <Image
                 src={card.image}
                 alt={card.title}
-                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                fill
+                sizes="(max-width: 1024px) 50vw, 25vw"
+                className="object-cover transition-transform duration-500 group-hover:scale-105"
               />
               <div className="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-colors duration-500 flex items-end justify-center">
                 <p className="absolute bottom-4 w-full text-center text-[13px] md:text-[15px] font-semibold text-white" style={{ fontFamily: "var(--font-open-sans)" }}>
@@ -268,10 +271,13 @@ export default function HomeSections() {
             consistency, safety, and performance. We welcome factory visits from potential clients and partners.
           </p>
           <div className="max-w-4xl mx-auto px-5 mb-8">
-            <img
-              src="https://assets.djavacoal.com/static-media/factory-visit/KD9GTB1lAdONCB51ytzWd"
+            <Image
+              src="/images/factory/factory-visit.jpg"
               alt="Factory Visit"
-              className="w-full object-cover"
+              width={896}
+              height={504}
+              className="w-full h-auto"
+              sizes="(max-width: 768px) 100vw, 896px"
             />
           </div>
           <a
@@ -302,10 +308,12 @@ export default function HomeSections() {
               className="group flex max-w-[320px] flex-col gap-2.5 flex-shrink-0 snap-center pb-8 border-b border-[#9C9C9C]"
             >
               <div className="relative aspect-square w-full overflow-hidden">
-                <img
+                <Image
                   src={post.featuredImage}
                   alt={post.title}
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  fill
+                  sizes="(max-width: 768px) 100vw, (max-width: 1100px) 50vw, 25vw"
+                  className="object-cover group-hover:scale-105 transition-transform duration-500"
                 />
               </div>
               <p className="text-[#9C9C9C] text-[14px]" style={{ fontFamily: "var(--font-open-sans)" }}>
@@ -332,10 +340,12 @@ export default function HomeSections() {
               className="group flex flex-col gap-2.5 pb-0 border-b-0"
             >
               <div className="relative aspect-square w-full overflow-hidden">
-                <img
+                <Image
                   src={post.featuredImage}
                   alt={post.title}
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  fill
+                  sizes="(max-width: 768px) 100vw, (max-width: 1100px) 50vw, 25vw"
+                  className="object-cover group-hover:scale-105 transition-transform duration-500"
                 />
               </div>
               <p className="text-[#9C9C9C] text-[14px] md:text-[15px]" style={{ fontFamily: "var(--font-open-sans)" }}>
@@ -362,10 +372,12 @@ export default function HomeSections() {
               className="group flex flex-col gap-2.5 max-w-[376px]"
             >
               <div className="relative aspect-square w-full overflow-hidden">
-                <img
+                <Image
                   src={post.featuredImage}
                   alt={post.title}
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  fill
+                  sizes="(max-width: 768px) 100vw, (max-width: 1100px) 50vw, 25vw"
+                  className="object-cover group-hover:scale-105 transition-transform duration-500"
                 />
               </div>
               <p className="text-[#9C9C9C] text-[15px]" style={{ fontFamily: "var(--font-open-sans)" }}>
@@ -394,12 +406,14 @@ export default function HomeSections() {
         </p>
         <div className="flex flex-wrap justify-center gap-3 max-w-4xl mx-auto px-5">
           {exportCountries.map((code) => (
-            <img
+            <Image
               key={code}
               src={`https://flagsapi.com/${code}/flat/64.png`}
               alt={code}
-              className="w-[57px] h-8 object-cover rounded-sm"
-              loading="lazy"
+              width={57}
+              height={32}
+              className="object-cover rounded-sm"
+              unoptimized
             />
           ))}
         </div>
@@ -415,15 +429,13 @@ export default function HomeSections() {
             <div className="flex items-center gap-10">
               {[...shippingPartners, ...shippingPartners].map((partner, i) => (
                 <div key={i} className="flex-shrink-0 w-[150px] h-[150px] flex items-center justify-center">
-                  <img src={partner.image} alt={partner.name} className="max-w-full max-h-full object-contain" />
+                  <Image src={partner.image} alt={partner.name} width={150} height={150} className="object-contain" unoptimized />
                 </div>
               ))}
             </div>
           </Marquee>
         </div>
       </section>
-
-      <VideoModal isOpen={videoOpen} onClose={() => setVideoOpen(false)} videoId="NWO_S1Kh6U0" />
     </>
   );
 }

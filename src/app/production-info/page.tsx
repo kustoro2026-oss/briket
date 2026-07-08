@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import FaqAccordion from "@/components/ui/FaqAccordion";
 import { getFaqs, getProductionSteps, getPackaging } from "@/lib/data";
 
@@ -28,10 +29,12 @@ export default function ProductionInfoPage() {
       {/* Banner */}
       <section className="bg-[#1C1C1C] text-white relative w-full overflow-hidden">
         <div className="relative h-48 w-full md:h-72">
-          <img
+          <Image
             src="https://djavacoal.com/images/bg-banner-ProductionProcess.png"
             alt="Production Process Banner"
-            className="absolute inset-0 h-full w-full object-cover"
+            fill
+            sizes="100vw"
+            className="object-cover"
           />
           <div className="absolute inset-0 bg-black/20 flex items-center justify-center">
             <h1 className="text-2xl font-semibold text-white">Production Info</h1>
@@ -91,11 +94,13 @@ export default function ProductionInfoPage() {
                       key={step.step}
                       className="flex flex-col justify-start rounded-xl bg-[#222222] transition-transform duration-300 hover:-translate-y-1"
                     >
-                      <div className="relative mb-4 w-full overflow-hidden rounded-xl">
-                        <img
+                      <div className="relative mb-4 w-full aspect-video overflow-hidden rounded-xl">
+                        <Image
                           src={step.illustration}
                           alt={step.title}
-                          className="aspect-square h-auto w-full rounded-xl object-cover"
+                          fill
+                          sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                          className="object-cover rounded-xl"
                         />
                         <div className="absolute top-0 left-0 z-10 h-1/3 w-full rounded-t-xl bg-gradient-to-b from-black/70 to-transparent" />
                         <div className="absolute top-3 left-1/2 z-20 -translate-x-1/2">
@@ -154,10 +159,12 @@ export default function ProductionInfoPage() {
                 </div>
                 <div className="flex flex-col items-start gap-6 px-5 pb-6 md:grid md:grid-cols-[minmax(0,309px)_1fr]">
                   <div className="relative h-72 w-full overflow-hidden rounded-lg md:aspect-4/3 md:max-h-[350px] lg:aspect-square lg:h-auto lg:max-h-[500px] lg:max-w-[500px]">
-                    <img
+                    <Image
                       src="https://djavacoal.com/images/shipment.png"
                       alt="Shipment"
-                      className="h-full w-full object-cover rounded-lg"
+                      fill
+                      sizes="(max-width: 768px) 100vw, 309px"
+                      className="object-cover rounded-lg"
                     />
                   </div>
                   <div>
@@ -198,10 +205,12 @@ export default function ProductionInfoPage() {
                   {packaging.map((pkg) => (
                     <div key={pkg.id} className="group">
                       <div className="relative aspect-square max-h-none w-full max-w-none overflow-hidden rounded-xl transition-all duration-300">
-                        <img
+                        <Image
                           src={pkg.image}
                           alt={pkg.name}
-                          className="h-full w-full object-cover rounded-xl"
+                          fill
+                          sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                          className="object-cover rounded-xl"
                         />
                         <div className="absolute top-0 left-0 z-10 h-1/3 w-full rounded-t-xl bg-gradient-to-b from-black/70 to-transparent" />
                       </div>

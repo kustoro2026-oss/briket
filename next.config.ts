@@ -9,9 +9,19 @@ const nextConfig: NextConfig = {
       },
       {
         protocol: "https",
+        hostname: "djavacoal.com",
+      },
+      {
+        protocol: "https",
         hostname: "flagsapi.com",
       },
+      {
+        protocol: "https",
+        hostname: "img.youtube.com",
+      },
     ],
+    deviceSizes: [640, 768, 1024, 1280, 1536],
+    imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
   },
   // Hindari webpack me-watch folder public/images yang besar (251MB+)
   // agar dev server tidak lambat dan tidak compile ulang terus.

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { getBlogPostBySlug, getRecentBlogPosts } from "@/lib/data";
@@ -85,10 +86,13 @@ export default async function BlogArticlePage({
           </div>
 
           {/* Featured Image */}
-          <img
+          <Image
             src={post.featuredImage}
             alt={post.title}
+            width={800}
+            height={450}
             className="w-full max-w-full h-auto my-6"
+            priority
           />
         </div>
       </section>
@@ -114,11 +118,13 @@ export default async function BlogArticlePage({
                     href={`/blog/${rp.slug}`}
                     className={`flex flex-col gap-1 ${rp.id === post.id ? "opacity-50 pointer-events-none" : ""}`}
                   >
-                    <div className="w-full aspect-square overflow-hidden">
-                      <img
+                    <div className="relative w-full aspect-square overflow-hidden">
+                      <Image
                         src={rp.featuredImage}
                         alt={rp.title}
-                        className="w-full h-full object-cover"
+                        fill
+                        sizes="(max-width: 1024px) 25vw, 20vw"
+                        className="object-cover"
                       />
                     </div>
                     <p className="text-sm text-[#EFA12D] mt-1">

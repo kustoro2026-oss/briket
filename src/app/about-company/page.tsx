@@ -1,5 +1,7 @@
 "use client";
 
+import { useRouter } from "next/navigation";
+import Image from "next/image";
 import { getTeamMembers } from "@/lib/data";
 
 const reelVideos = [
@@ -12,19 +14,19 @@ const reelVideos = [
   { id: "cGAVGlKIOt4" },
 ];
 
-const factoryGalleryFeatured = "SdOQVaVlAybk7MO2TYogM";
+const factoryGalleryFeatured = "/images/factory-gallery/featured.jpg";
 const factoryGalleryThumbs = [
-  "8P-niX5mpd82Ir2tfeWZA", "KmhePsBTCMLTJRhAdHHIj", "e8OTYDVOLT2rk049Zbtcl",
-  "13UOdLafWIkGU2vocW_7u", "pQgAlQ4-SRMoNhbZ0b3fB", "tJnTWpzTS5M-my5M7EHTe",
-  "KlPypF5ITfjAYm5wq81bj", "4SVNsC_6-tbLULjTL3U7Q", "ns6DDdb-zPYIGSMz2vKq2",
-  "wXIQhVN6gQHYBGWwODbhL", "rzgzPjQ49SUR2WYWtpiLc",
+  "/images/factory-gallery/01.jpg", "/images/factory-gallery/02.jpg", "/images/factory-gallery/03.jpg",
+  "/images/factory-gallery/04.jpg", "/images/factory-gallery/05.jpg", "/images/factory-gallery/06.jpg",
+  "/images/factory-gallery/07.jpg", "/images/factory-gallery/08.jpg", "/images/factory-gallery/09.jpg",
+  "/images/factory-gallery/10.jpg", "/images/factory-gallery/11.jpg",
 ];
 
-const productGalleryFeatured = "1RB4nDANJVS9Ze12PFOYC";
+const productGalleryFeatured = "/images/product-gallery/featured.jpg";
 const productGalleryThumbs = [
-  "O46U2YYeDdisOaS8PkvYp", "PPKAxuKhFTiI5LqaKaKcP", "PaFLpW4_W9uGIMu_XNnBI",
-  "dMbveEG12gGNckawYu1hv", "230II2kHqigS7BJuKXS1x", "3_uavo2eY672ngmXprMsw",
-  "ebHJlWxomkBSeYBrrY8TY", "BpzJaFbl2dVvciLb3sh24",
+  "/images/product-gallery/01.jpg", "/images/product-gallery/02.jpg", "/images/product-gallery/03.jpg",
+  "/images/product-gallery/04.jpg", "/images/product-gallery/05.jpg", "/images/product-gallery/06.jpg",
+  "/images/product-gallery/07.jpg", "/images/product-gallery/08.jpg",
 ];
 
 const certificates = [
@@ -39,16 +41,19 @@ const certificates = [
 ];
 
 export default function AboutCompanyPage() {
+  const router = useRouter();
   const teamMembers = getTeamMembers();
 
   return (
     <div className="bg-[#1C1C1C]">
       {/* Banner */}
       <section className="relative w-full overflow-hidden bg-[#1C1C1C] text-white h-48 md:h-72">
-        <img
+        <Image
           src="https://djavacoal.com/images/bg-banner-OurProduct.png"
           alt="About Banner"
-          className="absolute inset-0 h-full w-full object-cover"
+          fill
+          sizes="100vw"
+          className="object-cover"
         />
         <div className="absolute inset-0 flex items-center justify-center bg-black/20">
           <h1 className="text-2xl font-semibold italic text-white md:text-4xl">About Company</h1>
@@ -88,7 +93,7 @@ export default function AboutCompanyPage() {
             <svg className="w-5 h-5 text-white/70" fill="currentColor" viewBox="0 0 16 16"><path d="M0 3h16v2H0V3zm0 5h16v2H0V8zm0 5h16v2H0v-2z"/></svg>
             <select
               className="flex-1 bg-transparent border border-[#3a3a3a] rounded px-4 py-2 text-sm text-white outline-none"
-              onChange={(e) => { window.location.href = e.target.value; }}
+              onChange={(e) => { router.push(e.target.value); }}
             >
               {[
                 { label: "CV. Grow With Fakhri Indonesia", value: "#grow-with-fakhri" },
@@ -158,9 +163,11 @@ export default function AboutCompanyPage() {
               rel="noopener noreferrer"
               className="relative block w-full max-w-[849px] overflow-hidden rounded-xl border border-[#EFA12D]"
             >
-              <img
+              <Image
                 src="https://img.youtube.com/vi/NWO_S1Kh6U0/maxresdefault.jpg"
                 alt="Production Process Coconut Charcoal Briquette From Grow With Fakhri Indonesia"
+                width={849}
+                height={478}
                 className="w-full object-cover"
               />
               <div className="absolute inset-0 flex items-center justify-center bg-black/10">
@@ -224,11 +231,12 @@ export default function AboutCompanyPage() {
             {teamMembers.map((member) => (
               <div key={member.id} className="w-[260px] shrink-0 snap-start">
                 <div className="overflow-hidden rounded-2xl">
-                  <img
+                  <Image
                     src={member.photo}
                     alt={member.name}
+                    width={260}
+                    height={333}
                     className="w-[260px] h-auto object-cover"
-                    style={{ aspectRatio: "260/333" }}
                   />
                 </div>
                 <div className="mt-3 text-center">
@@ -244,11 +252,12 @@ export default function AboutCompanyPage() {
             {teamMembers.map((member) => (
               <div key={member.id} className="w-fit">
                 <div className="overflow-hidden rounded-2xl">
-                  <img
+                  <Image
                     src={member.photo}
                     alt={member.name}
+                    width={260}
+                    height={333}
                     className="w-[260px] h-auto object-cover"
-                    style={{ aspectRatio: "260/333" }}
                   />
                 </div>
                 <div className="mt-3 text-center">
@@ -310,15 +319,19 @@ export default function AboutCompanyPage() {
             {certificates.slice(0, 4).map((cert, i) => (
               <div key={i} className="w-[250px] shrink-0">
                 <div className="relative overflow-hidden" style={{ height: "377px" }}>
-                  <img
+                  <Image
                     src={cert.image}
                     alt={cert.label}
-                    className="w-full h-full object-contain"
+                    fill
+                    sizes="250px"
+                    className="object-contain"
                   />
-                  <img
+                  <Image
                     src="https://djavacoal.com/images/watermark-legal.png"
                     alt=""
-                    className="absolute inset-0 w-full h-full object-contain opacity-30 pointer-events-none"
+                    fill
+                    sizes="250px"
+                    className="object-contain opacity-30 pointer-events-none"
                   />
                 </div>
                 <p className="mt-2 text-center text-xs text-gray-300">{cert.label}</p>
@@ -331,15 +344,19 @@ export default function AboutCompanyPage() {
             {certificates.map((cert, i) => (
               <div key={i} className="w-[250px] shrink-0">
                 <div className="relative overflow-hidden" style={{ height: "377px" }}>
-                  <img
+                  <Image
                     src={cert.image}
                     alt={cert.label}
-                    className="w-full h-full object-contain"
+                    fill
+                    sizes="250px"
+                    className="object-contain"
                   />
-                  <img
+                  <Image
                     src="https://djavacoal.com/images/watermark-legal.png"
                     alt=""
-                    className="absolute inset-0 w-full h-full object-contain opacity-30 pointer-events-none"
+                    fill
+                    sizes="250px"
+                    className="object-contain opacity-30 pointer-events-none"
                   />
                 </div>
                 <p className="mt-2 text-center text-xs text-gray-300">{cert.label}</p>
@@ -359,10 +376,12 @@ export default function AboutCompanyPage() {
 
           <div className="flex flex-col lg:flex-row gap-8">
             <div className="relative h-56 w-full overflow-hidden rounded-md sm:h-72 md:h-80 lg:h-[520px] lg:max-w-3/4">
-              <img
-                src="https://assets.djavacoal.com/static-media/factory-visit/KD9GTB1lAdONCB51ytzWd"
+              <Image
+                src="/images/factory/factory-visit.jpg"
                 alt="Charcoal Production Factory Grow With Fakhri Indonesia"
-                className="h-full w-full rounded-md object-cover"
+                fill
+                sizes="(max-width: 1024px) 100vw, 75vw"
+                className="object-cover rounded-md"
               />
             </div>
             <div className="flex-1 space-y-4">
@@ -397,12 +416,14 @@ export default function AboutCompanyPage() {
           </p>
           <div className="flex flex-wrap justify-center gap-3 pt-2">
             {["SA","LB","IR","IQ","BH","JO","KW","OM","YE","TR","JP","KR","AU","DE","BE","ES","US","BR","RU","GN","SL","IN","PK"].map((code) => (
-              <img
+              <Image
                 key={code}
                 src={`https://flagsapi.com/${code}/flat/64.png`}
                 alt={code}
-                className="w-[57px] h-8 object-cover rounded-sm lg:h-16"
-                loading="lazy"
+                width={57}
+                height={32}
+                className="object-cover rounded-sm lg:h-16"
+                unoptimized
               />
             ))}
           </div>
@@ -429,10 +450,12 @@ export default function AboutCompanyPage() {
                 className="relative w-[280px] shrink-0 snap-start overflow-hidden rounded-lg"
                 style={{ aspectRatio: "9/16" }}
               >
-                <img
+                <Image
                   src={`https://img.youtube.com/vi/${video.id}/sddefault.jpg`}
                   alt=""
-                  className="w-full h-full object-cover"
+                  fill
+                  sizes="280px"
+                  className="object-cover"
                 />
                 <div className="absolute inset-0 flex items-center justify-center bg-black/20">
                   <div className="w-14 h-14 rounded-full bg-[#202020]/50 flex items-center justify-center">
@@ -448,17 +471,23 @@ export default function AboutCompanyPage() {
             {/* Factory Gallery */}
             <div className="space-y-4">
               <h3 className="text-lg font-semibold text-[#EFA12D] lg:text-2xl">Grow With Fakhri&apos;s Factory Gallery</h3>
-              <img
-                src={`https://assets.djavacoal.com/static-media/factory-gallery/${factoryGalleryFeatured}`}
-                alt="Factory"
-                className="aspect-square w-full rounded-none object-cover"
-              />
+              <div className="relative aspect-square w-full">
+                <Image
+                  src={factoryGalleryFeatured}
+                  alt="Factory"
+                  fill
+                  sizes="(max-width: 1024px) 100vw, 50vw"
+                  className="object-cover"
+                />
+              </div>
               <div className="scrollbar-hide flex snap-x snap-mandatory gap-3 overflow-x-auto scroll-smooth pb-2">
                 {factoryGalleryThumbs.map((img, i) => (
-                  <img
+                  <Image
                     key={i}
-                    src={`https://assets.djavacoal.com/static-media/factory-gallery/${img}`}
+                    src={img}
                     alt={`Factory ${i + 1}`}
+                    width={220}
+                    height={220}
                     className="h-[180px] min-w-[180px] shrink-0 snap-start rounded-lg object-cover lg:h-[220px] lg:min-w-[220px]"
                   />
                 ))}
@@ -468,17 +497,23 @@ export default function AboutCompanyPage() {
             {/* Product Gallery */}
             <div className="space-y-4">
               <h3 className="text-lg font-semibold text-[#EFA12D] lg:text-2xl">Grow With Fakhri&apos;s Products Gallery</h3>
-              <img
-                src={`https://assets.djavacoal.com/static-media/product-gallery/${productGalleryFeatured}`}
-                alt="Products"
-                className="aspect-square w-full rounded-none object-cover"
-              />
+              <div className="relative aspect-square w-full">
+                <Image
+                  src={productGalleryFeatured}
+                  alt="Products"
+                  fill
+                  sizes="(max-width: 1024px) 100vw, 50vw"
+                  className="object-cover"
+                />
+              </div>
               <div className="scrollbar-hide flex snap-x snap-mandatory gap-3 overflow-x-auto scroll-smooth pb-2">
                 {productGalleryThumbs.map((img, i) => (
-                  <img
+                  <Image
                     key={i}
-                    src={`https://assets.djavacoal.com/static-media/product-gallery/${img}`}
+                    src={img}
                     alt={`Product ${i + 1}`}
+                    width={220}
+                    height={220}
                     className="h-[180px] min-w-[180px] shrink-0 snap-start rounded-lg object-cover lg:h-[220px] lg:min-w-[220px]"
                   />
                 ))}

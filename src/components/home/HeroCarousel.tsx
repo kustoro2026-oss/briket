@@ -1,12 +1,13 @@
 "use client";
 
 import { useState, useEffect, useCallback } from "react";
+import Image from "next/image";
 
 const slideImages = [
-  "https://assets.djavacoal.com/static-media/carousel/Bf28YiPSszM3JAnM1WqOJ",
-  "https://assets.djavacoal.com/static-media/carousel/bqD3eBPOOHZHtq2g4-erj",
-  "https://assets.djavacoal.com/static-media/carousel/cJFmWbULJCxFp3X0wzn8u",
-  "https://assets.djavacoal.com/static-media/carousel/piDf0CGL8Ly5Q9gbCL-yn",
+  "/images/carousel/slide-1.jpg",
+  "/images/carousel/slide-2.jpg",
+  "/images/carousel/slide-3.jpg",
+  "/images/carousel/slide-4.jpg",
 ];
 
 const slideTitle = "Grow With Fakhri: Premium Coconut Charcoal Briquettes";
@@ -35,10 +36,13 @@ export default function HeroCarousel() {
             index === current ? "opacity-100" : "opacity-0 pointer-events-none"
           }`}
         >
-          <img
+          <Image
             src={image}
             alt={`Grow With Fakhri slide ${index + 1}`}
-            className="w-full h-full object-cover object-center transition-transform duration-700 ease-out scale-100"
+            fill
+            sizes="100vw"
+            priority={index === 0}
+            className="object-cover object-center"
           />
         </div>
       ))}

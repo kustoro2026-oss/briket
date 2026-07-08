@@ -3,49 +3,49 @@
     "id": "yoga-indra",
     "name": "Yoga Indra P.N.",
     "role": "President Director",
-    "photo": "https://assets.djavacoal.com/team-members/U4pR0OdlMCuLGon3HSBMk",
+    "photo": "/images/team/yoga-indra.jpg",
     "bio": "Founder and President Director of CV Djavacoal Indonesia, leading the company since 2018."
   },
   {
     "id": "ops-manager",
     "name": "Ahmad Rizky",
     "role": "Operational Manager",
-    "photo": "https://assets.djavacoal.com/team-members/nIjBq6gLA0VXt4C4pzMnU",
+    "photo": "/images/team/ahmad-rizky.jpg",
     "bio": "Oversees all production operations, ensuring quality and efficiency across the manufacturing process."
   },
   {
     "id": "it-specialist",
     "name": "Ardhian Faiz Zein",
     "role": "IT Specialist",
-    "photo": "https://assets.djavacoal.com/team-members/5rhZlFyFpTyfsz6B0X4fT",
+    "photo": "/images/team/ardhian-faiz.jpg",
     "bio": "Manages all technology infrastructure and digital systems for Djavacoal."
   },
   {
     "id": "finance-admin",
     "name": "Clara Lucia M.",
     "role": "Finance & Administration",
-    "photo": "https://assets.djavacoal.com/team-members/Alp1tb7PxKOK_CvVExWLA",
+    "photo": "/images/team/clara-lucia.jpg",
     "bio": "Handles financial operations, administration, and documentation."
   },
   {
     "id": "operational-1",
     "name": "Vivi Nofitasari",
     "role": "Operational",
-    "photo": "https://assets.djavacoal.com/team-members/7zfqT45mqUSYpQrREfXyk",
+    "photo": "/images/team/vivi-nofitasari.jpg",
     "bio": "Part of the operational team ensuring smooth day-to-day production."
   },
   {
     "id": "digital-marketing-1",
     "name": "Syafira Nur Yulia",
     "role": "Digital Marketing",
-    "photo": "https://assets.djavacoal.com/team-members/HoDcLhXe1EXpDNnwai1tl",
+    "photo": "/images/team/syafira-nur.jpg",
     "bio": "Manages online presence, social media, and digital marketing strategies."
   },
   {
     "id": "digital-marketing-2",
     "name": "Syawalina NurFitri",
     "role": "Digital Marketing",
-    "photo": "https://assets.djavacoal.com/team-members/BGM2MBC3KhEAuVaozFUup",
+    "photo": "/images/team/syawalina-nurfitri.jpg",
     "bio": "Supports digital marketing campaigns and content creation."
   }
 ]

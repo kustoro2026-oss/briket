@@ -1,5 +1,7 @@
 "use client";
 
+import Image from "next/image";
+
 interface VideoModalProps {
   videoId?: string;
   thumbnailUrl?: string;
@@ -48,9 +50,11 @@ export function VideoThumbnail({ videoId, thumbnailUrl }: { videoId?: string; th
 
   return (
     <div className="relative w-full overflow-hidden rounded-2xl border border-[#FFFFFF20] bg-[#1A1A1A] shadow-lg cursor-pointer group">
-      <img
+      <Image
         src={youtubeThumb}
         alt="Company Video"
+        width={1280}
+        height={720}
         className="w-full h-auto object-cover"
       />
       <div className="absolute inset-0 bg-black/30 group-hover:bg-black/50 transition-colors flex items-center justify-center">

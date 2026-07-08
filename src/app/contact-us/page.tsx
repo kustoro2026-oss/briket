@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import ContactForm from "@/components/ui/ContactForm";
 import { FaFacebookF, FaLinkedinIn, FaInstagram, FaTiktok } from "react-icons/fa";
 
@@ -9,10 +10,12 @@ export default function ContactUsPage() {
       {/* Banner */}
       <section className="bg-[#1C1C1C] text-white relative w-full overflow-hidden">
         <div className="relative h-48 w-full md:h-72">
-          <img
+          <Image
             src="https://djavacoal.com/images/bg-banner-ContactUs.png"
             alt="Contact Us Banner"
-            className="absolute inset-0 h-full w-full object-cover"
+            fill
+            sizes="100vw"
+            className="object-cover"
           />
           <div className="absolute inset-0 bg-black/20 flex items-center justify-center">
             <div className="text-center">
@@ -30,9 +33,11 @@ export default function ContactUsPage() {
             {/* Left: Contact Info + Logo */}
             <div className="flex flex-col items-center md:w-1/2">
               {/* Centered Logo SVG */}
-              <img
+              <Image
                 src="/images/logo-brand-baru.png"
                 alt="Grow With Fakhri"
+                width={120}
+                height={48}
                 className="h-auto w-[120px] mb-10"
               />
 

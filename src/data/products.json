@@ -6,11 +6,11 @@
     "description": "Coconut Shell Charcoal Briquette is an eco-friendly, sustainable fuel made from the natural byproduct of coconut shells. Known for its high calorific value, long burn time, and low ash content, it is ideal for grilling, barbecues, shisha, and industrial applications. Our premium coconut charcoal briquettes are made from 100% natural coconut shell, providing consistent heat, long burning time, and minimal ash production.",
     "category": "Shisha",
     "images": [
-      "https://assets.djavacoal.com/products/media/BGcOmXZ0DDl90Ejkmb6fF",
-      "https://assets.djavacoal.com/products/media/3ze1x1ufLGgPWeaU44oTv",
-      "https://assets.djavacoal.com/products/media/AJETNV4kIzceevuZzAtHb",
-      "https://assets.djavacoal.com/products/media/kzlOSGq6hkYRTBt-8Cag7",
-      "https://assets.djavacoal.com/products/media/wzxdreqn9VcVSlg2e17lb"
+      "/images/products/coconut-shisha/01.jpg",
+      "/images/products/coconut-shisha/02.jpg",
+      "/images/products/coconut-shisha/03.jpg",
+      "/images/products/coconut-shisha/04.jpg",
+      "/images/products/coconut-shisha/05.jpg"
     ],
     "shapes": [
       { "type": "FLAT", "sizes": ["25x25x17 - (108 pcs/kg)", "25x25x15 - (120 pcs/kg)", "20x20x20 - (192 pcs/kg)"] },
@@ -29,14 +29,14 @@
       "Caloric Value": "> 7000 Kcal"
     },
     "specImages": [
-      "https://assets.djavacoal.com/products/specifications/2LZejyOmwFAkZH5nCeZVp",
-      "https://assets.djavacoal.com/products/specifications/P8HieRMlvmaFukum2WwY7"
+      "/images/products/coconut-shisha/spec-1.jpg",
+      "/images/products/coconut-shisha/spec-2.jpg"
     ],
     "shapeImages": {
-      "FLAT": "https://assets.djavacoal.com/products/variants/S_XQGiEEQQsWTu_n4Cn-O",
-      "CUBE": "https://assets.djavacoal.com/products/variants/rgMzvxvChdRR2diOa8OoD",
-      "HEXA": "https://assets.djavacoal.com/products/variants/Y3g06PEVbC-OP93RdbXnx",
-      "STICK": "https://assets.djavacoal.com/products/variants/BXycrcgQ26TvzTt7ShoDj"
+      "FLAT": "/images/products/coconut-shisha/shape-flat.jpg",
+      "CUBE": "/images/products/coconut-shisha/shape-cube.jpg",
+      "HEXA": "/images/products/coconut-shisha/shape-hexa.jpg",
+      "STICK": "/images/products/coconut-shisha/shape-stick.jpg"
     }
   },
   {
@@ -46,11 +46,11 @@
     "description": "High-quality BBQ charcoal briquettes made from coconut shell. Perfect for grilling and barbeque, providing long-lasting heat with minimal smoke and ash.",
     "category": "BBQ",
     "images": [
-      "https://assets.djavacoal.com/products/media/wOK7KXjLym1cQ4cNVMe5j",
-      "https://assets.djavacoal.com/products/media/jxyQEOdlcz0Yz_Fg1NuFf",
-      "https://assets.djavacoal.com/products/media/xd7b0Ae714GeTWvIHzTiZ",
-      "https://assets.djavacoal.com/products/media/26mZBkxVAsqt0KJMum8IY",
-      "https://assets.djavacoal.com/products/media/5Rq_3oR1y3u9cHq_d4xzL"
+      "/images/products/bbq/01.jpg",
+      "/images/products/bbq/02.jpg",
+      "/images/products/bbq/03.jpg",
+      "/images/products/bbq/04.jpg",
+      "/images/products/bbq/05.jpg"
     ],
     "shapes": [
       { "type": "Hexa", "sizes": ["50x50x30mm", "50x50x35mm"] },
@@ -74,10 +74,10 @@
     "description": "Eco-friendly sawdust charcoal briquettes made from compressed sawdust. An economical alternative for industrial and household heating needs.",
     "category": "Industrial",
     "images": [
-      "https://assets.djavacoal.com/products/media/ESZyvBjO91rAqlzSrWkZq",
-      "https://assets.djavacoal.com/products/media/Oe4vtT_0CWTQjd0IYi_9m",
-      "https://assets.djavacoal.com/products/media/zvq2eTr_68LKeb8Lhfdhn",
-      "https://assets.djavacoal.com/products/media/qJnciiBM8VI1pqdqz-Eag"
+      "/images/products/sawdust/01.jpg",
+      "/images/products/sawdust/02.jpg",
+      "/images/products/sawdust/03.jpg",
+      "/images/products/sawdust/04.jpg"
     ],
     "shapes": [
       { "type": "Hexa", "sizes": ["AB Grade (45mm)", "ABC Grade (40mm)", "CD Grade (35mm)"] }
@@ -100,10 +100,10 @@
     "description": "100% natural hardwood charcoal, lump form. Ideal for restaurant grilling, traditional cooking, and industrial applications requiring high heat.",
     "category": "Restaurant",
     "images": [
-      "https://assets.djavacoal.com/products/media/h4T9OE6-eIld1qfb69OZU",
-      "https://assets.djavacoal.com/products/media/F7nvZwEvQ5t0vdTj0ZS3q",
-      "https://assets.djavacoal.com/products/media/cHd60925h-TmwZWuRibTP",
-      "https://assets.djavacoal.com/products/media/kNV-sb7fr8MKMFa0PoUGZ"
+      "/images/products/natural-wood/01.jpg",
+      "/images/products/natural-wood/02.jpg",
+      "/images/products/natural-wood/03.jpg",
+      "/images/products/natural-wood/04.jpg"
     ],
     "shapes": [
       { "type": "Lump Wood", "sizes": ["< 5cm"] }

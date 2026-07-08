@@ -1,6 +1,5 @@
-"use client";
-
 import Link from "next/link";
+import Image from "next/image";
 import { FaFacebookF, FaLinkedinIn, FaInstagram, FaTiktok } from "react-icons/fa";
 
 const companyLinks = [
@@ -32,17 +31,20 @@ export default function Footer() {
   return (
     <footer className="relative border-t border-t-secondary text-gray-200">
       {/* Background image overlay */}
-      <img
+      <Image
         src="https://djavacoal.com/images/bg-footer.png"
         alt=""
-        className="absolute inset-0 w-full h-full object-cover opacity-30"
+        fill
+        sizes="100vw"
+        className="object-cover opacity-30"
+        unoptimized
       />
 
       <div className="relative z-10 mx-auto grid grid-cols-1 gap-10 px-6 py-10 lg:grid-cols-4">
         {/* Column 1 - Company */}
         <div>
           <Link href="/" className="mb-4 inline-block">
-            <img src="/images/logo-brand-baru.png" alt="Grow With Fakhri" className="h-12 w-auto" />
+            <Image src="/images/logo-brand-baru.png" alt="Grow With Fakhri" width={140} height={48} className="h-12 w-auto" />
           </Link>
           <h3 className="text-secondary border-secondary mb-2 border-b-2 pb-1 text-base font-bold sm:text-xl">
             Company
