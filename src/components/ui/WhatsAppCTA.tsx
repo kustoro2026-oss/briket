@@ -7,17 +7,31 @@ export default function WhatsAppCTA() {
   const message = "Hi%2C%20I%20would%20like%20to%20know%20more%20about%20your%20products";
 
   return (
-    <a
-      href={`https://wa.me/${phone}?text=${message}`}
-      target="_blank"
-      rel="noopener noreferrer"
-      aria-label="Chat with us on WhatsApp"
-      className="fixed bottom-6 right-6 z-50 flex items-center gap-3 rounded-full bg-[#25D366] px-5 py-3 text-white shadow-lg transition-all duration-300 hover:bg-[#1ebe57] hover:shadow-xl hover:scale-105 active:scale-95 group"
-    >
-      <FaWhatsapp className="w-6 h-6 shrink-0" />
-      <span className="text-sm font-semibold whitespace-nowrap hidden sm:inline">
-        Chat with Us
-      </span>
-    </a>
+    <>
+      <style>{`
+        @keyframes pulse-ring {
+          0% { transform: scale(0.9); opacity: 1; }
+          100% { transform: scale(1.6); opacity: 0; }
+        }
+        .wa-pulse::before {
+          content: "";
+          position: absolute;
+          inset: -6px;
+          border-radius: 50%;
+          background: #25D366;
+          animation: pulse-ring 2s cubic-bezier(0.25, 0, 0.25, 1) infinite;
+          z-index: -1;
+        }
+      `}</style>
+      <a
+        href={`https://wa.me/${phone}?text=${message}`}
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Chat with us on WhatsApp"
+        className="wa-pulse fixed bottom-6 right-6 z-50 flex items-center justify-center w-14 h-14 rounded-full bg-[#25D366] text-white shadow-lg shadow-[#25D366]/30 transition-all duration-300 hover:bg-[#1ebe57] hover:shadow-xl hover:shadow-[#25D366]/40 hover:scale-110 active:scale-95"
+      >
+        <FaWhatsapp className="w-7 h-7" />
+      </a>
+    </>
   );
 }
