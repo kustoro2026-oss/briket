@@ -4,16 +4,6 @@ import { useRouter } from "next/navigation";
 import Image from "next/image";
 import { getTeamMembers, getCertificates } from "@/lib/data";
 
-const reelVideos = [
-  { id: "bVKeLmEZyE8" },
-  { id: "eVr3S9Hjo2o" },
-  { id: "VkJ7tm1LSmg" },
-  { id: "rIADKVzNZ9o" },
-  { id: "q98uLQT6hh4" },
-  { id: "EouOlxd_DlU" },
-  { id: "cGAVGlKIOt4" },
-];
-
 const factoryGalleryFeatured = "/images/factory-gallery/featured.jpg";
 const factoryGalleryThumbs = [
   "/images/factory-gallery/01.jpg", "/images/factory-gallery/02.jpg", "/images/factory-gallery/03.jpg",
@@ -433,6 +423,42 @@ export default function AboutCompanyPage() {
                 </a>
               </div>
             </div>
+
+            {/* Legal Proof Card */}
+            <div className="bg-[#2A2A2A] rounded-xl overflow-hidden">
+              <div className="relative w-full" style={{ aspectRatio: "1.414/1" }}>
+                <Image
+                  src="/images/instagram/gallery/legal-proof-01.png"
+                  alt="Legal Proof Documents"
+                  fill
+                  sizes="(max-width: 1024px) 100vw, 50vw"
+                  className="object-contain bg-black"
+                />
+              </div>
+              <div className="p-5 space-y-2">
+                <h3 className="text-base font-bold text-white">Legal Proof – Additional Documents</h3>
+                <p className="text-xs text-[#909090]">Dokumen legalitas tambahan dari Instagram Story Highlights</p>
+                <p className="text-xs text-[#60A5FF]">Sumber: @charcoal_nesia Legal Proof Highlights</p>
+              </div>
+            </div>
+
+            {/* MSDS Card */}
+            <div className="bg-[#2A2A2A] rounded-xl overflow-hidden">
+              <div className="relative w-full" style={{ aspectRatio: "1.414/1" }}>
+                <Image
+                  src="/images/instagram/gallery/msds-non-dg-01.png"
+                  alt="MSDS & Non DG Certificate"
+                  fill
+                  sizes="(max-width: 1024px) 100vw, 50vw"
+                  className="object-contain bg-black"
+                />
+              </div>
+              <div className="p-5 space-y-2">
+                <h3 className="text-base font-bold text-white">MSDS & Non-DG Certificate</h3>
+                <p className="text-xs text-[#909090]">Material Safety Data Sheet & Non-Dangerous Goods certification</p>
+                <p className="text-xs text-[#60A5FF]">Sumber: @charcoal_nesia MSDS & Non DG Highlights</p>
+              </div>
+            </div>
           </div>
         </section>
 
@@ -509,33 +535,48 @@ export default function AboutCompanyPage() {
           <h2 className="text-[20px] font-semibold text-white">Our Story in Pictures</h2>
           <p className="text-base text-[#EFA12D]">Experience The Dedication Behind Every Charcoal We Produce</p>
 
-          {/* Video Reels */}
-          <h3 className="text-lg font-semibold text-[#EFA12D] mt-6">Video Reels</h3>
-          <div className="flex gap-4 overflow-x-auto snap-x snap-mandatory scrollbar-hide pb-2">
-            {reelVideos.map((video) => (
+          {/* Instagram Feed Grid */}
+          <h3 className="text-lg font-semibold text-[#EFA12D] mt-6">
+            <a href="https://www.instagram.com/charcoal_nesia/" target="_blank" rel="noopener noreferrer" className="hover:underline inline-flex items-center gap-2">
+              @charcoal_nesia
+              <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 448 512"><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/></svg>
+            </a>
+            <span className="text-sm text-[#909090] font-normal">— Latest Posts</span>
+          </h3>
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3">
+            {[
+              { src: "/images/instagram/gallery/post-DZ6WfJiTO4k.png", label: "Export Shipping" },
+              { src: "/images/instagram/gallery/post-DZ2xU6nToHX.png", label: "Factory Visit Invitation" },
+              { src: "/images/instagram/gallery/post-Dak-ljIzkET.png", label: "Global Markets Supply" },
+              { src: "/images/instagram/gallery/post-DaQWTCyznzt.png", label: "Germany Market" },
+              { src: "/images/instagram/gallery/post-DaZupY3EYLt-01.png", label: "35 Min Burn Test" },
+              { src: "/images/instagram/gallery/post-DaZupY3EYLt-02.png", label: "Clean Brown Ash" },
+              { src: "/images/instagram/gallery/post-DaZupY3EYLt-03.png", label: "Premium Performance" },
+              { src: "/images/instagram/gallery/post-DZ2ubLOzXUi.png", label: "15 Days Lead Time" },
+            ].map((item, i) => (
               <a
-                key={video.id}
-                href={`https://www.youtube.com/watch?v=${video.id}`}
+                key={i}
+                href="https://www.instagram.com/charcoal_nesia/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="relative w-[280px] shrink-0 snap-start overflow-hidden rounded-lg"
-                style={{ aspectRatio: "9/16" }}
+                className="relative aspect-square overflow-hidden rounded-lg group"
               >
                 <Image
-                  src={`https://img.youtube.com/vi/${video.id}/sddefault.jpg`}
-                  alt=""
+                  src={item.src}
+                  alt={item.label}
                   fill
-                  sizes="280px"
-                  className="object-cover"
+                  sizes="(max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
+                  className="object-cover group-hover:scale-105 transition-transform duration-500"
                 />
-                <div className="absolute inset-0 flex items-center justify-center bg-black/20">
-                  <div className="w-14 h-14 rounded-full bg-[#202020]/50 flex items-center justify-center">
-                    <div className="w-0 h-0 border-t-[12px] border-t-transparent border-b-[12px] border-b-transparent border-l-[20px] border-l-white ml-1" />
-                  </div>
+                <div className="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-colors flex items-end p-2">
+                  <span className="text-white text-xs font-medium opacity-0 group-hover:opacity-100 transition-opacity">{item.label}</span>
                 </div>
               </a>
             ))}
           </div>
+          <p className="text-center text-xs text-[#606060] mt-2">
+            Follow <a href="https://www.instagram.com/charcoal_nesia/" target="_blank" rel="noopener noreferrer" className="text-[#EFA12D] hover:underline">@charcoal_nesia</a> on Instagram for more updates
+          </p>
 
           {/* Factory & Product Gallery Grid */}
           <div className="grid grid-cols-1 gap-8 lg:grid-cols-2">
