@@ -294,10 +294,14 @@ export default function HomeSections() {
           <h2 className="text-[28px] font-bold text-white mb-4" style={{ fontFamily: "var(--font-josefin-sans)" }}>
             VISIT OUR FACTORY
           </h2>
-          <p className="text-[#c6c6c6] text-[15px] leading-[24.375px] text-center max-w-2xl mx-auto mb-8 px-5">
+          <p className="text-[#c6c6c6] text-[15px] leading-[24.375px] text-center max-w-2xl mx-auto mb-4 px-5">
             See our production facility firsthand. Every step of our process from selecting premium raw materials
             from Sulawesi to shaping, testing, and packaging is carried out with professionalism and dedication
-            to ensure consistency, safety, and performance. We welcome factory visits from potential clients and partners.
+            to ensure consistency, safety, and performance.
+          </p>
+          <p className="text-[#EFA12D] text-[14px] leading-[22px] text-center max-w-2xl mx-auto mb-8 px-5 italic">
+            "Behind every premium shisha session is a meticulous manufacturing process. We ensure every step is handled
+            with precision and care to deliver consistent quality charcoal briquettes for global markets."
           </p>
           <div className="max-w-4xl mx-auto px-5 mb-8">
             <Image
@@ -309,6 +313,55 @@ export default function HomeSections() {
               sizes="(max-width: 768px) 100vw, 896px"
             />
           </div>
+
+          {/* Instagram Production Gallery */}
+          <div className="max-w-4xl mx-auto px-5 mb-8">
+            <h3 className="text-lg font-semibold text-[#EFA12D] mb-4" style={{ fontFamily: "var(--font-josefin-sans)" }}>
+              Behind The Scenes — Our Production
+            </h3>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
+              <div className="relative aspect-square overflow-hidden rounded-lg">
+                <Image
+                  src="/images/instagram/production/01-manufacturing.jpg"
+                  alt="Manufacturing Process"
+                  fill
+                  sizes="(max-width: 768px) 50vw, 25vw"
+                  className="object-cover hover:scale-105 transition-transform duration-500"
+                />
+              </div>
+              <div className="relative aspect-square overflow-hidden rounded-lg">
+                <Image
+                  src="/images/instagram/team/01-qc-inspection.jpg"
+                  alt="Quality Control Inspection"
+                  fill
+                  sizes="(max-width: 768px) 50vw, 25vw"
+                  className="object-cover hover:scale-105 transition-transform duration-500"
+                />
+              </div>
+              <div className="relative aspect-square overflow-hidden rounded-lg">
+                <Image
+                  src="/images/instagram/testing/01-burn-test.jpg"
+                  alt="Product Burn Test"
+                  fill
+                  sizes="(max-width: 768px) 50vw, 25vw"
+                  className="object-cover hover:scale-105 transition-transform duration-500"
+                />
+              </div>
+              <div className="relative aspect-square overflow-hidden rounded-lg">
+                <Image
+                  src="/images/instagram/packaging/01-private-label.jpg"
+                  alt="Packaging & Private Label"
+                  fill
+                  sizes="(max-width: 768px) 50vw, 25vw"
+                  className="object-cover hover:scale-105 transition-transform duration-500"
+                />
+              </div>
+            </div>
+            <p className="text-[#909090] text-xs mt-3 text-left">
+              Not just made — carefully inspected by the PT Charcoalnesia Team before reaching global markets.
+            </p>
+          </div>
+
           <a
             href="https://wa.me/+628818786988?text=Hi%2C%20I%20would%20like%20to%20schedule%20a%20factory%20visit"
             target="_blank"
