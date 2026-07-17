@@ -138,7 +138,7 @@ export default function HomeSections() {
         <h2 className="text-center text-[28px] font-bold text-white uppercase mb-10 md:text-[36px] lg:text-[42px]" style={{ fontFamily: "var(--font-josefin-sans)" }}>
           DISCOVER OUR <span className="text-[#EFA12D]">PRODUCTS</span>
         </h2>
-        <div className="grid grid-cols-1 gap-y-14 px-0 py-0 md:grid-cols-2 md:gap-x-10 md:gap-y-16 lg:grid-cols-4 lg:gap-x-4">
+        <div className="grid grid-cols-1 gap-y-14 px-0 py-0 md:grid-cols-2 md:gap-x-10 md:gap-y-16 lg:grid-cols-3 lg:gap-x-4">
           {products.map((product) => (
             <div key={product.id} className="group flex flex-col items-center w-full pb-8 mb-4 border-b border-[#9C9C9C] md:border-b-0 md:pb-0 md:mb-0">
               <Link href={`/our-products/${product.slug}`} className="w-full block">

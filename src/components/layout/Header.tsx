@@ -26,12 +26,9 @@ const navItems = [
     label: "Our Products",
     href: "/our-products",
     children: [
-      { label: "Coconut Shisha Charcoal", href: "/our-products/coconut-shell-charcoal-briquette-" },
-      { label: "Barbeque Charcoal", href: "/our-products/barbeque-charcoal-briquette" },
-      { label: "Sawdust Charcoal", href: "/our-products/sawdust-charcoal" },
-      { label: "Natural Wood Charcoal", href: "/our-products/natural-wood-charcoal" },
-      { label: "Raw Charcoal Materials", href: "/our-products/raw-coconut-charcoal-materials" },
-      { label: "Charcoalnesia Brands", href: "/our-products/charcoalnesia-brand" },
+      { label: "Coconut charcoal BBQ", href: "/our-products/coconut-charcoal-bbq" },
+      { label: "Coconut shells charcoal briquettes", href: "/our-products/coconut-shells-charcoal-briquettes" },
+      { label: "Raw coconut charcoal materials", href: "/our-products/raw-coconut-charcoal-materials" },
     ],
   },
   {

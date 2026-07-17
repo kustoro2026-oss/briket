@@ -1,56 +1,12 @@
 [
   {
-    "id": "coconut-shell-charcoal-briquette",
-    "name": "Coconut Shisha Charcoal Briquette",
-    "slug": "coconut-shell-charcoal-briquette-",
-    "description": "Coconut Shell Charcoal Briquette is an eco-friendly, sustainable fuel made from the natural byproduct of coconut shells. Suitable for shisha/hookah, odorless & smokeless, and 100% eco-friendly. Our premium coconut charcoal briquettes are made from 100% natural coconut shell, providing consistent heat, long burning time of 2 hours+, and minimal ash production with ash content at 1.68% and moisture at 5.98%.",
-    "category": "Shisha",
-    "images": [
-      "/images/products/coconut-shisha/01.jpg",
-      "/images/products/coconut-shisha/02.jpg",
-      "/images/products/coconut-shisha/03.jpg",
-      "/images/products/coconut-shisha/04.jpg",
-      "/images/products/coconut-shisha/05.jpg"
-    ],
-    "shapes": [
-      { "type": "FLAT", "sizes": ["25x25x17 - (108 pcs/kg)", "25x25x15 - (120 pcs/kg)", "20x20x20 - (192 pcs/kg)"] },
-      { "type": "CUBE", "sizes": ["22x22x22 - (96 pcs/kg)", "25x25x25 - (72 pcs/kg)", "26x26x26 - (64 pcs/kg)", "27x27x27 - (54 pcs/kg)", "28x28x28 - (50 pcs/kg)"] },
-      { "type": "HEXA", "sizes": ["18x50 - (72 pcs/kg)", "20x35 - (96 pcs/kg)", "20x50 - (64 pcs/kg)"] },
-      { "type": "STICK", "sizes": ["18x50 - (72 pcs/kg)", "20x35 - (96 pcs/kg)", "20x50 - (64 pcs/kg)"] }
-    ],
-    "packaging": ["Bulk Loose", "Full", "Bulk"],
-    "moq": "20\" Container (18 Tons) / 40\" Container (26 Tons)",
-    "capacity": "250 Tons/Month",
-    "specifications": {
-      "Ash Content": "1.68%",
-      "Moisture": "5.98%",
-      "Fixed Carbon": "> 75%",
-      "Burning Time": "> 2 hours",
-      "Caloric Value": "> 7000 Kcal"
-    },
-    "specImages": [
-      "/images/products/coconut-shisha/spec-1.jpg",
-      "/images/products/coconut-shisha/spec-2.jpg"
-    ],
-    "shapeImages": {
-      "FLAT": "/images/products/coconut-shisha/shape-flat.jpg",
-      "CUBE": "/images/products/coconut-shisha/shape-cube.jpg",
-      "HEXA": "/images/products/coconut-shisha/shape-hexa.jpg",
-      "STICK": "/images/products/coconut-shisha/shape-stick.jpg"
-    }
-  },
-  {
-    "id": "barbeque-charcoal-briquette",
-    "name": "Barbeque Charcoal Briquette",
-    "slug": "barbeque-charcoal-briquette",
-    "description": "These briquettes are perfect for barbecue and grilling. Specifically designed for extra long-lasting heat with highly consistent temperatures. This premium product guarantees a uniform burn with minimal smoke and low ash content. Made from coconut shell for superior performance.",
+    "id": "coconut-charcoal-bbq",
+    "name": "Coconut charcoal BBQ",
+    "slug": "coconut-charcoal-bbq",
+    "description": "These briquettes are perfect for barbecue and grilling. Specifically designed for extra long-lasting heat with highly consistent temperatures. This premium product guarantees a uniform burn with minimal smoke and low ash content.",
     "category": "BBQ",
     "images": [
-      "/images/products/bbq/01.jpg",
-      "/images/products/bbq/02.jpg",
-      "/images/products/bbq/03.jpg",
-      "/images/products/bbq/04.jpg",
-      "/images/products/bbq/05.jpg"
+      "/images/products/coconut-charcoal-bbq.PNG"
     ],
     "shapes": [
       { "type": "Hexa", "sizes": ["50x50x30mm", "50x50x35mm"] },
@@ -68,78 +24,24 @@
     }
   },
   {
-    "id": "sawdust-charcoal",
-    "name": "Sawdust Charcoal",
-    "slug": "sawdust-charcoal",
-    "description": "Eco-friendly sawdust charcoal briquettes made from compressed sawdust. An economical alternative for industrial and household heating needs.",
-    "category": "Industrial",
+    "id": "coconut-shells-charcoal-briquettes",
+    "name": "Coconut shells charcoal briquettes",
+    "slug": "coconut-shells-charcoal-briquettes",
+    "description": "Suitable for shisha/hookah. Odorless & Smokeless. 100% Eco-Friendly. Ash content 1.68%, moisture 5.98%, burning time 2hours+.",
+    "category": "Shisha",
     "images": [
-      "/images/products/sawdust/01.jpg",
-      "/images/products/sawdust/02.jpg",
-      "/images/products/sawdust/03.jpg",
-      "/images/products/sawdust/04.jpg"
+      "/images/products/coconut-shells-charcoal-briquettes.PNG"
     ],
     "shapes": [
-      { "type": "Hexa", "sizes": ["AB Grade (45mm)", "ABC Grade (40mm)", "CD Grade (35mm)"] }
+      { "type": "FLAT", "sizes": ["25x25x17 - (108 pcs/kg)", "25x25x15 - (120 pcs/kg)", "20x20x20 - (192 pcs/kg)"] },
+      { "type": "CUBE", "sizes": ["22x22x22 - (96 pcs/kg)", "25x25x25 - (72 pcs/kg)", "26x26x26 - (64 pcs/kg)"] }
     ],
-    "packaging": ["Woven Bag"],
-    "moq": "40ft Container (27 Tons)",
-    "capacity": "135 Tons/Month",
-    "specifications": {
-      "Ash Content": "< 5%",
-      "Moisture": "< 10%",
-      "Fixed Carbon": "> 60%",
-      "Burning Time": "> 2 hours",
-      "Caloric Value": "> 5500 Kcal"
-    }
-  },
-  {
-    "id": "natural-wood-charcoal",
-    "name": "Natural Wood Charcoal",
-    "slug": "natural-wood-charcoal",
-    "description": "100% natural hardwood charcoal, lump form. Ideal for restaurant grilling, traditional cooking, and industrial applications requiring high heat.",
-    "category": "Restaurant",
-    "images": [
-      "/images/products/natural-wood/01.jpg",
-      "/images/products/natural-wood/02.jpg",
-      "/images/products/natural-wood/03.jpg",
-      "/images/products/natural-wood/04.jpg"
-    ],
-    "shapes": [
-      { "type": "Lump Wood", "sizes": ["< 5cm"] }
-    ],
-    "packaging": ["Bulk Loose"],
-    "moq": "40ft Container (20 Tons)",
-    "capacity": "100 Tons/Month",
-    "specifications": {
-      "Ash Content": "< 3%",
-      "Moisture": "< 10%",
-      "Fixed Carbon": "> 75%",
-      "Burning Time": "> 2 hours",
-      "Caloric Value": "> 7000 Kcal"
-    }
-  },
-  {
-    "id": "charcoalnesia-brand",
-    "name": "Charcoalnesia Brands",
-    "slug": "charcoalnesia-brand",
-    "description": "Our signature Golden Cube brand, available for OEM and private label arrangements. Premium quality charcoal products under your own brand name.",
-    "category": "OEM",
-    "images": [
-      "https://djavacoal.com/images/products/cube-25.png",
-      "https://djavacoal.com/images/products/cube-26.png"
-    ],
-    "shapes": [
-      { "type": "Cube 25", "sizes": ["72 pcs/kg"] },
-      { "type": "Cube 20x50", "sizes": ["64 pcs/kg"] },
-      { "type": "Cube 26", "sizes": ["64 pcs/kg"] }
-    ],
-    "packaging": ["OEM / Private Label"],
-    "moq": "Contact for details",
+    "packaging": ["Bulk Loose", "Full", "Bulk"],
+    "moq": "20\" Container (18 Tons) / 40\" Container (26 Tons)",
     "capacity": "250 Tons/Month",
     "specifications": {
-      "Ash Content": "< 2.5%",
-      "Moisture": "< 8%",
+      "Ash Content": "1.68%",
+      "Moisture": "5.98%",
       "Fixed Carbon": "> 75%",
       "Burning Time": "> 2 hours",
       "Caloric Value": "> 7000 Kcal"
@@ -147,14 +49,12 @@
   },
   {
     "id": "raw-coconut-charcoal-materials",
-    "name": "Raw Coconut Charcoal Materials",
+    "name": "Raw coconut charcoal materials",
     "slug": "raw-coconut-charcoal-materials",
-    "description": "Already carbonized and ready for further production or bulk processing. Selectively sourced from premium Indonesian origins in Sulawesi, our raw charcoal features high carbon content and low moisture. Perfect for other manufacturers and bulk buyers looking for high-quality raw materials to secure their supply chain.",
+    "description": "Already carbonized and ready for further production or bulk processing. Selectively sourced from premium Indonesian origins, our raw charcoal features high carbon content and low moisture. Perfect for other manufacturers and bulk buyers looking for high-quality raw materials to secure their supply chain.",
     "category": "Raw Materials",
     "images": [
-      "/images/products/coconut-shisha/01.jpg",
-      "/images/products/coconut-shisha/02.jpg",
-      "/images/products/coconut-shisha/03.jpg"
+      "/images/products/raw-coconut-charcoal-materials.PNG"
     ],
     "shapes": [
       { "type": "Raw Charcoal Lump", "sizes": ["Various sizes available"] }
@@ -163,10 +63,10 @@
     "moq": "20\" Container (18 Tons) / 40\" Container (26 Tons)",
     "capacity": "250 Tons/Month",
     "specifications": {
+      "Carbonized": "100%",
       "Ash Content": "1.68%",
       "Moisture": "5.98%",
       "Fixed Carbon": "> 75%",
-      "Carbonized": "100%",
       "Caloric Value": "> 7000 Kcal"
     }
   }

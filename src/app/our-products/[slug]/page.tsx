@@ -173,33 +173,18 @@ export default function ProductPage() {
                 {/* Specification & Lab Test */}
                 <div className="flex flex-col gap-5">
                   <h3 className="text-xl font-bold text-white">Specification & Lab. Test:</h3>
-                  {product.specImages ? (
-                    <div className="grid grid-cols-1 gap-1 sm:gap-4 md:grid-cols-2">
-                      {product.specImages.map((img: string, i: number) => (
-                        <Image
-                          key={i}
-                          src={img}
-                          alt={`Specification ${i + 1}`}
-                          width={600}
-                          height={400}
-                          className="w-full h-auto"
-                        />
-                      ))}
-                    </div>
-                  ) : (
-                    <div className="grid grid-cols-1 gap-1 sm:gap-4 md:grid-cols-2">
-                      {Object.entries(product.specifications).map(([key, value], i) => (
-                        <div
-                          key={key}
-                          className="flex items-center justify-between px-4 py-4 border border-[#848484]"
-                          style={{ backgroundColor: i % 2 === 0 ? "#262626" : "#151515" }}
-                        >
-                          <span className="text-sm font-medium text-white">{key}</span>
-                          <span className="text-sm text-[#B3B3B3]">{value as string}</span>
-                        </div>
-                      ))}
-                    </div>
-                  )}
+                  <div className="grid grid-cols-1 gap-1 sm:gap-4 md:grid-cols-2">
+                    {Object.entries(product.specifications).map(([key, value], i) => (
+                      <div
+                        key={key}
+                        className="flex items-center justify-between px-4 py-4 border border-[#848484]"
+                        style={{ backgroundColor: i % 2 === 0 ? "#262626" : "#151515" }}
+                      >
+                        <span className="text-sm font-medium text-white">{key}</span>
+                        <span className="text-sm text-[#B3B3B3]">{value as string}</span>
+                      </div>
+                    ))}
+                  </div>
                 </div>
 
                 {/* Divider */}
@@ -218,17 +203,7 @@ export default function ProductPage() {
                               background: "radial-gradient(circle at center, #000 0%, #171717 50%, rgba(255,255,255,0.25) 100%)",
                             }}
                           >
-                            {product.shapeImages && (product.shapeImages as Record<string, string>)[shape.type] ? (
-                              <Image
-                                src={(product.shapeImages as Record<string, string>)[shape.type]}
-                                alt={shape.type}
-                                width={110}
-                                height={110}
-                                className="object-contain"
-                              />
-                            ) : (
-                              <span className="text-white/20 text-xs">{shape.type}</span>
-                            )}
+                            <span className="text-white/20 text-xs">{shape.type}</span>
                           </div>
                           <div>
                             <h4 className="text-base font-bold text-white">{shape.type}:</h4>
