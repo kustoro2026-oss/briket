@@ -3,7 +3,7 @@
 import { FaWhatsapp } from "react-icons/fa";
 
 export default function WhatsAppCTA() {
-  const phone = "+628818786988";
+  const phone = "+628212991650";
   const message = "Hi%2C%20I%20would%20like%20to%20know%20more%20about%20your%20products";
 
   return (

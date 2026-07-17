@@ -52,8 +52,8 @@ export default function ContactUsPage() {
                   </div>
                   <div>
                     <h4 className="text-base font-semibold text-[#EFA12D]">E-Mail</h4>
-                    <a href="mailto:growwithfakhri@gmail.com" className="text-sm text-[#d9dce0] hover:text-secondary">
-                      growwithfakhri@gmail.com
+                    <a href="mailto:charcoalnesiaglobalexport@gmail.com" className="text-sm text-[#d9dce0] hover:text-secondary">
+                      charcoalnesiaglobalexport@gmail.com
                     </a>
                   </div>
                 </div>
@@ -68,12 +68,12 @@ export default function ContactUsPage() {
                   <div>
                     <h4 className="text-base font-semibold text-[#EFA12D]">Phone</h4>
                     <a
-                      href="https://wa.me/628818786988"
+                      href="https://wa.me/628212991650"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="text-sm text-[#d9dce0] hover:text-secondary"
                     >
-                      +628818786988
+                      +628212991650
                     </a>
                   </div>
                 </div>

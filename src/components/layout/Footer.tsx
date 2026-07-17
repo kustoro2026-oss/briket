@@ -159,12 +159,12 @@ export default function Footer() {
               </svg>
               <span className="text-sm font-bold text-gray-200 md:text-base">Phone :</span>
               <a
-                href="https://wa.me/+628818786988"
+                href="https://wa.me/+628212991650"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-sm text-gray-200 hover:underline md:text-base"
               >
-                +628818786988
+                +628212991650
               </a>
             </div>
 
@@ -176,10 +176,10 @@ export default function Footer() {
               </svg>
               <span className="text-sm font-bold text-gray-200 md:text-base">E-mail :</span>
               <a
-                href="mailto:growwithfakhri@gmail.com"
+                href="mailto:charcoalnesiaglobalexport@gmail.com"
                 className="text-sm text-gray-200 hover:underline md:text-base"
               >
-                growwithfakhri@gmail.com
+                charcoalnesiaglobalexport@gmail.com
               </a>
             </div>
           </div>

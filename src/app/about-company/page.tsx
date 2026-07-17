@@ -2,7 +2,7 @@
 
 import { useRouter } from "next/navigation";
 import Image from "next/image";
-import { getTeamMembers } from "@/lib/data";
+import { getTeamMembers, getCertificates } from "@/lib/data";
 
 const reelVideos = [
   { id: "bVKeLmEZyE8" },
@@ -29,20 +29,10 @@ const productGalleryThumbs = [
   "/images/product-gallery/07.jpg", "/images/product-gallery/08.jpg",
 ];
 
-const certificates = [
-  { label: "NIB / Business Registration Number", image: "https://djavacoal.com/images/certificates/cert1.png" },
-  { label: "Report Of Analysis (ROA)", image: "https://djavacoal.com/images/certificates/cert2.png" },
-  { label: "Self-Heating Test (SHT) - 1", image: "https://djavacoal.com/images/certificates/cert3.png" },
-  { label: "Self-Heating Test (SHT) - 2", image: "https://djavacoal.com/images/certificates/cert4.png" },
-  { label: "Self-Heating Test (SHT) - 3", image: "https://djavacoal.com/images/certificates/cert5.png" },
-  { label: "Material Safety Data Sheet (MSDS) - 1", image: "https://djavacoal.com/images/certificates/cert6.png" },
-  { label: "Material Safety Data Sheet (MSDS) - 2", image: "https://djavacoal.com/images/certificates/cert7.png" },
-  { label: "Material Safety Data Sheet (MSDS)", image: "https://djavacoal.com/images/certificates/cert8.png" },
-];
-
 export default function AboutCompanyPage() {
   const router = useRouter();
   const teamMembers = getTeamMembers();
+  const certificates = getCertificates();
 
   return (
     <div className="bg-[#1C1C1C]">
@@ -188,12 +178,14 @@ export default function AboutCompanyPage() {
             {[
               ["Company Name:", "PT Charcoalnesia Global Export"],
               ["Owner's Name:", "Yoga Indra Pradipta N"],
-              ["Address:", "Jl. P. Ilir Sari V No. 15, Jawa Barat, Indonesia"],
-              ["Established:", "2018"],
-              ["Products:", "Charcoal Products"],
+              ["Address:", "Jl. Menara 9 Blok 146 No. 14, Meruya Selatan, Kembangan, Jakarta Barat, DKI Jakarta 11650"],
+              ["Phone:", "0821-2991-650"],
+              ["Email:", "charcoalnesiaglobalexport@gmail.com"],
+              ["Established:", "2026"],
+              ["NIB:", "0707260080753"],
+              ["NPWP:", "1000000010253155"],
+              ["Products:", "Coconut Charcoal Briquettes"],
               ["Production Capacity:", "250 Tons / Month"],
-              ["Certification:", "Charcoal Products"],
-              ["Registered Number:", "NIB – 0220001680488"],
             ].map(([label, value], i) => (
               <div
                 key={i}
@@ -380,56 +372,67 @@ export default function AboutCompanyPage() {
             <p className="text-sm font-medium italic tracking-[0.35px] text-[#60A5FF]">Legal & Certificates</p>
           </div>
           <h2 className="text-[20px] font-semibold text-white">Trusted Legality, Proven Quality</h2>
-          <p className="text-base text-[#EFA12D]">Comprehensive Legal Documents and Verified Lab Certificates</p>
+          <p className="text-base text-[#EFA12D]">Official Business Registration & Legal Entity Documents</p>
 
-          {/* Mobile: horizontal scroll */}
-          <div className="scrollbar-hide flex gap-6 overflow-x-auto pb-3 lg:hidden">
-            {certificates.slice(0, 4).map((cert, i) => (
-              <div key={i} className="w-[250px] shrink-0">
-                <div className="relative overflow-hidden" style={{ height: "377px" }}>
-                  <Image
-                    src={cert.image}
-                    alt={cert.label}
-                    fill
-                    sizes="250px"
-                    className="object-contain"
-                  />
-                  <Image
-                    src="https://djavacoal.com/images/watermark-legal.png"
-                    alt=""
-                    fill
-                    sizes="250px"
-                    className="object-contain opacity-30 pointer-events-none"
-                  />
-                </div>
-                <p className="mt-2 text-center text-xs text-gray-300">{cert.label}</p>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mt-6">
+            {/* NIB Card */}
+            <div className="bg-[#2A2A2A] rounded-xl overflow-hidden">
+              <div className="relative w-full" style={{ aspectRatio: "1.414/1" }}>
+                <Image
+                  src="/images/certificates/nib-page1.png"
+                  alt="NIB PT Charcoalnesia Global Export"
+                  fill
+                  sizes="(max-width: 1024px) 100vw, 50vw"
+                  className="object-contain bg-black"
+                />
               </div>
-            ))}
-          </div>
+              <div className="p-5 space-y-2">
+                <h3 className="text-base font-bold text-white">NIB – Nomor Induk Berusaha</h3>
+                <p className="text-sm text-[#EFA12D] font-mono">0707260080753</p>
+                <p className="text-xs text-[#909090]">Diterbitkan oleh Kementerian Investasi dan Hilirisasi / BKPM</p>
+                <p className="text-xs text-[#909090]">Berlaku sebagai API-U, hak akses kepabeanan, BPJS, dan WLKP</p>
+                <p className="text-xs text-[#60A5FF]">Diterbitkan: 7 Juli 2026</p>
+                <a
+                  href="/documents/nib-pt-charcoalnesia.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 mt-2 text-xs font-semibold text-white bg-[#1B7308] px-4 py-2 rounded hover:bg-[#1c7a09] transition"
+                >
+                  <Image src="/images/icons/download.svg" alt="" width={14} height={14} />
+                  Download PDF
+                </a>
+              </div>
+            </div>
 
-          {/* Desktop: 4-column grid */}
-          <div className="hidden gap-6 lg:grid lg:grid-cols-4">
-            {certificates.map((cert, i) => (
-              <div key={i} className="w-[250px] shrink-0">
-                <div className="relative overflow-hidden" style={{ height: "377px" }}>
-                  <Image
-                    src={cert.image}
-                    alt={cert.label}
-                    fill
-                    sizes="250px"
-                    className="object-contain"
-                  />
-                  <Image
-                    src="https://djavacoal.com/images/watermark-legal.png"
-                    alt=""
-                    fill
-                    sizes="250px"
-                    className="object-contain opacity-30 pointer-events-none"
-                  />
-                </div>
-                <p className="mt-2 text-center text-xs text-gray-300">{cert.label}</p>
+            {/* SK Pengesahan Card */}
+            <div className="bg-[#2A2A2A] rounded-xl overflow-hidden">
+              <div className="relative w-full" style={{ aspectRatio: "1.414/1" }}>
+                <Image
+                  src="/images/certificates/cetak-sk-page1.png"
+                  alt="SK Pengesahan PT Charcoalnesia Global Export"
+                  fill
+                  sizes="(max-width: 1024px) 100vw, 50vw"
+                  className="object-contain bg-black"
+                />
               </div>
-            ))}
+              <div className="p-5 space-y-2">
+                <h3 className="text-base font-bold text-white">SK Pengesahan Pendirian PT</h3>
+                <p className="text-sm text-[#EFA12D] font-mono">AHU-0052452.AH.01.01.TAHUN 2026</p>
+                <p className="text-xs text-[#909090]">Diterbitkan oleh Kementerian Hukum RI – Dirjen AHU</p>
+                <p className="text-xs text-[#909090]">Notaris: GUFI LAURA PATRICIA, S.H., M.Kn. | Akta No. 38, 3 Juli 2026</p>
+                <p className="text-xs text-[#909090]">No. Register: AHU-0149075.AH.01.11.TAHUN 2026</p>
+                <p className="text-xs text-[#60A5FF]">Ditetapkan: 3 Juli 2026</p>
+                <a
+                  href="/documents/sk-pengesahan-pt-charcoalnesia.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 mt-2 text-xs font-semibold text-white bg-[#1B7308] px-4 py-2 rounded hover:bg-[#1c7a09] transition"
+                >
+                  <Image src="/images/icons/download.svg" alt="" width={14} height={14} />
+                  Download PDF
+                </a>
+              </div>
+            </div>
           </div>
         </section>
 
@@ -460,7 +463,7 @@ export default function AboutCompanyPage() {
                 while maintaining the consistency and excellence that our global customers trust.
               </p>
               <a
-                href="https://wa.me/+628818786988?text=Hi%2C%20I%20would%20like%20to%20schedule%20a%20factory%20visit"
+                href="https://wa.me/+628212991650?text=Hi%2C%20I%20would%20like%20to%20schedule%20a%20factory%20visit"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex h-[54px] w-full items-center justify-center gap-3 rounded-lg bg-[#1B7308] text-sm font-semibold text-white transition hover:bg-[#1c7a09] md:w-[325px]"

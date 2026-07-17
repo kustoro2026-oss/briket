@@ -1,10 +1,26 @@
 [
-  { "id": "cert-1", "name": "NIB", "type": "Legal", "documentUrl": "/documents/nib.pdf" },
-  { "id": "cert-2", "name": "ROA", "type": "Legal", "documentUrl": "/documents/roa.pdf" },
-  { "id": "cert-3", "name": "SHT - Coconut Charcoal", "type": "SHT", "documentUrl": "/documents/sht-coconut.pdf" },
-  { "id": "cert-4", "name": "SHT - Sawdust Charcoal", "type": "SHT", "documentUrl": "/documents/sht-sawdust.pdf" },
-  { "id": "cert-5", "name": "SHT - Wood Charcoal", "type": "SHT", "documentUrl": "/documents/sht-wood.pdf" },
-  { "id": "cert-6", "name": "MSDS - Coconut Charcoal", "type": "MSDS", "documentUrl": "/documents/msds-coconut.pdf" },
-  { "id": "cert-7", "name": "MSDS - Sawdust Charcoal", "type": "MSDS", "documentUrl": "/documents/msds-sawdust.pdf" },
-  { "id": "cert-8", "name": "MSDS - Wood Charcoal", "type": "MSDS", "documentUrl": "/documents/msds-wood.pdf" }
+  {
+    "id": "nib",
+    "name": "NIB – Nomor Induk Berusaha",
+    "type": "Legal",
+    "number": "0707260080753",
+    "issuedBy": "Kementerian Investasi dan Hilirisasi / BKPM",
+    "issuedDate": "7 Juli 2026",
+    "description": "Business Identification Number (NIB) berlaku sebagai API-U, hak akses kepabeanan, pendaftaran BPJS Kesehatan & Ketenagakerjaan, dan WLKP.",
+    "documentUrl": "/documents/nib-pt-charcoalnesia.pdf"
+  },
+  {
+    "id": "sk-pengesahan",
+    "name": "SK Pengesahan Pendirian PT",
+    "type": "Legal",
+    "number": "AHU-0052452.AH.01.01.TAHUN 2026",
+    "issuedBy": "Kementerian Hukum RI (Dirjen AHU)",
+    "issuedDate": "3 Juli 2026",
+    "notary": "GUFI LAURA PATRICIA, S.H., M.KN.",
+    "akta": "Akta No. 38, 3 Juli 2026",
+    "registerNumber": "AHU-0149075.AH.01.11.TAHUN 2026",
+    "description": "Surat Keputusan Pengesahan Pendirian Badan Hukum Perseroan Terbatas dari Kementerian Hukum RI.",
+    "documentUrl": "/documents/sk-pengesahan-pt-charcoalnesia.pdf"
+  }
 ]
+

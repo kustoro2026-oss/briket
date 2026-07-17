@@ -363,7 +363,7 @@ export default function HomeSections() {
           </div>
 
           <a
-            href="https://wa.me/+628818786988?text=Hi%2C%20I%20would%20like%20to%20schedule%20a%20factory%20visit"
+            href="https://wa.me/+628212991650?text=Hi%2C%20I%20would%20like%20to%20schedule%20a%20factory%20visit"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center justify-center gap-3 rounded-lg bg-[#1B7308] text-white px-6 h-[54px] w-[271px] text-sm font-semibold transition-all hover:bg-[#1c7a09] md:w-[360px] md:text-[15px] lg:w-[500px]"
