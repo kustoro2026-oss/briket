@@ -111,9 +111,12 @@ export default function HomeSections() {
 
       {/* ========== WHY CHOOSE US ========== */}
       <section className="relative w-full overflow-hidden py-10 md:py-14 lg:py-16">
-        <h2 className="text-center text-[28px] font-bold text-white uppercase mb-10 md:text-[36px] lg:text-[42px]" style={{ fontFamily: "var(--font-josefin-sans)" }}>
+        <h2 className="text-center text-[28px] font-bold text-white uppercase mb-4 md:text-[36px] lg:text-[42px]" style={{ fontFamily: "var(--font-josefin-sans)" }}>
           WHY CHOOSE US?
         </h2>
+        <p className="text-center text-[#C6C6C6] text-sm md:text-base max-w-3xl mx-auto mb-10 px-5">
+          100% Pure Coconut Shell · Zero Cracking · No Chemical Fillers · Clean Brown Ash · 2 Hours+ Burn Time · Eco-Friendly
+        </p>
         <div className="scrollbar-hide flex justify-start gap-[clamp(1rem,1.5vw,1.25rem)] overflow-x-auto px-3 sm:px-5 md:px-10 lg:flex-wrap lg:justify-center lg:overflow-x-visible lg:px-20">
           {features.map((feature, i) => (
             <div
@@ -221,7 +224,28 @@ export default function HomeSections() {
               </div>
             ))}
           </div>
-          <div className="mt-12 flex justify-center">
+          {/* Private Label / OEM Info from Instagram */}
+          <div className="mt-12 mx-auto max-w-3xl px-5 text-center">
+            <div className="flex items-center justify-center gap-3 mb-4">
+              <Image
+                src="/images/instagram/packaging/01-private-label.jpg"
+                alt="Private Label Packaging"
+                width={400}
+                height={300}
+                className="rounded-lg object-cover"
+              />
+            </div>
+            <h3 className="text-xl font-bold text-[#EFA12D] mb-3" style={{ fontFamily: "var(--font-josefin-sans)" }}>
+              Private Label & OEM Manufacturing
+            </h3>
+            <p className="text-[#C6C6C6] text-sm md:text-base leading-relaxed mb-4">
+              Build your own brand with our flexible packaging solutions. We fully support Private Label manufacturing 
+              with custom inner boxes from 1kg up to 20kg. Prefer a faster route? Use our official Charcoalnesia brand 
+              to save on design fees and get faster production. All options come with heavy-duty 5-layer master cartons 
+              and secure plastic liners inside.
+            </p>
+          </div>
+          <div className="mt-8 flex justify-center">
             <Link
               href="/production-info#packaging-info"
               className="text-[15px] font-semibold text-[#EFA12D] italic underline-offset-4 hover:underline md:text-[16px]"
@@ -313,7 +337,7 @@ export default function HomeSections() {
           MAJORITY EXPORT DESTINATION
         </h2>
         <p className="text-[#d3d3d3] text-base leading-[26px] text-center max-w-[1024px] mx-auto mb-8">
-          Our products reach customers across 20+ countries worldwide.
+          Our products reach customers across 20+ countries worldwide, with strong demand in Germany, Jordan, and the Middle East markets.
         </p>
         <div className="flex flex-wrap justify-center gap-3 max-w-4xl mx-auto px-5">
           {exportCountries.map((code) => (

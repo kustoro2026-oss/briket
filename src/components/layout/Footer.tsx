@@ -5,6 +5,7 @@ import { FaFacebookF, FaLinkedinIn, FaInstagram, FaTiktok } from "react-icons/fa
 const companyLinks = [
   { label: "Charcoalnesia", href: "/about-company#charcoalnesia" },
   { label: "Charcoalnesia's Team", href: "/about-company#charcoalnesia-team" },
+  { label: "Quality Control", href: "/about-company#quality-control" },
   { label: "Legal & Certificate", href: "/about-company#legal-certificate" },
   { label: "Factory", href: "/about-company#factory" },
   { label: "Our Gallery", href: "/about-company#our-gallery" },

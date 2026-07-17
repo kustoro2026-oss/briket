@@ -71,6 +71,7 @@ export default function AboutCompanyPage() {
               {[
                 { label: "PT Charcoalnesia Global Export", href: "#charcoalnesia" },
                 { label: "Charcoalnesia's Team", href: "#charcoalnesia-team" },
+                { label: "Quality Control", href: "#quality-control" },
                 { label: "What We Do?", href: "#what-we-do" },
                 { label: "Countries Exported", href: "#countries-exported" },
                 { label: "Legal & Certificates", href: "#legal-certificate" },
@@ -98,6 +99,7 @@ export default function AboutCompanyPage() {
               {[
                 { label: "PT Charcoalnesia Global Export", value: "#charcoalnesia" },
                 { label: "Charcoalnesia's Team", value: "#charcoalnesia-team" },
+                { label: "Quality Control", value: "#quality-control" },
                 { label: "What We Do?", value: "#what-we-do" },
                 { label: "Countries Exported", value: "#countries-exported" },
                 { label: "Legal & Certificates", value: "#legal-certificate" },
@@ -268,6 +270,70 @@ export default function AboutCompanyPage() {
                 </div>
               </div>
             ))}
+          </div>
+        </section>
+
+        {/* ===== Quality Control ===== */}
+        <section id="quality-control" className="mt-2 scroll-mt-28 rounded-xl bg-[#222222] p-5 lg:p-10">
+          <div className="mb-2 flex items-center gap-3">
+            <span className="h-px w-8 bg-white" />
+            <p className="text-sm font-medium italic tracking-[0.35px] text-[#60A5FF]">Quality Control</p>
+          </div>
+          <h2 className="text-[20px] font-semibold text-white mt-1">Carefully Inspected Before Reaching Global Markets</h2>
+          <p className="text-base text-[#EFA12D] mt-1">Every Batch Is Tested For Consistency, Purity, And Performance</p>
+
+          <div className="flex flex-col lg:flex-row gap-8 mt-6">
+            <div className="relative w-full lg:w-[400px] aspect-square overflow-hidden rounded-xl">
+              <Image
+                src="/images/instagram/team/01-qc-inspection.jpg"
+                alt="PT Charcoalnesia Team Quality Control Inspection"
+                fill
+                sizes="400px"
+                className="object-cover rounded-xl"
+              />
+            </div>
+            <div className="flex-1 space-y-4">
+              <p className="text-sm leading-[22.75px] text-[#c0c5cc]">
+                Quality control is our top priority. Our internal QC team, led by Rahmat, directly oversees the entire
+                production process — implementing rigorous on-site quality control inspection from start to finish.
+                Not just made. Carefully inspected by the PT Charcoalnesia Team before reaching global markets.
+              </p>
+              <p className="text-sm leading-[22.75px] text-[#c0c5cc]">
+                We conduct comprehensive product testing sessions to ensure that every single batch of our premium
+                coconut charcoal briquettes meets the highest international standards. The red hot glow and clean
+                brown ash are the ultimate proof of 100% pure coconut shell quality — no chemical fillers, just
+                maximum heat and the perfect burn.
+              </p>
+              <div className="grid grid-cols-2 gap-3 mt-4">
+                {[
+                  { label: "Material", value: "100% Coconut Shell" },
+                  { label: "Ash", value: "Clean Brown, Low" },
+                  { label: "Burn Time", value: "2 Hours+" },
+                  { label: "Fillers", value: "Zero Chemicals" },
+                ].map((item, i) => (
+                  <div key={i} className="bg-[#323232] rounded-lg p-3">
+                    <span className="block text-xs text-[#60A5FF] mb-1">{item.label}</span>
+                    <span className="block text-sm font-semibold text-white">{item.value}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+
+          {/* Additional QC Images */}
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 mt-8">
+            <div className="relative aspect-square overflow-hidden rounded-lg">
+              <Image src="/images/instagram/testing/02-pure-quality.jpg" alt="Pure Quality Test" fill sizes="200px" className="object-cover" />
+            </div>
+            <div className="relative aspect-square overflow-hidden rounded-lg">
+              <Image src="/images/instagram/testing/01-burn-test.jpg" alt="Burn Test" fill sizes="200px" className="object-cover" />
+            </div>
+            <div className="relative aspect-square overflow-hidden rounded-lg">
+              <Image src="/images/instagram/production/01-manufacturing.jpg" alt="Manufacturing Process" fill sizes="200px" className="object-cover" />
+            </div>
+            <div className="relative aspect-square overflow-hidden rounded-lg">
+              <Image src="/images/instagram/shipping/01-export-shipping.jpg" alt="Export Shipping" fill sizes="200px" className="object-cover" />
+            </div>
           </div>
         </section>
 

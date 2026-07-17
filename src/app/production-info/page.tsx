@@ -221,6 +221,44 @@ export default function ProductionInfoPage() {
                     </div>
                   ))}
                 </div>
+
+                {/* Private Label / OEM */}
+                <div className="px-5 pb-8 md:px-10">
+                  <div className="border-t border-[#848484] pt-8">
+                    <div className="flex flex-col md:flex-row gap-8 items-center">
+                      <div className="relative w-full md:w-[350px] aspect-video overflow-hidden rounded-xl">
+                        <Image
+                          src="/images/instagram/packaging/01-private-label.jpg"
+                          alt="Private Label Packaging"
+                          fill
+                          sizes="350px"
+                          className="object-cover rounded-xl"
+                        />
+                      </div>
+                      <div className="flex-1">
+                        <h3 className="text-lg font-semibold text-[#EFA12D] mb-3">Private Label & OEM Manufacturing</h3>
+                        <p className="text-sm leading-relaxed text-[#CCCCCC] mb-4">
+                          Build your own brand with our flexible packaging solutions. We fully support Private Label manufacturing
+                          with custom inner boxes from 1kg up to 20kg. Prefer a faster route? Use our official Charcoalnesia brand
+                          to save on design fees and get faster production times.
+                        </p>
+                        <div className="grid grid-cols-2 gap-3">
+                          {[
+                            { label: "Inner Box Sizes", value: "1kg – 20kg custom" },
+                            { label: "Master Carton", value: "Heavy-duty 5-layer" },
+                            { label: "Inner Protection", value: "Plastic liners" },
+                            { label: "Brand Option", value: "Your Brand or Ours" },
+                          ].map((item, i) => (
+                            <div key={i} className="bg-[#323232] rounded-lg p-3">
+                              <span className="block text-xs text-[#60A5FF] mb-1">{item.label}</span>
+                              <span className="block text-sm font-semibold text-white">{item.value}</span>
+                            </div>
+                          ))}
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </section>
 

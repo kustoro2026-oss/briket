@@ -16,6 +16,7 @@ const navItems = [
     children: [
       { label: "Charcoalnesia", href: "/about-company#charcoalnesia" },
       { label: "Team", href: "/about-company#charcoalnesia-team" },
+      { label: "Quality Control", href: "/about-company#quality-control" },
       { label: "What We Do", href: "/about-company#what-we-do" },
       { label: "Legal & Certificate", href: "/about-company#legal-certificate" },
       { label: "Factory", href: "/about-company#factory" },
