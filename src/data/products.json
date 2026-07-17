@@ -3,7 +3,7 @@
     "id": "coconut-shell-charcoal-briquette",
     "name": "Coconut Shisha Charcoal Briquette",
     "slug": "coconut-shell-charcoal-briquette-",
-    "description": "Coconut Shell Charcoal Briquette is an eco-friendly, sustainable fuel made from the natural byproduct of coconut shells. Known for its high calorific value, long burn time, and low ash content, it is ideal for grilling, barbecues, shisha, and industrial applications. Our premium coconut charcoal briquettes are made from 100% natural coconut shell, providing consistent heat, long burning time, and minimal ash production.",
+    "description": "Coconut Shell Charcoal Briquette is an eco-friendly, sustainable fuel made from the natural byproduct of coconut shells. Suitable for shisha/hookah, odorless & smokeless, and 100% eco-friendly. Our premium coconut charcoal briquettes are made from 100% natural coconut shell, providing consistent heat, long burning time of 2 hours+, and minimal ash production with ash content at 1.68% and moisture at 5.98%.",
     "category": "Shisha",
     "images": [
       "/images/products/coconut-shisha/01.jpg",
@@ -22,8 +22,8 @@
     "moq": "20\" Container (18 Tons) / 40\" Container (26 Tons)",
     "capacity": "250 Tons/Month",
     "specifications": {
-      "Ash Content": "< 2.5%",
-      "Moisture": "< 8%",
+      "Ash Content": "1.68%",
+      "Moisture": "5.98%",
       "Fixed Carbon": "> 75%",
       "Burning Time": "> 2 hours",
       "Caloric Value": "> 7000 Kcal"
@@ -43,7 +43,7 @@
     "id": "barbeque-charcoal-briquette",
     "name": "Barbeque Charcoal Briquette",
     "slug": "barbeque-charcoal-briquette",
-    "description": "High-quality BBQ charcoal briquettes made from coconut shell. Perfect for grilling and barbeque, providing long-lasting heat with minimal smoke and ash.",
+    "description": "These briquettes are perfect for barbecue and grilling. Specifically designed for extra long-lasting heat with highly consistent temperatures. This premium product guarantees a uniform burn with minimal smoke and low ash content. Made from coconut shell for superior performance.",
     "category": "BBQ",
     "images": [
       "/images/products/bbq/01.jpg",
@@ -120,9 +120,9 @@
     }
   },
   {
-    "id": "djavacoal-brand",
-    "name": "Grow With Fakhri Brands",
-    "slug": "djavacoal-brand",
+    "id": "charcoalnesia-brand",
+    "name": "Charcoalnesia Brands",
+    "slug": "charcoalnesia-brand",
     "description": "Our signature Golden Cube brand, available for OEM and private label arrangements. Premium quality charcoal products under your own brand name.",
     "category": "OEM",
     "images": [
@@ -142,6 +142,31 @@
       "Moisture": "< 8%",
       "Fixed Carbon": "> 75%",
       "Burning Time": "> 2 hours",
+      "Caloric Value": "> 7000 Kcal"
+    }
+  },
+  {
+    "id": "raw-coconut-charcoal-materials",
+    "name": "Raw Coconut Charcoal Materials",
+    "slug": "raw-coconut-charcoal-materials",
+    "description": "Already carbonized and ready for further production or bulk processing. Selectively sourced from premium Indonesian origins in Sulawesi, our raw charcoal features high carbon content and low moisture. Perfect for other manufacturers and bulk buyers looking for high-quality raw materials to secure their supply chain.",
+    "category": "Raw Materials",
+    "images": [
+      "/images/products/coconut-shisha/01.jpg",
+      "/images/products/coconut-shisha/02.jpg",
+      "/images/products/coconut-shisha/03.jpg"
+    ],
+    "shapes": [
+      { "type": "Raw Charcoal Lump", "sizes": ["Various sizes available"] }
+    ],
+    "packaging": ["Bulk Loose", "Woven Bag"],
+    "moq": "20\" Container (18 Tons) / 40\" Container (26 Tons)",
+    "capacity": "250 Tons/Month",
+    "specifications": {
+      "Ash Content": "1.68%",
+      "Moisture": "5.98%",
+      "Fixed Carbon": "> 75%",
+      "Carbonized": "100%",
       "Caloric Value": "> 7000 Kcal"
     }
   }

@@ -20,7 +20,7 @@ export default function ContactUsPage() {
           <div className="absolute inset-0 bg-black/20 flex items-center justify-center">
             <div className="text-center">
               <h1 className="text-2xl font-semibold text-white">Contact Us</h1>
-              <p className="text-white/70 mt-1 text-lg">Free Sample Grow With Fakhri</p>
+              <p className="text-white/70 mt-1 text-lg">Free Sample Charcoalnesia</p>
             </div>
           </div>
         </div>
@@ -35,7 +35,7 @@ export default function ContactUsPage() {
               {/* Centered Logo SVG */}
               <Image
                 src="/images/logo-brand-baru.png"
-                alt="Grow With Fakhri"
+                alt="Charcoalnesia"
                 width={120}
                 height={48}
                 className="h-auto w-[120px] mb-10"
@@ -107,7 +107,7 @@ export default function ContactUsPage() {
                 <a href="https://linkedin.com/" target="_blank" rel="noopener noreferrer" className="border bg-transparent p-2 hover:bg-gray-500 transition-colors">
                   <FaLinkedinIn className="w-[18px] h-[18px] text-gray-200" />
                 </a>
-                <a href="https://instagram.com/" target="_blank" rel="noopener noreferrer" className="border bg-transparent p-2 hover:bg-gray-500 transition-colors">
+                <a href="https://instagram.com/charcoal_nesia" target="_blank" rel="noopener noreferrer" className="border bg-transparent p-2 hover:bg-gray-500 transition-colors">
                   <FaInstagram className="w-[18px] h-[18px] text-gray-200" />
                 </a>
                 <a href="https://tiktok.com/" target="_blank" rel="noopener noreferrer" className="border bg-transparent p-2 hover:bg-gray-500 transition-colors">
@@ -134,7 +134,7 @@ export default function ContactUsPage() {
                   allowFullScreen
                   loading="lazy"
                   referrerPolicy="no-referrer-when-downgrade"
-                  title="Grow With Fakhri Location"
+                  title="Charcoalnesia Location"
                 />
               </div>
             </div>

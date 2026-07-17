@@ -80,18 +80,22 @@ export default function HomeSections() {
           {/* Deskripsi */}
           <div className="flex-1">
             <h2 className="text-[28px] md:text-[32px] font-bold text-white text-left" style={{ fontFamily: "var(--font-josefin-sans)" }}>
-              CV. GROW WITH FAKHRI
+              PT CHARCOALNESIA GLOBAL EXPORT
             </h2>
             <p className="text-[15px] leading-[27px] text-[#cfcfcf] text-justify mb-4 mt-4" style={{ fontFamily: "var(--font-open-sans)" }}>
-              CV Grow With Fakhri is a trusted supplier and exporter of premium charcoal products, specializing
-              in coconut shell charcoal briquettes, BBQ briquettes, sawdust charcoal, and natural hardwood charcoal.
-              With three partner factories across Java Island and direct access to major international ports,
-              we ensure competitive shipping and timely delivery for our global partners.
+              Charcoalnesia is a premier manufacturer and supplier of high-quality charcoal products.
+              We operate in close collaboration with three trusted manufacturing facilities in Indonesia
+              that provide us with dedicated, exclusive production lines. Our first line is fully dedicated
+              to premium shisha/hookah 100% coconut shells charcoal, the second line specializes in coconut
+              based charcoal for BBQ/Grill, and the third line is dedicated to high quality wood based charcoal
+              for traditional BBQ.
             </p>
             <p className="text-[15px] leading-[27px] text-[#cfcfcf] text-justify mb-6" style={{ fontFamily: "var(--font-open-sans)" }}>
-              Quality is our priority — every product meets international standards for performance, long-lasting
-              burning time, and eco-friendly characteristics. We also offer OEM and private label services for
-              custom briquette shapes, packaging, and branding to fit your unique needs.
+              Our premium raw materials are selectively sourced from premium origins in Sulawesi. In addition
+              to finished briquettes, we are fully capable of supplying raw materials that have already been
+              processed into raw charcoal to support other manufacturers and bulk buyers. To guarantee absolute
+              consistency, our internal Quality Control team, led by Rahmat, directly oversees the entire
+              production — implementing rigorous on-site quality control inspection from start to finish.
             </p>
             <Link
               href="/about-company"
@@ -268,8 +272,8 @@ export default function HomeSections() {
           </h2>
           <p className="text-[#c6c6c6] text-[15px] leading-[24.375px] text-center max-w-2xl mx-auto mb-8 px-5">
             See our production facility firsthand. Every step of our process from selecting premium raw materials
-            to shaping, testing, and packaging is carried out with professionalism and dedication to ensure
-            consistency, safety, and performance. We welcome factory visits from potential clients and partners.
+            from Sulawesi to shaping, testing, and packaging is carried out with professionalism and dedication
+            to ensure consistency, safety, and performance. We welcome factory visits from potential clients and partners.
           </p>
           <div className="max-w-4xl mx-auto px-5 mb-8">
             <Image

@@ -14,8 +14,8 @@ const navItems = [
     label: "About Company",
     href: "/about-company",
     children: [
-      { label: "Grow With Fakhri", href: "/about-company#grow-with-fakhri" },
-      { label: "Team", href: "/about-company#djavacoals-team" },
+      { label: "Charcoalnesia", href: "/about-company#charcoalnesia" },
+      { label: "Team", href: "/about-company#charcoalnesia-team" },
       { label: "What We Do", href: "/about-company#what-we-do" },
       { label: "Legal & Certificate", href: "/about-company#legal-certificate" },
       { label: "Factory", href: "/about-company#factory" },
@@ -30,7 +30,8 @@ const navItems = [
       { label: "Barbeque Charcoal", href: "/our-products/barbeque-charcoal-briquette" },
       { label: "Sawdust Charcoal", href: "/our-products/sawdust-charcoal" },
       { label: "Natural Wood Charcoal", href: "/our-products/natural-wood-charcoal" },
-      { label: "Grow With Fakhri Brands", href: "/our-products/grow-with-fakhri-brand" },
+      { label: "Raw Charcoal Materials", href: "/our-products/raw-coconut-charcoal-materials" },
+      { label: "Charcoalnesia Brands", href: "/our-products/charcoalnesia-brand" },
     ],
   },
   {
@@ -66,7 +67,7 @@ export default function Header() {
 
         {/* Logo */}
         <Link href="/" className="px-6 text-lg font-semibold lg:ml-[50px] flex-shrink-0">
-          <Image src="/images/logo-brand-baru.png" alt="Grow With Fakhri" width={120} height={40} className="h-10 w-auto" />
+          <Image src="/images/logo-brand-baru.png" alt="Charcoalnesia" width={120} height={40} className="h-10 w-auto" />
         </Link>
 
         {/* Desktop Navigation */}
@@ -155,7 +156,7 @@ export default function Header() {
       >
         {/* Logo + Close */}
         <div className="flex items-center justify-between px-5 py-4 border-b border-white/10">
-          <Image src="/images/logo-brand-baru.png" alt="Grow With Fakhri" width={96} height={24} className="h-6 w-auto" />
+          <Image src="/images/logo-brand-baru.png" alt="Charcoalnesia" width={96} height={24} className="h-6 w-auto" />
           <button
             onClick={() => setMobileOpen(false)}
             className="text-sm font-medium text-white/80 hover:text-white uppercase tracking-wide transition-colors"

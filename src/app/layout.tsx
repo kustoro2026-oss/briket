@@ -19,10 +19,10 @@ const openSans = Open_Sans({
 
 export const metadata: Metadata = {
   title: {
-    default: "Grow With Fakhri | Premium Charcoal Briquettes",
-    template: "%s | Grow With Fakhri",
+    default: "PT CHARCOALNESIA GLOBAL EXPORT | Premium Charcoal Briquettes",
+    template: "%s | Charcoalnesia",
   },
-  description: "Grow With Fakhri - Premium coconut charcoal briquettes for shisha, BBQ, and industrial use.",
+  description: "PT CHARCOALNESIA GLOBAL EXPORT - Premium coconut charcoal briquettes for shisha, BBQ, and industrial use. High-quality Indonesian charcoal products.",
 };
 
 export default function RootLayout({

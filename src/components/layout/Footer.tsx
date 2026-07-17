@@ -3,8 +3,8 @@ import Image from "next/image";
 import { FaFacebookF, FaLinkedinIn, FaInstagram, FaTiktok } from "react-icons/fa";
 
 const companyLinks = [
-  { label: "Grow With Fakhri", href: "/about-company#grow-with-fakhri" },
-  { label: "Grow With Fakhri's Team", href: "/about-company#grow-with-fakhris-team" },
+  { label: "Charcoalnesia", href: "/about-company#charcoalnesia" },
+  { label: "Charcoalnesia's Team", href: "/about-company#charcoalnesia-team" },
   { label: "Legal & Certificate", href: "/about-company#legal-certificate" },
   { label: "Factory", href: "/about-company#factory" },
   { label: "Our Gallery", href: "/about-company#our-gallery" },
@@ -15,7 +15,8 @@ const productLinks = [
   { label: "Barbeque Charcoal Briquette", href: "/our-products/barbeque-charcoal-briquette" },
   { label: "Sawdust Charcoal", href: "/our-products/sawdust-charcoal" },
   { label: "Natural Wood Charcoal", href: "/our-products/natural-wood-charcoal" },
-  { label: "Grow With Fakhri Brand", href: "/our-products/grow-with-fakhri-brand" },
+  { label: "Raw Charcoal Materials", href: "/our-products/raw-coconut-charcoal-materials" },
+  { label: "Charcoalnesia Brand", href: "/our-products/charcoalnesia-brand" },
 ];
 
 const quickLinks = [
@@ -46,7 +47,7 @@ export default function Footer() {
           <Link href="/">
             <Image
               src="/images/logo-brand-baru.png"
-              alt="Grow With Fakhri"
+              alt="Charcoalnesia"
               width={160}
               height={55}
               className="h-14 w-auto"
@@ -62,7 +63,7 @@ export default function Footer() {
           <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer" className="border border-gray-500 bg-transparent p-2.5 hover:bg-gray-500 transition-colors">
             <FaLinkedinIn className="w-4 h-4 text-gray-200" />
           </a>
-          <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" className="border border-gray-500 bg-transparent p-2.5 hover:bg-gray-500 transition-colors">
+          <a href="https://www.instagram.com/charcoal_nesia" target="_blank" rel="noopener noreferrer" className="border border-gray-500 bg-transparent p-2.5 hover:bg-gray-500 transition-colors">
             <FaInstagram className="w-[18px] h-[18px] text-gray-200" />
           </a>
           <a href="https://www.tiktok.com/" target="_blank" rel="noopener noreferrer" className="border border-gray-500 bg-transparent p-2.5 hover:bg-gray-500 transition-colors">
@@ -149,7 +150,7 @@ export default function Footer() {
                 rel="noopener noreferrer"
                 className="text-sm text-gray-200 hover:underline md:text-base"
               >
-                Grow With Fakhri - Dusun II, Wirogunan, Kec. Kartasura, Kabupaten Sukoharjo, Jawa Tengah 57166
+                Charcoalnesia - Dusun II, Wirogunan, Kec. Kartasura, Kabupaten Sukoharjo, Jawa Tengah 57166
               </a>
             </div>
 
@@ -189,7 +190,7 @@ export default function Footer() {
 
       {/* Copyright - Brown Background */}
       <div className="relative bg-[#9D7B19] py-4 text-center text-sm text-white">
-        &copy; Copyright 2026 &middot; CV. Grow With Fakhri
+        &copy; Copyright 2026 &middot; PT CHARCOALNESIA GLOBAL EXPORT
       </div>
     </footer>
   );

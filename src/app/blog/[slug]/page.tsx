@@ -32,7 +32,7 @@ export default async function BlogArticlePage({
   }
 
   const recentPosts = getRecentBlogPosts(5);
-  const pageUrl = `https://djavacoal.com/blog/${slug}`;
+  const pageUrl = `https://charcoalnesia.com/blog/${slug}`;
 
   return (
     <div className="bg-primary">

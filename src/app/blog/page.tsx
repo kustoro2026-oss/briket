@@ -5,7 +5,7 @@ import { HiArrowRight } from "react-icons/hi";
 import { getBlogPosts } from "@/lib/data";
 
 export const metadata: Metadata = {
-  title: "News & Articles - Charcoal Industry Insights | Djavacoal Indonesia",
+  title: "News & Articles - Charcoal Industry Insights | Charcoalnesia",
   description: "Stay updated with the latest news, articles, and insights from the charcoal industry.",
 };
 

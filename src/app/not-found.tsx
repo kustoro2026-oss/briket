@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 export const metadata = {
-  title: "Page Not Found | Djavacoal Indonesia",
+  title: "Page Not Found | Charcoalnesia",
 };
 
 export default function NotFound() {

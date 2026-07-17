@@ -10,7 +10,7 @@ const slideImages = [
   "/images/carousel/slide-4.jpg",
 ];
 
-const slideTitle = "Grow With Fakhri: Premium Coconut Charcoal Briquettes";
+const slideTitle = "Charcoalnesia: Premium Coconut Charcoal Briquettes";
 
 export default function HeroCarousel() {
   const [current, setCurrent] = useState(0);
@@ -38,7 +38,7 @@ export default function HeroCarousel() {
         >
           <Image
             src={image}
-            alt={`Grow With Fakhri slide ${index + 1}`}
+            alt={`Charcoalnesia slide ${index + 1}`}
             fill
             sizes="100vw"
             priority={index === 0}
@@ -53,7 +53,7 @@ export default function HeroCarousel() {
           className="max-w-[700px] leading-[1.4em] font-semibold text-white text-[25px] md:text-[36px] lg:text-[42px] lg:leading-[1.1em]"
           style={{ fontFamily: "var(--font-josefin-sans)" }}
         >
-          Power Your Flame with <span className="text-[#EFA12D]">Djavacoal Indonesia:</span> The Ultimate Solution for Clean Energy
+          Power Your Flame with <span className="text-[#EFA12D]">Charcoalnesia:</span> The Ultimate Solution for Clean Energy
         </h1>
 
         <div className="flex flex-col gap-3 sm:flex-row sm:justify-center sm:gap-5 max-w-[480px] w-full">
