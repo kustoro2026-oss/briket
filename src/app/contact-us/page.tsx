@@ -1,8 +1,13 @@
-"use client";
-
+import type { Metadata } from "next";
 import Image from "next/image";
 import ContactForm from "@/components/ui/ContactForm";
-import { FaFacebookF, FaLinkedinIn, FaInstagram, FaTiktok } from "react-icons/fa";
+import { FaInstagram } from "react-icons/fa";
+
+export const metadata: Metadata = {
+  title: "Contact & Request for Quotation",
+  description:
+    "Contact the Charcoalnesia export sales team. Structured request for quotation form covering product, quantity, packaging, destination, and incoterm.",
+};
 
 export default function ContactUsPage() {
   return (
@@ -11,16 +16,20 @@ export default function ContactUsPage() {
       <section className="bg-[#1C1C1C] text-white relative w-full overflow-hidden">
         <div className="relative h-48 w-full md:h-72">
           <Image
-            src="https://djavacoal.com/images/bg-banner-ContactUs.png"
-            alt="Contact Us Banner"
+            src="/images/contact/contact-banner.png"
+            alt="Contact Charcoalnesia"
             fill
             sizes="100vw"
             className="object-cover"
           />
-          <div className="absolute inset-0 bg-black/20 flex items-center justify-center">
+          <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
             <div className="text-center">
-              <h1 className="text-2xl font-semibold text-white">Contact Us</h1>
-              <p className="text-white/70 mt-1 text-lg">Free Sample Charcoalnesia</p>
+              <h1
+                className="text-2xl font-semibold text-white md:text-4xl"
+                style={{ fontFamily: "var(--font-josefin-sans)" }}
+              >
+                Export Sales &amp; Request for Quotation
+              </h1>
             </div>
           </div>
         </div>
@@ -32,7 +41,7 @@ export default function ContactUsPage() {
           <div className="flex flex-col items-center gap-12 lg:flex-row lg:items-start lg:gap-10">
             {/* Left: Contact Info + Logo */}
             <div className="flex flex-col items-center md:w-1/2">
-              {/* Centered Logo SVG */}
+              {/* Centered Logo */}
               <Image
                 src="/images/logo-brand-baru.png"
                 alt="Charcoalnesia"
@@ -51,14 +60,17 @@ export default function ContactUsPage() {
                     </svg>
                   </div>
                   <div>
-                    <h4 className="text-base font-semibold text-[#EFA12D]">E-Mail</h4>
-                    <a href="mailto:charcoalnesiaglobalexport@gmail.com" className="text-sm text-[#d9dce0] hover:text-secondary">
+                    <h4 className="text-base font-semibold text-[#EFA12D]">Export Sales E-mail</h4>
+                    <a
+                      href="mailto:charcoalnesiaglobalexport@gmail.com"
+                      className="text-sm text-[#d9dce0] hover:text-secondary"
+                    >
                       charcoalnesiaglobalexport@gmail.com
                     </a>
                   </div>
                 </div>
 
-                {/* Phone */}
+                {/* WhatsApp */}
                 <div className="flex items-start gap-4">
                   <div className="w-9 h-9 flex-shrink-0 flex items-center justify-center">
                     <svg viewBox="0 0 512 512" className="w-6 h-6" fill="#EFA12D">
@@ -66,19 +78,19 @@ export default function ContactUsPage() {
                     </svg>
                   </div>
                   <div>
-                    <h4 className="text-base font-semibold text-[#EFA12D]">Phone</h4>
+                    <h4 className="text-base font-semibold text-[#EFA12D]">WhatsApp</h4>
                     <a
                       href="https://wa.me/628212991650"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="text-sm text-[#d9dce0] hover:text-secondary"
                     >
-                      +628212991650
+                      +62 821-2991-650
                     </a>
                   </div>
                 </div>
 
-                {/* Location */}
+                {/* Registered Office */}
                 <div className="flex items-start gap-4">
                   <div className="w-9 h-9 flex-shrink-0 flex items-center justify-center">
                     <svg viewBox="0 0 384 512" className="w-6 h-6" fill="#EFA12D">
@@ -86,56 +98,43 @@ export default function ContactUsPage() {
                     </svg>
                   </div>
                   <div>
-                    <h4 className="text-base font-semibold text-[#EFA12D]">Location</h4>
-                    <a
-                      href="https://maps.google.com"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-sm text-[#d9dce0] hover:text-secondary"
-                    >
-                      Dusun II, Wirogunan, Kec. Kartasura, Kabupaten Sukoharjo, Jawa Tengah 57166
-                    </a>
+                    <h4 className="text-base font-semibold text-[#EFA12D]">Registered Office</h4>
+                    <p className="text-sm text-[#d9dce0]">
+                      Jl. Menara 9 Blok 146 No. 14, Meruya Selatan, Kembangan, Jakarta Barat,
+                      Indonesia
+                    </p>
                   </div>
                 </div>
               </div>
 
-              {/* Social Icons */}
+              {/* Social Icons - verified only */}
               <div className="mt-8 flex gap-3">
-                <a href="https://facebook.com/" target="_blank" rel="noopener noreferrer" className="border bg-transparent p-2 hover:bg-gray-500 transition-colors">
-                  <FaFacebookF className="w-[18px] h-[18px] text-gray-200" />
-                </a>
-                <a href="https://linkedin.com/" target="_blank" rel="noopener noreferrer" className="border bg-transparent p-2 hover:bg-gray-500 transition-colors">
-                  <FaLinkedinIn className="w-[18px] h-[18px] text-gray-200" />
-                </a>
-                <a href="https://instagram.com/charcoal_nesia" target="_blank" rel="noopener noreferrer" className="border bg-transparent p-2 hover:bg-gray-500 transition-colors">
+                <a
+                  href="https://www.instagram.com/charcoal_nesia"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Charcoalnesia on Instagram"
+                  className="border border-gray-500 bg-transparent p-2.5 hover:bg-gray-500 transition-colors"
+                >
                   <FaInstagram className="w-[18px] h-[18px] text-gray-200" />
-                </a>
-                <a href="https://tiktok.com/" target="_blank" rel="noopener noreferrer" className="border bg-transparent p-2 hover:bg-gray-500 transition-colors">
-                  <FaTiktok className="w-[18px] h-[18px] text-gray-200" />
                 </a>
               </div>
             </div>
 
-            {/* Right: Contact Form + Map */}
+            {/* Right: Structured RFQ Form */}
             <div className="flex flex-col gap-8 md:w-1/2">
-              {/* Contact Form - orange background */}
               <div className="bg-[#EFA12D] rounded-lg p-6">
-                <h3 className="text-xl font-semibold text-white mb-4">Send Us a Message</h3>
+                <h2
+                  className="mb-1 text-xl font-semibold text-white"
+                  style={{ fontFamily: "var(--font-josefin-sans)" }}
+                >
+                  Request for Quotation
+                </h2>
+                <p className="mb-4 text-sm text-white/85">
+                  Complete the structured fields below - commercial terms are confirmed by product,
+                  packaging, quantity, and destination.
+                </p>
                 <ContactForm />
-              </div>
-
-              {/* Google Maps */}
-              <div className="aspect-[3/2] w-full overflow-hidden rounded-lg md:aspect-[4/3]">
-                <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3955.3120666838836!2d110.72521280000001!3d-7.5409051!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7a15004c3164cd%3A0xac187c8c3e62cd72!2sDjavacoal%20Indonesia%20-%20Charcoal%20Factory!5e0!3m2!1sen!2sid!4v1764246566129!5m2!1sen!2sid"
-                  width="100%"
-                  height="100%"
-                  style={{ border: 0 }}
-                  allowFullScreen
-                  loading="lazy"
-                  referrerPolicy="no-referrer-when-downgrade"
-                  title="Charcoalnesia Location"
-                />
               </div>
             </div>
           </div>

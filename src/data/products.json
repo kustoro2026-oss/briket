@@ -1,73 +1,58 @@
 [
   {
-    "id": "coconut-charcoal-bbq",
-    "name": "Coconut charcoal BBQ",
-    "slug": "coconut-charcoal-bbq",
-    "description": "These briquettes are perfect for barbecue and grilling. Specifically designed for extra long-lasting heat with highly consistent temperatures. This premium product guarantees a uniform burn with minimal smoke and low ash content.",
-    "category": "BBQ",
+    "id": "cube-briquettes",
+    "name": "Cube Briquettes",
+    "slug": "cube-briquettes",
+    "application": "Shisha / Hookah",
+    "description": "Briquettes made with 100% coconut shell charcoal material. Natural tapioca starch is used as a binder.",
+    "material": "100% Coconut Shell Charcoal Material",
+    "binder": "Natural Binder: Tapioca Starch",
     "images": [
-      "/images/products/coconut-charcoal-bbq.PNG"
+      "/images/products/cube-25.png"
     ],
-    "shapes": [
-      { "type": "Hexa", "sizes": ["50x50x30mm", "50x50x35mm"] },
-      { "type": "Pillow", "sizes": ["50x50x30mm", "60x60x35mm"] }
-    ],
-    "packaging": ["Bulk Loose", "Woven Bag"],
-    "moq": "40ft Container (27 Tons)",
-    "capacity": "250 Tons/Month",
-    "specifications": {
-      "Ash Content": "< 3%",
-      "Moisture": "< 8%",
-      "Fixed Carbon": "> 70%",
-      "Burning Time": "> 3 hours",
-      "Caloric Value": "> 6500 Kcal"
-    }
+    "packaging": ["Standard", "Private Label"],
+    "coaNote": "Latest applicable COA available upon request."
   },
   {
-    "id": "coconut-shells-charcoal-briquettes",
-    "name": "Coconut shells charcoal briquettes",
-    "slug": "coconut-shells-charcoal-briquettes",
-    "description": "Suitable for shisha/hookah. Odorless & Smokeless. 100% Eco-Friendly. Ash content 1.68%, moisture 5.98%, burning time 2hours+.",
-    "category": "Shisha",
+    "id": "hexagonal-briquettes",
+    "name": "Hexagonal Briquettes",
+    "slug": "hexagonal-briquettes",
+    "application": "Shisha / Hookah or BBQ / Grill",
+    "description": "Briquettes made with 100% coconut shell charcoal material. Natural tapioca starch is used as a binder.",
+    "material": "100% Coconut Shell Charcoal Material",
+    "binder": "Natural Binder: Tapioca Starch",
     "images": [
-      "/images/products/coconut-shells-charcoal-briquettes.PNG"
+      "/images/product-gallery/01.jpg"
     ],
-    "shapes": [
-      { "type": "FLAT", "sizes": ["25x25x17 - (108 pcs/kg)", "25x25x15 - (120 pcs/kg)", "20x20x20 - (192 pcs/kg)"] },
-      { "type": "CUBE", "sizes": ["22x22x22 - (96 pcs/kg)", "25x25x25 - (72 pcs/kg)", "26x26x26 - (64 pcs/kg)"] }
-    ],
-    "packaging": ["Bulk Loose", "Full", "Bulk"],
-    "moq": "20\" Container (18 Tons) / 40\" Container (26 Tons)",
-    "capacity": "250 Tons/Month",
-    "specifications": {
-      "Ash Content": "1.68%",
-      "Moisture": "5.98%",
-      "Fixed Carbon": "> 75%",
-      "Burning Time": "> 2 hours",
-      "Caloric Value": "> 7000 Kcal"
-    }
+    "packaging": ["Standard", "Private Label"],
+    "coaNote": "Latest applicable COA available upon request."
   },
   {
-    "id": "raw-coconut-charcoal-materials",
-    "name": "Raw coconut charcoal materials",
-    "slug": "raw-coconut-charcoal-materials",
-    "description": "Already carbonized and ready for further production or bulk processing. Selectively sourced from premium Indonesian origins, our raw charcoal features high carbon content and low moisture. Perfect for other manufacturers and bulk buyers looking for high-quality raw materials to secure their supply chain.",
-    "category": "Raw Materials",
+    "id": "finger-briquettes",
+    "name": "Finger Briquettes",
+    "slug": "finger-briquettes",
+    "application": "Shisha / Hookah",
+    "description": "Briquettes made with 100% coconut shell charcoal material. Natural tapioca starch is used as a binder.",
+    "material": "100% Coconut Shell Charcoal Material",
+    "binder": "Natural Binder: Tapioca Starch",
     "images": [
-      "/images/products/raw-coconut-charcoal-materials.PNG"
+      "/images/product-gallery/02.jpg"
     ],
-    "shapes": [
-      { "type": "Raw Charcoal Lump", "sizes": ["Various sizes available"] }
+    "packaging": ["Standard", "Private Label"],
+    "coaNote": "Latest applicable COA available upon request."
+  },
+  {
+    "id": "flower-briquettes",
+    "name": "Flower Briquettes",
+    "slug": "flower-briquettes",
+    "application": "Shisha / Hookah",
+    "description": "Briquettes made with 100% coconut shell charcoal material. Natural tapioca starch is used as a binder.",
+    "material": "100% Coconut Shell Charcoal Material",
+    "binder": "Natural Binder: Tapioca Starch",
+    "images": [
+      "/images/product-gallery/03.jpg"
     ],
-    "packaging": ["Bulk Loose", "Woven Bag"],
-    "moq": "20\" Container (18 Tons) / 40\" Container (26 Tons)",
-    "capacity": "250 Tons/Month",
-    "specifications": {
-      "Carbonized": "100%",
-      "Ash Content": "1.68%",
-      "Moisture": "5.98%",
-      "Fixed Carbon": "> 75%",
-      "Caloric Value": "> 7000 Kcal"
-    }
+    "packaging": ["Standard", "Private Label"],
+    "coaNote": "Latest applicable COA available upon request."
   }
 ]

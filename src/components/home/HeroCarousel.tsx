@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useCallback } from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 const slideImages = [
   "/images/carousel/slide-1.jpg",
@@ -9,8 +10,6 @@ const slideImages = [
   "/images/carousel/slide-3.jpg",
   "/images/carousel/slide-4.jpg",
 ];
-
-const slideTitle = "Charcoalnesia: Premium Coconut Charcoal Briquettes";
 
 export default function HeroCarousel() {
   const [current, setCurrent] = useState(0);
@@ -48,29 +47,45 @@ export default function HeroCarousel() {
       ))}
 
       {/* Content - centered */}
-      <div className="relative z-10 flex h-full flex-col items-center justify-center gap-10 px-5 text-center md:px-20 lg:px-32">
+      <div className="relative z-10 flex h-full flex-col items-center justify-center gap-6 px-5 text-center md:px-20 lg:px-32">
         <h1
-          className="max-w-[700px] leading-[1.4em] font-semibold text-white text-[25px] md:text-[36px] lg:text-[42px] lg:leading-[1.1em]"
+          className="max-w-[860px] leading-[1.2em] font-semibold text-white text-[24px] md:text-[34px] lg:text-[40px]"
           style={{ fontFamily: "var(--font-josefin-sans)" }}
         >
-          Power Your Flame with <span className="text-[#EFA12D]">Charcoalnesia:</span> The Ultimate Solution for Clean Energy
+          Indonesian Coconut Shell Charcoal Briquettes
         </h1>
 
-        <div className="flex flex-col gap-3 sm:flex-row sm:justify-center sm:gap-5 max-w-[480px] w-full">
-          <a
-            href="/about-company"
+        <p
+          className="text-[17px] font-medium text-[#EFA12D] md:text-[20px]"
+          style={{ fontFamily: "var(--font-josefin-sans)" }}
+        >
+          For Shisha, Hookah &amp; BBQ Applications
+        </p>
+
+        <p className="max-w-[640px] text-sm leading-relaxed text-white/90 md:text-base">
+          B2B charcoal supply from Indonesia with defined product specifications, batch quality
+          control, private-label packaging, and export documentation support.
+        </p>
+
+        <p className="text-[13px] font-semibold uppercase tracking-[0.18em] text-white/85 md:text-sm">
+          Available Shapes: Cube | Hexagonal | Finger | Flower
+        </p>
+
+        <div className="flex flex-col gap-3 sm:flex-row sm:justify-center sm:gap-5 max-w-[520px] w-full">
+          <Link
+            href="/our-products"
             className="flex flex-1 items-center justify-center rounded-[40px] border border-white bg-black/40 px-8 py-4 text-[15px] font-bold text-white whitespace-nowrap backdrop-blur-sm transition-all duration-300 hover:bg-black/60 sm:text-[16px] md:px-10 md:py-5"
             style={{ fontFamily: "var(--font-josefin-sans)" }}
           >
-            About Us
-          </a>
-          <a
-            href="/our-products"
+            View Products
+          </Link>
+          <Link
+            href="/contact-us"
             className="flex flex-1 items-center justify-center rounded-[40px] border border-[#EFA12D] bg-black/40 px-8 py-4 text-[15px] font-bold text-[#EFA12D] whitespace-nowrap backdrop-blur-sm transition-all duration-300 hover:bg-black/60 sm:text-[16px] md:px-10 md:py-5"
             style={{ fontFamily: "var(--font-josefin-sans)" }}
           >
-            Discover Our Products
-          </a>
+            Request Quotation
+          </Link>
         </div>
       </div>
 

@@ -4,12 +4,11 @@ import Image from "next/image";
 
 interface VideoModalProps {
   videoId?: string;
-  thumbnailUrl?: string;
   isOpen: boolean;
   onClose: () => void;
 }
 
-export default function VideoModal({ videoId, thumbnailUrl, isOpen, onClose }: VideoModalProps) {
+export default function VideoModal({ videoId, isOpen, onClose }: VideoModalProps) {
   if (!isOpen) return null;
 
   const embedUrl = videoId ? `https://www.youtube.com/embed/${videoId}?autoplay=1` : undefined;
@@ -46,7 +45,7 @@ export default function VideoModal({ videoId, thumbnailUrl, isOpen, onClose }: V
 export function VideoThumbnail({ videoId, thumbnailUrl }: { videoId?: string; thumbnailUrl?: string }) {
   const youtubeThumb = videoId
     ? `https://img.youtube.com/vi/${videoId}/maxresdefault.jpg`
-    : thumbnailUrl || "https://djavacoal.com/images/thumbnail-yt.jpg"
+    : thumbnailUrl || "/images/about/video-thumbnail.jpg"
 
   return (
     <div className="relative w-full overflow-hidden rounded-2xl border border-[#FFFFFF20] bg-[#1A1A1A] shadow-lg cursor-pointer group">

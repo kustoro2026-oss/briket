@@ -1,0 +1,29 @@
+[
+  {
+    "name": "Platinum",
+    "ash": "<= 2.1%",
+    "volatile": "<= 12%",
+    "moisture": "<= 5%",
+    "fixedCarbon": "Target 85%",
+    "calorific": "Target 7,500 kcal/kg",
+    "ashColour": "White"
+  },
+  {
+    "name": "Super Premium",
+    "ash": "2.0-2.5%",
+    "volatile": "<= 13%",
+    "moisture": "<= 6%",
+    "fixedCarbon": "Target 82%",
+    "calorific": "Target 7,200 kcal/kg",
+    "ashColour": "White"
+  },
+  {
+    "name": "Premium",
+    "ash": "2.0-3.0%",
+    "volatile": "<= 15%",
+    "moisture": "<= 7%",
+    "fixedCarbon": "Target 80%",
+    "calorific": "Target 7,000 kcal/kg",
+    "ashColour": "White"
+  }
+]

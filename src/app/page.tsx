@@ -3,8 +3,9 @@ import HeroCarousel from "@/components/home/HeroCarousel";
 import HomeSections from "@/components/home/HomeSections";
 
 export const metadata: Metadata = {
-  title: "Coconut Charcoal Briquettes Manufacturer | Charcoalnesia",
-  description: "Power Your Flame with Charcoalnesia: The Ultimate Solution for Clean Energy. Premium coconut charcoal briquettes for shisha, BBQ, and industrial use.",
+  title: "Coconut Shell Charcoal Briquettes for Shisha & BBQ",
+  description:
+    "Indonesian export of coconut shell charcoal briquettes for shisha, hookah, and BBQ applications. Product range: Cube, Hexagonal, Finger, and Flower. Request a quotation or evaluation sample.",
 };
 
 export default function Home() {

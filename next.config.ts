@@ -5,18 +5,6 @@ const nextConfig: NextConfig = {
     remotePatterns: [
       {
         protocol: "https",
-        hostname: "assets.djavacoal.com",
-      },
-      {
-        protocol: "https",
-        hostname: "djavacoal.com",
-      },
-      {
-        protocol: "https",
-        hostname: "flagsapi.com",
-      },
-      {
-        protocol: "https",
         hostname: "img.youtube.com",
       },
     ],

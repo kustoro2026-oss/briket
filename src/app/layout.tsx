@@ -18,11 +18,21 @@ const openSans = Open_Sans({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://charcoalnesia.com"),
   title: {
-    default: "PT CHARCOALNESIA GLOBAL EXPORT | Premium Charcoal Briquettes",
+    default: "Charcoalnesia | Coconut Shell Charcoal Briquettes",
     template: "%s | Charcoalnesia",
   },
-  description: "PT CHARCOALNESIA GLOBAL EXPORT - Premium coconut charcoal briquettes for shisha, BBQ, and industrial use. High-quality Indonesian charcoal products.",
+  description:
+    "Indonesian export of coconut shell charcoal briquettes for shisha, hookah, and BBQ applications. Product range: Cube, Hexagonal, Finger, and Flower briquettes.",
+  openGraph: {
+    title: "Charcoalnesia | Coconut Shell Charcoal Briquettes",
+    description:
+      "Indonesian export of coconut shell charcoal briquettes for shisha, hookah, and BBQ applications.",
+    type: "website",
+    siteName: "Charcoalnesia",
+    images: ["/images/carousel/slide-1.jpg"],
+  },
 };
 
 export default function RootLayout({

@@ -2,22 +2,47 @@
 
 import { useState } from "react";
 import Image from "next/image";
-import FaqAccordion from "@/components/ui/FaqAccordion";
-import { getFaqs, getProductionSteps, getPackaging } from "@/lib/data";
+import { getFaqs, getProductionSteps, getPackaging, getQualityGrades } from "@/lib/data";
 
 const sections = [
   { id: "production-process", label: "Production Process" },
+  { id: "quality-grades", label: "Quality Grades" },
   { id: "moq-payment-terms", label: "MOQ & Payment Terms" },
   { id: "shipment-terms", label: "Shipment Terms" },
   { id: "packaging-info", label: "Packaging Info" },
+  { id: "export-dg", label: "Export & DG Information" },
   { id: "faqs", label: "FAQ" },
 ];
 
+/* Export documents - shown "as required / when applicable" */
+const exportDocuments = [
+  { category: "Technical", items: "COA / ROA, SDS/MSDS, relevant laboratory report" },
+  {
+    category: "DG / Safety",
+    items: "Dangerous Goods Declaration + Packing Certificate, shipment-specific safety documents",
+  },
+  {
+    category: "Production / Packing",
+    items: "Weathering evidence, packing temperature, vanning/survey evidence where required",
+  },
+  { category: "Commercial", items: "Commercial Invoice, Packing List" },
+  { category: "Origin", items: "Certificate of Origin / SKA when applicable" },
+  { category: "Shipping", items: "Bill of Lading and carrier-specific documents" },
+];
+
 export default function ProductionInfoPage() {
-  const [activeSection, setActiveSection] = useState("production-process");
+  /* Sync the active sidebar item with a direct hash link, e.g. /production-info#export-dg */
+  const [activeSection, setActiveSection] = useState(() => {
+    if (typeof window !== "undefined" && window.location.hash) {
+      const id = window.location.hash.replace("#", "");
+      if (sections.some((s) => s.id === id)) return id;
+    }
+    return "production-process";
+  });
   const faqs = getFaqs();
   const steps = getProductionSteps();
   const packaging = getPackaging();
+  const grades = getQualityGrades();
 
   const scrollTo = (id: string) => {
     setActiveSection(id);
@@ -30,14 +55,19 @@ export default function ProductionInfoPage() {
       <section className="bg-[#1C1C1C] text-white relative w-full overflow-hidden">
         <div className="relative h-48 w-full md:h-72">
           <Image
-            src="https://djavacoal.com/images/bg-banner-ProductionProcess.png"
-            alt="Production Process Banner"
+            src="/images/production/production-banner.png"
+            alt="Production Information"
             fill
             sizes="100vw"
             className="object-cover"
           />
-          <div className="absolute inset-0 bg-black/20 flex items-center justify-center">
-            <h1 className="text-2xl font-semibold text-white">Production Info</h1>
+          <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
+            <h1
+              className="text-2xl font-semibold text-white md:text-4xl"
+              style={{ fontFamily: "var(--font-josefin-sans)" }}
+            >
+              Production Info
+            </h1>
           </div>
         </div>
       </section>
@@ -58,7 +88,7 @@ export default function ProductionInfoPage() {
       </div>
 
       {/* Content Area: Sidebar + Main */}
-      <div className="mx-auto max-w-7xl px-5 py-0 pb-10 md:px-10 md:py-16 lg:mx-0 lg:max-w-none lg:px-0 lg:py-0 lg:mr-10">
+      <div className="mx-auto max-w-7xl px-5 pb-10 md:px-10 md:py-16 lg:mx-0 lg:max-w-none lg:px-0 lg:py-0 lg:mr-10">
         <div className="grid grid-cols-1 gap-10 lg:grid-cols-[260px_1fr]">
           {/* Sidebar Navigation (Desktop) */}
           <div className="hidden lg:sticky lg:top-24 lg:block lg:self-start lg:py-16">
@@ -81,18 +111,24 @@ export default function ProductionInfoPage() {
 
           {/* Main Content */}
           <div className="flex flex-col gap-12">
-            {/* Production Process */}
+            {/* ===== Production Process ===== */}
             <section id="production-process" className="scroll-mt-28">
               <div className="rounded-xl bg-[#222222] mb-12">
                 <div className="p-5 md:p-10">
                   <span className="text-sm font-medium tracking-wide text-[#60A5FF] italic">Production Process</span>
-                  <h2 className="text-xl font-semibold text-white mt-1">How We Craft Quality Charcoal for Global Markets</h2>
+                  <h2 className="text-xl font-semibold text-white mt-1">Production Process</h2>
+                  <p className="mt-3 text-sm leading-[22px] text-[#CCCCCC]">
+                    Production in Indonesia is coordinated according to defined product
+                    specifications, quality-control checkpoints, packaging requirements, and export
+                    preparation. The charcoal material is 100% coconut shell charcoal; natural
+                    tapioca starch is used as a binder.
+                  </p>
                 </div>
                 <div className="grid grid-cols-1 gap-6 px-5 pb-8 md:grid-cols-3 md:px-10">
-                  {steps.map((step, i) => (
+                  {steps.map((step) => (
                     <div
                       key={step.step}
-                      className="flex flex-col justify-start rounded-xl bg-[#222222] transition-transform duration-300 hover:-translate-y-1"
+                      className="flex flex-col justify-start rounded-xl transition-transform duration-300 hover:-translate-y-1"
                     >
                       <div className="relative mb-4 w-full aspect-video overflow-hidden rounded-xl">
                         <Image
@@ -117,31 +153,99 @@ export default function ProductionInfoPage() {
               </div>
             </section>
 
-            {/* MOQ & Payment Terms */}
+            {/* ===== Quality Grades ===== */}
+            <section id="quality-grades" className="scroll-mt-28">
+              <div className="rounded-xl bg-[#222222] mb-12">
+                <div className="p-5 md:p-10">
+                  <span className="text-sm font-medium tracking-wide text-[#60A5FF] italic">Quality Grades</span>
+                  <h2 className="text-xl font-semibold text-white mt-1">Commercial Specification Grades</h2>
+                  <p className="mt-3 text-sm leading-[22px] text-[#CCCCCC]">
+                    Material: 100% Coconut Shell Charcoal Material | Natural Binder: Tapioca Starch
+                  </p>
+                </div>
+                <div className="overflow-x-auto px-5 pb-8 md:px-10">
+                  <table className="w-full min-w-[720px] border-collapse text-center text-[13px] md:text-sm">
+                    <thead>
+                      <tr className="bg-[#1D1D1D] text-white">
+                        <th className="border border-[#3a3a3a] px-3 py-3 font-bold">Grade</th>
+                        <th className="border border-[#3a3a3a] px-3 py-3 font-bold">Ash Content</th>
+                        <th className="border border-[#3a3a3a] px-3 py-3 font-bold">Volatile Matter</th>
+                        <th className="border border-[#3a3a3a] px-3 py-3 font-bold">Moisture</th>
+                        <th className="border border-[#3a3a3a] px-3 py-3 font-bold">Fixed Carbon</th>
+                        <th className="border border-[#3a3a3a] px-3 py-3 font-bold">Gross Calorific Value</th>
+                        <th className="border border-[#3a3a3a] px-3 py-3 font-bold">Ash Colour</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {grades.map((grade, idx) => (
+                        <tr key={grade.name} className={idx === 0 ? "bg-[#EFA12D]/10" : "bg-black/20"}>
+                          <td className="border border-[#3a3a3a] px-3 py-3 font-bold text-[#EFA12D]">
+                            {grade.name}
+                          </td>
+                          <td className="border border-[#3a3a3a] px-3 py-3 text-[#CCCCCC]">{grade.ash}</td>
+                          <td className="border border-[#3a3a3a] px-3 py-3 text-[#CCCCCC]">{grade.volatile}</td>
+                          <td className="border border-[#3a3a3a] px-3 py-3 text-[#CCCCCC]">{grade.moisture}</td>
+                          <td className="border border-[#3a3a3a] px-3 py-3 text-[#CCCCCC]">{grade.fixedCarbon}</td>
+                          <td className="border border-[#3a3a3a] px-3 py-3 text-[#CCCCCC]">{grade.calorific}</td>
+                          <td className="border border-[#3a3a3a] px-3 py-3 text-[#CCCCCC]">{grade.ashColour}</td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                  <p className="mt-4 text-xs leading-[18px] text-[#909090] md:text-[13px]">
+                    Use these as website commercial grade references. Batch-specific actual results
+                    remain shown only in the applicable COA / laboratory report. Latest applicable
+                    COA available upon request.
+                  </p>
+                </div>
+              </div>
+            </section>
+
+            {/* ===== MOQ & Payment Terms ===== */}
             <section id="moq-payment-terms" className="scroll-mt-28">
               <div className="rounded-xl bg-[#222222] mb-12">
                 <div className="p-5 md:p-10">
                   <span className="text-sm font-medium tracking-wide text-[#60A5FF] italic">MOQ & Payment Terms</span>
-                  <h2 className="text-xl font-semibold text-white mt-1">Minimum Order & Payment Terms</h2>
+                  <h2 className="text-xl font-semibold text-white mt-1">Commercial Terms</h2>
                 </div>
                 <div className="px-5 pb-8 md:px-10">
-                  <h3 className="text-base font-semibold text-white mb-4">T/T (Telegraphic Transfer)</h3>
-                  <p className="text-sm text-[#CCCCCC] mb-6">
-                    We accept Telegraphic Transfer (T/T) for all international transactions, ensuring secure and reliable payments.
-                  </p>
                   <table className="w-full border-collapse">
                     <tbody>
                       {[
-                        { label: "MOQ:", value: "20\" Container (18 Tons) / 40\" Container (26 Tons)" },
-                        { label: "Payment Method:", value: "T/T (Telegraph Transfer)" },
-                        { label: "Payment Structure:", value: "50% Advance Payment, 50% Balance Before Shipment (Can Be Discussed)" },
-                        { label: "Shipment Terms:", value: "Freight On Board (FOB)" },
-                        { label: "Currency:", value: "$USD" },
-                        { label: "Lead Time:", value: "Approx. 4–6 Weeks After Confirmation & Down Payment" },
+                        {
+                          label: "MOQ:",
+                          value:
+                            "Confirmed by product grade, packaging configuration, and production schedule.",
+                        },
+                        {
+                          label: "Payment Method:",
+                          value: "Confirmed in the quotation / Proforma Invoice.",
+                        },
+                        {
+                          label: "Payment Structure:",
+                          value:
+                            "Follows the current commercial framework and is stated in the quotation / Proforma Invoice.",
+                        },
+                        {
+                          label: "Lead Time:",
+                          value:
+                            "Starts after PI / payment / artwork / specification confirmation and is confirmed in the quotation.",
+                        },
+                        {
+                          label: "Samples:",
+                          value:
+                            "Product evaluation samples are available for qualified buyers under agreed sampling terms.",
+                        },
                       ].map((row, i) => (
-                        <tr key={i} className="border-b border-[#848484]" style={{ backgroundColor: i % 2 === 0 ? "#262626" : "#323232" }}>
-                          <td className="py-3 px-3 text-sm text-white font-normal w-[180px] border-r border-[#848484]">{row.label}</td>
-                          <td className="py-3 px-3 text-sm text-white font-normal">{row.value}</td>
+                        <tr
+                          key={i}
+                          className="border-b border-[#848484]"
+                          style={{ backgroundColor: i % 2 === 0 ? "#262626" : "#323232" }}
+                        >
+                          <td className="py-3 px-3 text-sm text-white font-semibold w-[200px] border-r border-[#848484] align-top">
+                            {row.label}
+                          </td>
+                          <td className="py-3 px-3 text-sm text-[#CCCCCC]">{row.value}</td>
                         </tr>
                       ))}
                     </tbody>
@@ -150,56 +254,48 @@ export default function ProductionInfoPage() {
               </div>
             </section>
 
-            {/* Shipment Terms */}
+            {/* ===== Shipment Terms ===== */}
             <section id="shipment-terms" className="scroll-mt-28">
               <div className="rounded-xl bg-[#222222] mb-12">
                 <div className="p-5 md:p-10">
                   <span className="text-sm font-medium tracking-wide text-[#60A5FF] italic">Shipment Terms</span>
-                  <h2 className="text-xl font-semibold text-white mt-1">Reliable Shipping with FOB Terms</h2>
+                  <h2 className="text-xl font-semibold text-white mt-1">Shipment Terms</h2>
                 </div>
-                <div className="flex flex-col items-start gap-6 px-5 pb-6 md:grid md:grid-cols-[minmax(0,309px)_1fr]">
-                  <div className="relative h-72 w-full overflow-hidden rounded-lg md:aspect-4/3 md:max-h-[350px] lg:aspect-square lg:h-auto lg:max-h-[500px] lg:max-w-[500px]">
-                    <Image
-                      src="https://djavacoal.com/images/shipment.png"
-                      alt="Shipment"
-                      fill
-                      sizes="(max-width: 768px) 100vw, 309px"
-                      className="object-cover rounded-lg"
-                    />
-                  </div>
-                  <div>
-                    <h3 className="text-sm font-semibold text-white mb-3">FOB (Free On Board)</h3>
-                    <p className="text-sm leading-relaxed text-[#CCCCCC]">
-                      At Charcoalnesia, all international shipments are provided under{" "}
-                      <strong className="text-white">FOB (Free On Board)</strong> terms. This means we
-                      take full responsibility for <strong className="text-white">preparing, packaging</strong>,{" "}
-                      and delivering your order safely to the <strong className="text-white">designated port in Indonesia</strong>,
-                      covering all local costs until the goods are loaded on board the vessel. From that
-                      point, our buyers have the freedom to arrange their preferred shipping line,
-                      insurance, and logistics. With access to major international ports in Jakarta,
-                      Semarang, and Surabaya, we ensure smooth, efficient, and cost-effective export
-                      handling for our global partners.
-                    </p>
-                    <h4 className="text-sm font-semibold text-white mt-6 mb-3">Available Ports</h4>
-                    <ul className="space-y-2">
-                      {["Jakarta (Tanjung Priok)", "Semarang (Tanjung Emas)", "Surabaya (Tanjung Perak)"].map((port) => (
-                        <li key={port} className="flex items-center gap-2 text-sm text-[#CCCCCC]">
-                          <span className="w-1.5 h-1.5 rounded-full bg-[#EFA12D]" />
-                          {port}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
+                <div className="px-5 pb-8 md:px-10">
+                  <ul className="space-y-4 text-sm leading-[22px] text-[#CCCCCC]">
+                    <li className="flex items-start gap-3">
+                      <span className="mt-1.5 size-2 shrink-0 rounded-full bg-[#EFA12D]" />
+                      Available shipment terms are confirmed per quotation and destination.
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <span className="mt-1.5 size-2 shrink-0 rounded-full bg-[#EFA12D]" />
+                      If FOB is used: &quot;FOB [Named Indonesian Port], Incoterms 2020&quot;.
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <span className="mt-1.5 size-2 shrink-0 rounded-full bg-[#EFA12D]" />
+                      CFR/CIF may be offered where routing and carrier acceptance are confirmed.
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <span className="mt-1.5 size-2 shrink-0 rounded-full bg-[#EFA12D]" />
+                      Charcoal bookings remain subject to DG, packing, carrier, route, and booking
+                      acceptance requirements.
+                    </li>
+                  </ul>
                 </div>
               </div>
             </section>
 
-            {/* Packaging Info */}
+            {/* ===== Packaging Info ===== */}
             <section id="packaging-info" className="scroll-mt-28">
               <div className="rounded-xl bg-[#222222] mb-12">
                 <div className="p-5 md:p-10">
-                  <span className="text-sm font-medium tracking-wide text-[#60A5FF] italic">Packaging Option</span>
-                  <h2 className="text-xl font-semibold text-white mt-1">Flexible Packaging to Suit Your Business Needs</h2>
+                  <span className="text-sm font-medium tracking-wide text-[#60A5FF] italic">Packaging Info</span>
+                  <h2 className="text-xl font-semibold text-white mt-1">Packaging Options</h2>
+                  <p className="mt-3 text-sm leading-[22px] text-[#CCCCCC]">
+                    Inner pack net and gross weight, master carton weight and dimensions, and
+                    estimated container loading are calculated from the actual packaging
+                    configuration and confirmed in the quotation.
+                  </p>
                 </div>
                 <div className="grid grid-cols-1 gap-6 px-5 pb-8 md:grid-cols-3 md:px-10">
                   {packaging.map((pkg) => (
@@ -215,14 +311,12 @@ export default function ProductionInfoPage() {
                         <div className="absolute top-0 left-0 z-10 h-1/3 w-full rounded-t-xl bg-gradient-to-b from-black/70 to-transparent" />
                       </div>
                       <h3 className="mt-3 text-base font-semibold text-[#EFA12D]">{pkg.name}</h3>
-                      <p className="text-sm leading-relaxed text-[#CCCCCC] mt-1">
-                        {pkg.description.split(". ").slice(0, 1)[0]}.
-                      </p>
+                      <p className="text-sm leading-relaxed text-[#CCCCCC] mt-1">{pkg.description}</p>
                     </div>
                   ))}
                 </div>
 
-                {/* Private Label / OEM */}
+                {/* Private Label / OEM - locked copy */}
                 <div className="px-5 pb-8 md:px-10">
                   <div className="border-t border-[#848484] pt-8">
                     <div className="flex flex-col md:flex-row gap-8 items-center">
@@ -236,25 +330,14 @@ export default function ProductionInfoPage() {
                         />
                       </div>
                       <div className="flex-1">
-                        <h3 className="text-lg font-semibold text-[#EFA12D] mb-3">Private Label & OEM Manufacturing</h3>
-                        <p className="text-sm leading-relaxed text-[#CCCCCC] mb-4">
-                          Build your own brand with our flexible packaging solutions. We fully support Private Label manufacturing
-                          with custom inner boxes from 1kg up to 20kg. Prefer a faster route? Use our official Charcoalnesia brand
-                          to save on design fees and get faster production times.
+                        <h3 className="text-lg font-semibold text-[#EFA12D] mb-3">
+                          PRIVATE LABEL / OEM PACKAGING
+                        </h3>
+                        <p className="text-sm leading-relaxed text-[#CCCCCC]">
+                          Custom branding and packaging are available subject to artwork approval,
+                          packaging specification, MOQ, and production lead time. Commercial details
+                          are confirmed in the quotation / Proforma Invoice.
                         </p>
-                        <div className="grid grid-cols-2 gap-3">
-                          {[
-                            { label: "Inner Box Sizes", value: "1kg – 20kg custom" },
-                            { label: "Master Carton", value: "Heavy-duty 5-layer" },
-                            { label: "Inner Protection", value: "Plastic liners" },
-                            { label: "Brand Option", value: "Your Brand or Ours" },
-                          ].map((item, i) => (
-                            <div key={i} className="bg-[#323232] rounded-lg p-3">
-                              <span className="block text-xs text-[#60A5FF] mb-1">{item.label}</span>
-                              <span className="block text-sm font-semibold text-white">{item.value}</span>
-                            </div>
-                          ))}
-                        </div>
                       </div>
                     </div>
                   </div>
@@ -262,12 +345,42 @@ export default function ProductionInfoPage() {
               </div>
             </section>
 
-            {/* FAQ */}
+            {/* ===== Export & DG Information ===== */}
+            <section id="export-dg" className="scroll-mt-28">
+              <div className="rounded-xl bg-[#222222] mb-12">
+                <div className="p-5 md:p-10">
+                  <span className="text-sm font-medium tracking-wide text-[#60A5FF] italic">Export Information</span>
+                  <h2 className="text-xl font-semibold text-white mt-1">IMDG-Compliant Maritime Shipping</h2>
+                  <p className="mt-3 text-sm leading-[22px] text-[#CCCCCC]">
+                    Charcoal shipments are prepared in accordance with IMDG Code requirements (UN
+                    1361, Class 4.2), supported by applicable SDS and self-heating test documentation
+                    to facilitate safe and compliant international sea transport.
+                  </p>
+                </div>
+                <div className="px-5 pb-8 md:px-10">
+                  <h3 className="mb-4 text-sm font-bold tracking-wide text-white">
+                    DOCUMENTS — AS REQUIRED / WHEN APPLICABLE
+                  </h3>
+                  <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+                    {exportDocuments.map((doc) => (
+                      <div key={doc.category} className="rounded-xl border border-[#3a3a3a] bg-black/20 p-4">
+                        <h4 className="mb-1.5 text-[13px] font-bold text-[#EFA12D]">{doc.category}</h4>
+                        <p className="text-[12px] leading-[18px] text-[#CCCCCC] md:text-[13px]">
+                          {doc.items}
+                        </p>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            {/* ===== FAQ ===== */}
             <section id="faqs" className="scroll-mt-28">
               <div className="rounded-xl bg-[#222222]">
                 <div className="p-5 md:p-10">
                   <span className="text-sm font-medium tracking-wide text-[#60A5FF] italic">FAQ</span>
-                  <h2 className="text-xl font-semibold text-white mt-1">Frequently Ask Question</h2>
+                  <h2 className="text-xl font-semibold text-white mt-1">Frequently Asked Questions</h2>
                 </div>
                 <div className="flex flex-col gap-3 px-5 pb-8 md:px-10">
                   {faqs.map((faq) => (

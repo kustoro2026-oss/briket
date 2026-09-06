@@ -1,72 +1,62 @@
 [
   {
     "id": "faq-1",
-    "question": "Can I visit your factory?",
-    "answer": "Yes, we welcome factory visits! Please contact us to schedule an appointment. We'll be happy to show you our production facility and quality control processes."
+    "question": "What charcoal products do you supply?",
+    "answer": "We supply four fixed briquette shapes only: Cube, Hexagonal, Finger, and Flower, for shisha/hookah and BBQ applications according to the applicable product configuration."
   },
   {
     "id": "faq-2",
-    "question": "Can you produce with my brand?",
-    "answer": "Absolutely! We offer OEM and private label services. You can customize packaging with your own brand name and design. Contact our team to discuss your branding requirements."
+    "question": "What is the raw material?",
+    "answer": "Our charcoal material is 100% coconut shell charcoal. Natural tapioca starch is used as a binder."
   },
   {
     "id": "faq-3",
-    "question": "Do you guarantee the quality?",
-    "answer": "Yes, we guarantee the quality of all our products. Each batch undergoes rigorous quality control and lab testing before shipment. We provide lab reports and certificates with every order."
+    "question": "Can you produce custom briquette shapes?",
+    "answer": "No. Our briquette range is limited to Cube, Hexagonal, Finger, and Flower. Private-label / OEM packaging can be customized subject to artwork approval, packaging MOQ, and lead time."
   },
   {
     "id": "faq-4",
-    "question": "How do you ensure consistent quality?",
-    "answer": "We maintain strict quality control procedures at every stage of production - from raw material selection to final packaging. Our products are tested for ash content, moisture, fixed carbon, burning time, and caloric value."
+    "question": "Do you offer private label / OEM packaging?",
+    "answer": "Yes. Artwork, packaging specification, MOQ, approval, and lead time are confirmed before production."
   },
   {
     "id": "faq-5",
-    "question": "What are your payment terms?",
-    "answer": "We accept T/T (Telegraphic Transfer) payment with 50% advance and 50% before shipment. All transactions are in USD."
+    "question": "Can I request a sample?",
+    "answer": "Evaluation samples are available for qualified buyers subject to sample configuration and agreed courier terms."
   },
   {
     "id": "faq-6",
-    "question": "What is the delivery time?",
-    "answer": "Our standard lead time is 4-6 weeks after order confirmation and receipt of advance payment. This may vary depending on order quantity and current production schedule."
+    "question": "What documents are available?",
+    "answer": "Applicable COA/ROA, SDS/MSDS, commercial, origin, shipping, and shipment-specific DG/safety documents as required."
   },
   {
     "id": "faq-7",
-    "question": "How to make an order?",
-    "answer": "Simply contact us via email at charcoalnesiaglobalexport@gmail.com or WhatsApp at +628212991650. Our team will guide you through the ordering process, from product selection to shipping arrangements."
+    "question": "Is charcoal shipped as Non-DG?",
+    "answer": "Shipment follows current IMDG and carrier acceptance requirements. Charcoal shipments are prepared in accordance with IMDG Code requirements (UN 1361, Class 4.2), supported by applicable SDS and self-heating test documentation."
   },
   {
     "id": "faq-8",
-    "question": "What is your production capacity?",
-    "answer": "We have a production capacity of 250 tons per month for coconut charcoal products and 135 tons per month for sawdust charcoal. We can scale production based on order requirements."
+    "question": "What are your MOQ and lead time?",
+    "answer": "Confirmed by product grade, packaging, production schedule, and quotation."
   },
   {
     "id": "faq-9",
-    "question": "Do you provide free samples?",
-    "answer": "Yes, we provide free samples for quality evaluation. Contact us to request samples of any product you're interested in. Shipping costs may apply."
+    "question": "What Incoterms can you offer?",
+    "answer": "FOB/CFR/CIF or other confirmed terms according to named port, routing, and carrier acceptance."
   },
   {
     "id": "faq-10",
-    "question": "Can you provide custom packaging?",
-    "answer": "Yes, we offer custom packaging solutions including private label, custom box designs, and various packaging formats (bulk, full packaging, woven bags)."
+    "question": "Can buyers visit the production facility?",
+    "answer": "Visits may be arranged for qualified buyers by appointment, subject to schedule and approval."
   },
   {
     "id": "faq-11",
-    "question": "Which countries do you export to?",
-    "answer": "We export to over 20 countries worldwide including markets in the Middle East, Europe, Asia, and Africa. Contact us to discuss shipping to your country."
+    "question": "How do I request a quotation?",
+    "answer": "Send the briquette shape, quality grade (Platinum / Super Premium / Premium), approved size, quantity, packaging, destination country/port, and target timing through the RFQ form."
   },
   {
     "id": "faq-12",
-    "question": "Do you provide lab reports?",
-    "answer": "Yes, we provide complete lab test reports including MSDS (Material Safety Data Sheet) and quality analysis for all our products."
-  },
-  {
-    "id": "faq-13",
-    "question": "Are your products eco-friendly?",
-    "answer": "Yes, all our charcoal briquettes are made from 100% natural coconut shells and wood - renewable resources. Our products are chemical-free, odorless, and produce minimal smoke and ash."
-  },
-  {
-    "id": "faq-14",
-    "question": "How long is the delivery time for international orders?",
-    "answer": "International shipping times vary by destination. After production (4-6 weeks), sea freight typically takes 2-6 weeks depending on the destination port. We ship from Jakarta, Semarang, or Surabaya ports."
+    "question": "Where is production located?",
+    "answer": "Production is conducted in Indonesia and coordinated according to confirmed specifications, QC checkpoints, packaging, and shipment requirements."
   }
 ]

@@ -5,6 +5,7 @@ import teamData from "@/data/team.json";
 import certificatesData from "@/data/certificates.json";
 import packagingData from "@/data/packaging.json";
 import productionStepsData from "@/data/production-steps.json";
+import qualityGradesData from "@/data/quality-grades.json";
 
 export function getProducts() {
   return productsData;
@@ -46,4 +47,8 @@ export function getPackaging() {
 
 export function getProductionSteps() {
   return productionStepsData;
+}
+
+export function getQualityGrades() {
+  return qualityGradesData;
 }
